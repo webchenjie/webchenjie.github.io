@@ -1,6 +1,6 @@
-const nav = require('./public/nav.js')
-const sidebar = require('./public/sidebar.js')
-const plugins = require('./public/plugins.js')
+const nav = require('./public/config/nav.js')
+const sidebar = require('./public/config/sidebar.js')
+const plugins = require('./public/config/plugins.js')
 module.exports = {
   title: "chenjieBlog",
   description: "热爱生活，积极向上",
