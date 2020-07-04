@@ -298,24 +298,26 @@ module.exports = {
       {
         text: "文档",
         icon: "reco-document",
-        items: [{ text: "html", link: "/docs/html.md" },
-        { text: "css", link: "/docs/css.md" },
-        { text: "javascript", link: "/docs/javascript.md" },
-        { text: "vuejs", link: "/docs/vuejs.md" },
-        { text: "nodejs", link: "/docs/nodejs.md" },
-        { text: "webpack", link: "/docs/webpack.md" },
-        { text: "element-ui", link: "/docs/element-ui.md" },
-        { text: "vue-element-admin", link: "/docs/vue-element-admin.md" },
-        { text: "git", link: "/docs/git.md" },
-        { text: "uni-app", link: "/docs/uni-app.md" },
-        { text: "微信小程序", link: "/docs/微信小程序.md" }]
+        items: [
+          { text: "git", link: "/docs/git.md" },
+          { text: "html", link: "/docs/html.md" },
+          { text: "css", link: "/docs/css.md" },
+          { text: "javascript", link: "/docs/javascript.md" },
+          { text: "vuejs", link: "/docs/vuejs.md" },
+          { text: "nodejs", link: "/docs/nodejs.md" },
+          { text: "webpack", link: "/docs/webpack.md" },
+          { text: "element-ui", link: "/docs/element-ui.md" },
+          { text: "vue-element-admin", link: "/docs/vue-element-admin.md" },
+          { text: "uni-app", link: "/docs/uni-app.md" },
+          { text: "微信小程序", link: "/docs/微信小程序.md" }
+        ]
       },
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
       { text: "GitHub", link: "https://github.com/webchenjie", icon: "reco-github" },
     ],
 
     sidebar: {
-      "/docs/": ["html", "css", "javascript", "nodejs", "vue", "uni-app", "微信小程序"],
+      "/docs/": ["git", "html", "css", "javascript", "vuejs", "nodejs", "webpack", "element-ui", "vue-element-admin", "uni-app", "微信小程序"],
     },
 
     // 博客设置
