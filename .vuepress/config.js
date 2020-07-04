@@ -1,7 +1,6 @@
 module.exports = {
   title: "chenjieBlog",
   description: "热爱生活，积极向上",
-  dest: 'public',
   head: [
     ["link", {
       rel: "icon",
