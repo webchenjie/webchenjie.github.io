@@ -20,7 +20,7 @@ module.exports = [{
       },
       {
         text: "javascript",
-        link: "/docs/javascript/W3C.md"
+        link: "/docs/javascript/Array.md"
       },
       {
         text: "vuejs",

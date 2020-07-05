@@ -18,12 +18,48 @@ module.exports = {
       title: 'javascript',
       collapsable: true,
       children: [{
-          title: 'W3C',
-          path: '/docs/javascript/W3C.md'
+          title: 'Array',
+          path: '/docs/javascript/Array.md'
         },
         {
-          title: 'ECMA',
-          path: '/docs/javascript/ECMA.md'
+          title: 'String',
+          path: '/docs/javascript/String.md'
+        },
+        {
+          title: 'Object',
+          path: '/docs/javascript/Object.md'
+        },
+        {
+          title: 'Function',
+          path: '/docs/javascript/Function.md'
+        },
+        {
+          title: 'Math',
+          path: '/docs/javascript/Math.md'
+        },
+        {
+          title: 'Date',
+          path: '/docs/javascript/Date.md'
+        },
+        {
+          title: 'DOM',
+          path: '/docs/javascript/DOM.md'
+        },
+        {
+          title: 'BOM',
+          path: '/docs/javascript/BOM.md'
+        },
+        {
+          title: '数据类型',
+          path: '/docs/javascript/数据类型.md'
+        },
+        {
+          title: '作用域与闭包',
+          path: '/docs/javascript/作用域和闭包.md'
+        },
+        {
+          title: '原型和原型链',
+          path: '/docs/javascript/原型和原型链.md'
         }
       ]
     },
