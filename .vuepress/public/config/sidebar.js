@@ -50,6 +50,14 @@ module.exports = {
           path: '/docs/javascript/BOM.md'
         },
         {
+          title: 'Ajax和Json',
+          path: '/docs/javascript/Ajax和Json.md'
+        },
+        {
+          title: '移动端',
+          path: '/docs/javascript/移动端.md'
+        },
+        {
           title: '数据类型',
           path: '/docs/javascript/数据类型.md'
         },
@@ -60,6 +68,10 @@ module.exports = {
         {
           title: '原型和原型链',
           path: '/docs/javascript/原型和原型链.md'
+        },
+        {
+          title: '正则表达式',
+          path: '/docs/javascript/正则表达式.md'
         }
       ]
     },
