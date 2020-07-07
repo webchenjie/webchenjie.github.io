@@ -54,6 +54,10 @@ module.exports = {
           path: '/docs/javascript/Ajax和Json.md'
         },
         {
+          title: 'ES6',
+          path: '/docs/javascript/ES6.md'
+        },
+        {
           title: '移动端',
           path: '/docs/javascript/移动端.md'
         },
