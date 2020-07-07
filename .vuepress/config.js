@@ -4,6 +4,8 @@ const plugins = require('./public/config/plugins.js')
 module.exports = {
   title: "chenjieBlog",
   description: "热爱生活，积极向上",
+  host: '127.0.0.1',
+  port: 8080,
   head: [
     ["link", {
       rel: "icon",
