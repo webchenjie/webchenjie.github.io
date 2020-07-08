@@ -42,6 +42,106 @@ date: 2020-07-04
 ----------------------------------------------------------------------------------------------
 // 模板字符串
 `${变量}`
-
-
+----------------------------------------------------------------------------------------------
+// Set数据结构，接收可遍历对象，里面的数据不能重复
+1. let s = new Set()
+2. s.add('hello').add('cj') // 增
+3. s.delete('hello') // 删
+4. s.clear() // 全删
+5. s.has('hello') // 查
+6. s.size // 相当于length
+7. s.keys() // 读
+8. s.values() // 读
+9. s.entries() // 读
+10. 删完再加则是改
+11. for of、forEach //遍历
+----------------------------------------------------------------------------------------------
+// Map数据结构，接收可遍历对象，满足key/value形式
+1. let m = new Map()
+2. m.set(name, 'cj') // 增、改
+3. m.delete('hello') // 删
+4. m.clear() // 全删
+5. m.has('hello') // 查，查的时候是查key值
+6. m.size // 相当于length
+7. m.keys() // 读
+8. m.values() // 读
+9. m.entries() // 读
+10. m.get(name) //获取
+11. for of、forEach //遍历
+----------------------------------------------------------------------------------------------
+// 反射机制是在编译阶段不知道是哪个类被加载，而是在运行的时候才加载执行
+1. Reflect.apply(Math.floor, null, [4, 5]) // es6
+   Math.floor(null, [4, 5]) // es5
+2. Reflect.construct(Date, []) //es6
+   let d = new Date()
+3. Reflect.getOwnPropertyDescriptor() //获取属性描述符
+4. Reflect.defineProperty() // 修改属性描述符
+5. Reflect.deleteProperty() // 删除属性描述符
+6. Reflect.get(obj, 'name') // 获取值
+7. Reflect.set(obj, 'name', 'cj') // 设置值
+8. Reflect.getPrototypeOf(obj) // 获取原型链上的对象
+9. Reflect.has(obj 'cj') // 判断是否有这个属性，返回布尔值
+10. Reflect.isExtensible(obj) // 判断是否可扩展，返回布尔值
+11. Reflect.prevenExtensions(obj) // 把obj变为不可扩展
+12. Reflect.setPrototypeOf(arr, String.prototype) //  把arr的原型改成String
+13. Reflect.ownKeys(obj) // 获取非原型的属性
+14. Reflect.hasOwnProperty('name') // 判断name是否是自身属性而不是原型上的
+----------------------------------------------------------------------------------------------
+// proxy代理，保护信息，不可修改
+1. let c = { name: 'cj', age: 23 }
+   let j = new proxy(c, {
+       get(target, key) {
+        return target[key]
+       },
+       set(target, key, value) {
+        return false
+       }
+     })
+2. let j = Proxy.revocable(c, {
+       get(target, key) {
+        return target[key]
+       },
+       set(target, key, value) {
+        return false
+       }
+     })
+   })
+可以撤销代理的对象j，里面包括j.proxy代理的内容和j.revoke()方法撤销代理
+3. 当第2个参数为空时，相当是对第一个参数做的一次浅拷贝
+4. 类似es5的getter/setter
+5. proxy相当于去修改设置对象的属性行为，而Reflect则是获取对象的这些行为
+----------------------------------------------------------------------------------------------
+// Generator(控制函数执行)
+1. function * loop() {
+    for(let i = 0; i < 5; i++){
+     yield console.log(i)
+    }
+   }
+   const l = loop()
+   l.next()
+   l.next()
+   l.next()
+2. yield后面可以是可遍历对象或generator加*
+3. next()返回值当前执行结果的状态
+4. next(10)可以传参，第一个无效
+5. 提前结束l.return(10)，可传可不传
+6. l.throw(new Error('err'))，在外部抛出异常，在内部接收，try catch
+7. yield没有返回值，后面的值会做计算
+8. next返回是yield后面的val值和done是否结束
+9. next传参是给yield
+10. next返回一个迭代器协议
+11. next遇到yield停止
+----------------------------------------------------------------------------------------------
+// Iterator(实现自定义遍历的接口)
+1. 部署一个[Symbol.iterator]的方法，this指当前的值，必须return一个函数
+2. 迭代器协议：是一个对象，对象包含一个无参函数next，next返回一个对象
+3. 可迭代协议：[Symbol.iterator]
+4. return {
+    next() {
+     return {
+      done: false,
+       value: 1
+       }
+     }
+   }
 ```
