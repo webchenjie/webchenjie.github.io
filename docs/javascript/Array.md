@@ -72,4 +72,5 @@ console.log(other) // [2, 4, 6, 8, 10]
 11. Array.find(fn) // 查找符合条件的内容，只返回第一个（fiflter返回全部）
 12. Array.findIndex(fn) // 查找符合条件的内容，只返回第一个的索引
 13. arr.includes(参数) // 判断arr是否包含参数，返回布尔值
+14. arr.flat(深度) // 数组扁平化
 ```
