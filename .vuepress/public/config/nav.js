@@ -20,7 +20,7 @@ module.exports = [{
       },
       {
         text: "javascript",
-        link: "/docs/javascript/Array.md"
+        link: "/docs/javascript/ECMA和W3C.md"
       },
       {
         text: "vuejs",
