@@ -1,14 +1,18 @@
 module.exports = {
   "/docs/": [
     {
-      title: "git",
-      collapsable: true,
-      path: "/docs/git/git.md",
-    },
-    {
       title: "html",
       collapsable: true,
-      path: "/docs/html/html.md",
+      children: [
+        {
+          title: "html",
+          path: "/docs/html/html.md"
+        }, 
+        {
+          title: "html5",
+          path: "/docs/html/html5.md"
+        }
+      ]
     },
     {
       title: "css",
@@ -21,120 +25,151 @@ module.exports = {
       children: [
         {
           title: "ECMA和W3C",
-          path: "/docs/javascript/ECMA和W3C.md",
+          path: "/docs/javascript/ECMA和W3C.md"
         },
         {
           title: "Object",
-          path: "/docs/javascript/Object.md",
+          path: "/docs/javascript/Object.md"
         },
         {
           title: "Array",
-          path: "/docs/javascript/Array.md",
+          path: "/docs/javascript/Array.md"
         },
         {
           title: "Function",
-          path: "/docs/javascript/Function.md",
+          path: "/docs/javascript/Function.md"
         },
         {
           title: "String",
-          path: "/docs/javascript/String.md",
+          path: "/docs/javascript/String.md"
         },
         {
           title: "Math",
-          path: "/docs/javascript/Math.md",
+          path: "/docs/javascript/Math.md"
         },
         {
           title: "Date",
-          path: "/docs/javascript/Date.md",
+          path: "/docs/javascript/Date.md"
         },
         {
           title: "DOM",
-          path: "/docs/javascript/DOM.md",
+          path: "/docs/javascript/DOM.md"
         },
         {
           title: "BOM",
-          path: "/docs/javascript/BOM.md",
+          path: "/docs/javascript/BOM.md"
         },
         {
           title: "ES6",
-          path: "/docs/javascript/ES6.md",
+          path: "/docs/javascript/ES6.md"
         },
         {
           title: "HTTP",
-          path: "/docs/javascript/HTTP.md",
+          path: "/docs/javascript/HTTP.md"
         },
         {
           title: "Ajax和Json",
-          path: "/docs/javascript/Ajax和Json.md",
+          path: "/docs/javascript/Ajax和Json.md"
         },
         {
           title: "存储",
-          path: "/docs/javascript/存储.md",
+          path: "/docs/javascript/存储.md"
         },
         {
           title: "异步",
-          path: "/docs/javascript/异步.md",
+          path: "/docs/javascript/异步.md"
         },
         {
           title: "移动端",
-          path: "/docs/javascript/移动端.md",
+          path: "/docs/javascript/移动端.md"
         },
         {
           title: "数据类型",
-          path: "/docs/javascript/数据类型.md",
+          path: "/docs/javascript/数据类型.md"
         },
         {
           title: "正则表达式",
-          path: "/docs/javascript/正则表达式.md",
+          path: "/docs/javascript/正则表达式.md"
         },
         {
           title: "性能和安全",
-          path: "/docs/javascript/性能和安全.md",
+          path: "/docs/javascript/性能和安全.md"
         },
         {
           title: "作用域与闭包",
-          path: "/docs/javascript/作用域和闭包.md",
+          path: "/docs/javascript/作用域和闭包.md"
         },
         {
           title: "原型和原型链",
-          path: "/docs/javascript/原型和原型链.md",
+          path: "/docs/javascript/原型和原型链.md"
         },
-      ],
+      ]
     },
     {
-      title: "vuejs",
+      title: "vue",
       collapsable: true,
-      path: "/docs/vuejs/vuejs.md",
+      children: [
+        {
+          title: "基础知识",
+          path: "/docs/vue/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/vue/进阶知识.md"
+        },
+        {
+          title: "vuex",
+          path: "/docs/vue/vuex.md"
+        },
+        {
+          title: "vue-router",
+          path: "/docs/vue/vue-router.md"
+        }
+      ]
     },
     {
-      title: "nodejs",
+      title: "node",
       collapsable: true,
-      path: "/docs/nodejs/nodejs.md",
+      path: "/docs/node/nodejs.md"
     },
     {
       title: "webpack",
       collapsable: true,
-      path: "/docs/webpack/webpack.md",
+      path: "/docs/webpack/webpack.md"
     },
     {
       title: "element-ui",
       collapsable: true,
-      path: "/docs/element-ui/element-ui.md",
+      path: "/docs/element-ui/element-ui.md"
     },
     {
       title: "vue-element-admin",
       collapsable: true,
-      path: "/docs/vue-element-admin/vue-element-admin.md",
+      path: "/docs/vue-element-admin/vue-element-admin.md"
     },
     {
       title: "uni-app",
       collapsable: true,
-      path: "/docs/uni-app/uni-app.md",
+      path: "/docs/uni-app/uni-app.md"
     },
     {
       title: "微信小程序",
       collapsable: true,
-      path: "/docs/微信小程序/微信小程序.md",
+      path: "/docs/微信小程序/微信小程序.md"
     },
-  ],
-};
+    {
+      title: "git和linux",
+      collapsable: true,
+      children: [
+        {
+          title: "git",
+          path: "/docs/git和linux/git.md"
+        },
+        {
+          title: "linux",
+          path: "/docs/git和linux/linux.md"
+        }  
+      ]
+    }
+  ]
+}

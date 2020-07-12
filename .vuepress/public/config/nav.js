@@ -6,10 +6,7 @@ module.exports = [{
   {
     text: "文档",
     icon: "reco-document",
-    items: [{
-        text: "git",
-        link: "/docs/git/git.md"
-      },
+    items: [
       {
         text: "html",
         link: "/docs/html/html.md"
@@ -23,12 +20,12 @@ module.exports = [{
         link: "/docs/javascript/ECMA和W3C.md"
       },
       {
-        text: "vuejs",
-        link: "/docs/vuejs/vuejs.md"
+        text: "vue",
+        link: "/docs/vue/基础知识.md"
       },
       {
-        text: "nodejs",
-        link: "/docs/nodejs/nodejs.md"
+        text: "node",
+        link: "/docs/node/nodejs.md"
       },
       {
         text: "webpack",
@@ -49,7 +46,11 @@ module.exports = [{
       {
         text: "微信小程序",
         link: "/docs/微信小程序/微信小程序.md"
-      }
+      },
+      {
+        text: "git和linux",
+        link: "/docs/git和linux/git.md"
+      },
     ]
   },
   {
