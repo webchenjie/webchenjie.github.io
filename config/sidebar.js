@@ -5,19 +5,28 @@ module.exports = {
       collapsable: true,
       children: [
         {
-          title: "html",
-          path: "/docs/html/html.md"
+          title: "基础知识",
+          path: "/docs/html/基础知识.md"
         }, 
         {
-          title: "html5",
-          path: "/docs/html/html5.md"
+          title: "进阶知识",
+          path: "/docs/html/进阶知识.md"
         }
       ]
     },
     {
       title: "css",
       collapsable: true,
-      path: "/docs/css/css.md",
+      children: [
+        {
+          title: "基础知识",
+          path: "/docs/css/基础知识.md",
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/css/进阶知识.md"
+        }
+      ]
     },
     {
       title: "javascript",

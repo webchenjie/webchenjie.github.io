@@ -9,11 +9,11 @@ module.exports = [{
     items: [
       {
         text: "html",
-        link: "/docs/html/html.md"
+        link: "/docs/html/基础知识.md"
       },
       {
         text: "css",
-        link: "/docs/css/css.md"
+        link: "/docs/css/基础知识.md"
       },
       {
         text: "javascript",
