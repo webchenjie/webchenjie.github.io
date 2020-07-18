@@ -29,7 +29,7 @@ module.exports = [{
       },
       {
         text: "webpack",
-        link: "/docs/webpack/webpack.md"
+        link: "/docs/webpack/基础知识.md"
       },
       {
         text: "element-ui",

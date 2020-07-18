@@ -144,7 +144,16 @@ module.exports = {
     {
       title: "webpack",
       collapsable: true,
-      path: "/docs/webpack/webpack.md"
+      children: [
+        {
+          title: "基础知识",
+          path: "/docs/webpack/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/webpack/进阶知识.md"
+        }
+      ]
     },
     {
       title: "element-ui",
