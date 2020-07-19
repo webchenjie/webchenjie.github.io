@@ -139,7 +139,16 @@ module.exports = {
     {
       title: "node",
       collapsable: true,
-      path: "/docs/node/nodejs.md"
+      children: [
+        {
+          title: "基础知识",
+          path: "/docs/node/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/node/进阶知识.md"
+        }
+      ]
     },
     {
       title: "webpack",
