@@ -25,7 +25,7 @@ module.exports = [{
       },
       {
         text: "node",
-        link: "/docs/node/nodejs.md"
+        link: "/docs/node/基础知识.md"
       },
       {
         text: "webpack",
