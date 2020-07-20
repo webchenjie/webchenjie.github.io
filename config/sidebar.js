@@ -73,10 +73,6 @@ module.exports = {
           path: "/docs/javascript/ES6.md"
         },
         {
-          title: "HTTP",
-          path: "/docs/javascript/HTTP.md"
-        },
-        {
           title: "Ajax和Json",
           path: "/docs/javascript/Ajax和Json.md"
         },
@@ -165,6 +161,20 @@ module.exports = {
       ]
     },
     {
+      title: "http",
+      collapsable: true,
+      children: [
+        {
+          title: "基础知识",
+          path: "/docs/http/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/http/进阶知识.md"
+        }
+      ]
+    },
+    {
       title: "element-ui",
       collapsable: true,
       path: "/docs/element-ui/element-ui.md"
@@ -182,7 +192,15 @@ module.exports = {
     {
       title: "微信小程序",
       collapsable: true,
-      path: "/docs/微信小程序/微信小程序.md"
+      children: [{
+          title: "基础知识",
+          path: "/docs/微信小程序/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/微信小程序/进阶知识.md"
+        }
+      ]
     },
     {
       title: "git和linux",
