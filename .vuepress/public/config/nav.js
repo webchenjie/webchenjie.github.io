@@ -32,6 +32,10 @@ module.exports = [{
         link: "/docs/webpack/基础知识.md"
       },
       {
+        text: "http",
+        link: "/docs/http/基础知识.md"
+      },
+      {
         text: "element-ui",
         link: "/docs/element-ui/element-ui.md"
       },
@@ -45,7 +49,7 @@ module.exports = [{
       },
       {
         text: "微信小程序",
-        link: "/docs/微信小程序/微信小程序.md"
+        link: "/docs/微信小程序/基础知识.md"
       },
       {
         text: "git和linux",
