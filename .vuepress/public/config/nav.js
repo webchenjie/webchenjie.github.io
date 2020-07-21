@@ -45,7 +45,7 @@ module.exports = [{
       },
       {
         text: "uni-app",
-        link: "/docs/uni-app/uni-app.md"
+        link: "/docs/uni-app/基础知识.md"
       },
       {
         text: "微信小程序",
