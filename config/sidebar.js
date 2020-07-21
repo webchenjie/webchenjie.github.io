@@ -187,7 +187,16 @@ module.exports = {
     {
       title: "uni-app",
       collapsable: true,
-      path: "/docs/uni-app/uni-app.md"
+      children: [
+        {
+        title: "基础知识",
+          path: "/docs/uni-app/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/uni-app/进阶知识.md"
+        }
+      ]
     },
     {
       title: "微信小程序",
