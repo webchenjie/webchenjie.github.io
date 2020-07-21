@@ -121,6 +121,14 @@ module.exports = {
         {
           title: "进阶知识",
           path: "/docs/vue/进阶知识.md"
+        },
+        {
+          title: "vuex",
+          path: "/docs/vue/vuex.md"
+        },
+        {
+          title: "vue-router",
+          path: "/docs/vue/vue-router.md"
         }
       ]
     },
