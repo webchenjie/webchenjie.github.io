@@ -167,14 +167,17 @@ module.exports = {
       ]
     },
     {
-      title: "element-ui",
-      collapsable: true,
-      path: "/docs/element-ui/element-ui.md"
-    },
-    {
       title: "vue-element-admin",
       collapsable: true,
-      path: "/docs/vue-element-admin/vue-element-admin.md"
+      children: [{
+          title: "基础知识",
+          path: "/docs/vue-element-admin/基础知识.md"
+        },
+        {
+          title: "进阶知识",
+          path: "/docs/vue-element-admin/进阶知识.md"
+        }
+      ]
     },
     {
       title: "uni-app",

@@ -36,12 +36,8 @@ module.exports = [{
         link: "/docs/http/基础知识.md"
       },
       {
-        text: "element-ui",
-        link: "/docs/element-ui/element-ui.md"
-      },
-      {
         text: "vue-element-admin",
-        link: "/docs/vue-element-admin/vue-element-admin.md"
+        link: "/docs/vue-element-admin/基础知识.md"
       },
       {
         text: "uni-app",
