@@ -7,7 +7,7 @@ module.exports = {
   head: [
     ["link", {
       rel: "icon",
-      href: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/favicon.ico"
+      href: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/favicon.ico"
     }],
     ["meta", {
       name: "viewport",
@@ -26,11 +26,11 @@ module.exports = {
   theme: "reco",
   themeConfig: {
     type: "blog",
-    logo: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/logo.png",
+    logo: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/logo.png",
     // 作者
     author: "chenjie",
     // 作者头像
-    authorAvatar: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/logo.png",
+    authorAvatar: "https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/logo.png",
 
     // 404腾讯公益
     noFoundPageByTencent: false,
