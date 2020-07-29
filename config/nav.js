@@ -5,7 +5,7 @@ module.exports = [{
   },
   {
     text: "文档",
-    icon: "reco-document",
+    icon: "reco-api",
     items: [
       {
         text: "html",
@@ -57,6 +57,104 @@ module.exports = [{
     text: "时间线",
     link: "/timeline/",
     icon: "reco-date"
+  },
+  {
+    text: "学习链接",
+    icon: "reco-document",
+    items: [
+      {
+        text: "印记中文",
+        link: "https://www.docschina.org/"
+      },
+      {
+        text: "阿里云",
+        link: "https://account.aliyun.com/login/login.html"
+      },
+      {
+        text: "码云",
+        link: "https://gitee.com/"
+      },
+      {
+        text: "iconfont",
+        link: "https://www.iconfont.cn/"
+      },
+      {
+        text: "swiper",
+        link: "https://www.swiper.com.cn/"
+      },
+      {
+        text: "echarts",
+        link: "https://echarts.apache.org/zh/index.html"
+      },
+      {
+        text: "javascript",
+        link: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+      },
+      {
+        text: "node.js",
+        link: "http://nodejs.cn/"
+      },
+      {
+        text: "npm",
+        link: "https://www.npmjs.com/"
+      },
+      {
+        text: "webpack",
+        link: "https://www.webpackjs.com/"
+      },
+      {
+        text: "vue.js",
+        link: "https://cn.vuejs.org/"
+      },
+      {
+        text: "vue3.js",
+        link: "https://composition-api.vuejs.org/zh/"
+      },
+      {
+        text: "nuxt.js",
+        link: "https://www.nuxtjs.cn/"
+      },
+      {
+        text: "vuepress",
+        link: "https://www.vuepress.cn/"
+      },
+      {
+        text: "vuepress-theme-reco",
+        link: "https://vuepress-theme-reco.recoluan.com/"
+      },
+      {
+        text: "vue-element-admin",
+        link: "https://panjiachen.gitee.io/vue-element-admin-site/zh/"
+      },
+      {
+        text: "element-ui",
+        link: "https://element.eleme.cn/#/zh-CN/"
+      },
+      {
+        text: "uview-ui",
+        link: "https://www.uviewui.com/"
+      },
+      {
+        text: "uni-app",
+        link: "https://uniapp.dcloud.io/"
+      },
+      {
+        text: "uni-cloud",
+        link: "https://unicloud.dcloud.net.cn/login/"
+      },
+      {
+        text: "uni-app可视化组件API",
+        link: "https://hellouniapp.dcloud.net.cn/pcguide.html#/"
+      },
+      {
+        text: "微信公众平台",
+        link: "https://mp.weixin.qq.com/"
+      },
+      {
+        text: "微信开发文档",
+        link: "https://developers.weixin.qq.com/doc/"
+      }  
+    ]
   },
   {
     text: "GitHub",
