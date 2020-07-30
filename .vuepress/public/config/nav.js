@@ -64,7 +64,7 @@ module.exports = [{
     items: [
       {
         text: "印记中文",
-        link: "https://www.docschina.org/"
+        link: "https://www.docschina.org"
       },
       {
         text: "阿里云",
@@ -72,19 +72,23 @@ module.exports = [{
       },
       {
         text: "码云",
-        link: "https://gitee.com/"
+        link: "https://gitee.com"
       },
       {
         text: "iconfont",
-        link: "https://www.iconfont.cn/"
+        link: "https://www.iconfont.cn"
       },
       {
         text: "swiper",
-        link: "https://www.swiper.com.cn/"
+        link: "https://www.swiper.com.cn"
       },
       {
         text: "echarts",
         link: "https://echarts.apache.org/zh/index.html"
+      },
+      {
+        text: "tinypng",
+        link: "https://tinypng.com"
       },
       {
         text: "javascript",
@@ -92,63 +96,63 @@ module.exports = [{
       },
       {
         text: "node.js",
-        link: "http://nodejs.cn/"
+        link: "http://nodejs.cn"
       },
       {
         text: "npm",
-        link: "https://www.npmjs.com/"
+        link: "https://www.npmjs.com"
       },
       {
         text: "webpack",
-        link: "https://www.webpackjs.com/"
+        link: "https://www.webpackjs.com"
       },
       {
         text: "vue.js",
-        link: "https://cn.vuejs.org/"
+        link: "https://cn.vuejs.org"
       },
       {
         text: "vue3.js",
-        link: "https://composition-api.vuejs.org/zh/"
+        link: "https://composition-api.vuejs.org/zh"
       },
       {
         text: "nuxt.js",
-        link: "https://www.nuxtjs.cn/"
+        link: "https://www.nuxtjs.cn"
       },
       {
         text: "vuepress",
-        link: "https://www.vuepress.cn/"
+        link: "https://www.vuepress.cn"
       },
       {
         text: "vuepress-theme-reco",
-        link: "https://vuepress-theme-reco.recoluan.com/"
+        link: "https://vuepress-theme-reco.recoluan.com"
       },
       {
         text: "vue-element-admin",
-        link: "https://panjiachen.gitee.io/vue-element-admin-site/zh/"
+        link: "https://panjiachen.gitee.io/vue-element-admin-site/zh"
       },
       {
         text: "element-ui",
-        link: "https://element.eleme.cn/#/zh-CN/"
+        link: "https://element.eleme.cn/#/zh-CN"
       },
       {
         text: "uview-ui",
-        link: "https://www.uviewui.com/"
+        link: "https://www.uviewui.com"
       },
       {
         text: "uni-app",
-        link: "https://uniapp.dcloud.io/"
+        link: "https://uniapp.dcloud.io"
       },
       {
         text: "uni-cloud",
-        link: "https://unicloud.dcloud.net.cn/login/"
+        link: "https://unicloud.dcloud.net.cn/login"
       },
       {
         text: "uni-app可视化组件API",
-        link: "https://hellouniapp.dcloud.net.cn/pcguide.html#/"
+        link: "https://hellouniapp.dcloud.net.cn/pcguide.html"
       },
       {
         text: "微信公众平台",
-        link: "https://mp.weixin.qq.com/"
+        link: "https://mp.weixin.qq.com"
       },
       {
         text: "微信开发文档",
