@@ -75,6 +75,10 @@ module.exports = [{
         link: "https://gitee.com"
       },
       {
+        text: "七牛云开发者中心",
+        link: "https://developer.qiniu.com"
+      },
+      {
         text: "iconfont",
         link: "https://www.iconfont.cn"
       },
@@ -149,6 +153,10 @@ module.exports = [{
       {
         text: "uni-app可视化组件API",
         link: "https://hellouniapp.dcloud.net.cn/pcguide.html"
+      },
+      {
+        text: "微信开发平台",
+        link: "https://open.weixin.qq.com"
       },
       {
         text: "微信公众平台",
