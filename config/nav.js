@@ -75,8 +75,12 @@ module.exports = [{
         link: "https://gitee.com"
       },
       {
-        text: "七牛云开发者中心",
+        text: "七牛云",
         link: "https://developer.qiniu.com"
+      },
+      {
+        text: "bootcdn",
+        link: "https://www.bootcdn.cn"
       },
       {
         text: "iconfont",
@@ -155,17 +159,17 @@ module.exports = [{
         link: "https://hellouniapp.dcloud.net.cn/pcguide.html"
       },
       {
-        text: "微信开发平台",
+        text: "微信开发文档",
+        link: "https://developers.weixin.qq.com/doc/"
+      },
+      {
+        text: "微信开放平台",
         link: "https://open.weixin.qq.com"
       },
       {
         text: "微信公众平台",
         link: "https://mp.weixin.qq.com"
-      },
-      {
-        text: "微信开发文档",
-        link: "https://developers.weixin.qq.com/doc/"
-      }  
+      }
     ]
   },
   {
