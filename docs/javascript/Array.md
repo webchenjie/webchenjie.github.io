@@ -3,7 +3,7 @@ title: Array
 date: 2020-07-04
 ---
 
-``` js
+```js
 // 创建数组
 1. new Array(3) // 3表示数组长度
 2. var arr = new Array(3, '4', true) // 3, '4', true 表示数组内容

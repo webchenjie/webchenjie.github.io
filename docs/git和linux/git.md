@@ -3,9 +3,11 @@ title: git
 date: 2020-07-12
 ---
 
-# git工作流程
+# git 工作流程
+
 ![git](https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/docs/git和linux/git/git.png)
-``` js
+
+```js
 // 查看
 1. git status // 查看当前分支下文件的状态(增加、修改、提交)
 2. git diff // 查看当前分支下修改的内容,后面可加具体的文件名

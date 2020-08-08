@@ -3,7 +3,7 @@ title: Date
 date: 2020-07-04
 ---
 
-``` js
+```js
 // 获取
 1. var today = new Date() // 无参时返回当前的日期时间对象
 2. today.getFullYear() // 返回4位数的年份
