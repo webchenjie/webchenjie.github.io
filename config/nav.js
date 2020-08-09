@@ -6,8 +6,7 @@ module.exports = [{
   {
     text: "文档",
     icon: "reco-api",
-    items: [
-      {
+    items: [{
         text: "html",
         link: "/docs/html/基础知识.md"
       },
@@ -61,8 +60,7 @@ module.exports = [{
   {
     text: "学习链接",
     icon: "reco-document",
-    items: [
-      {
+    items: [{
         text: "印记中文",
         link: "https://www.docschina.org"
       },
