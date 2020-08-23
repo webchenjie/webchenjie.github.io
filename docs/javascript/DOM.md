@@ -131,6 +131,7 @@ ele.style.styleName = styleValue
 10. DomContentLoaded // 在Dom树加载完成后触发比onload快
 11. readystatechange // ajax状态
 12. hashchange // window事件,指url#后面的值变化时触发
+13. onunload // 页面被关闭时触发
 ----------------------------------------------------------------------------------------------
 // 事件类型(键盘事件)
 1. onkeydown // 在用户按下一个键盘按键时触发
