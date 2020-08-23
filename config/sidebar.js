@@ -77,8 +77,8 @@ module.exports = {
           path: '/docs/javascript/Ajax和Json.md',
         },
         {
-          title: '存储',
-          path: '/docs/javascript/存储.md',
+          title: '存储和认证',
+          path: '/docs/javascript/存储和认证.md',
         },
         {
           title: '异步',
