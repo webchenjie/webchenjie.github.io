@@ -88,6 +88,11 @@ ele.style.styleName = styleValue
 2. ele.setAttribute('class', 'box') // 设置ele元素的class属性值为box
 3. ele.removeAttribute('class') // 删除ele元素上的class属性
 ----------------------------------------------------------------------------------------------
+// clientWidth、offsetWidth、scrollWidth
+1. clientWidth = content + padding-left + padding-right
+2. offsetWidth = content + padding-left + padding-right + border-left + border-right + scrollbar
+3. scrollWidth = content + padding-left + padding-right + scrollbar + border-left + border-right +滚动进入不可见的内容
+----------------------------------------------------------------------------------------------
 // 事件
 1. html事件: 直接在html元素标签内添加事件执行脚本,如<tag 事件='执行脚本'></tag>,执行脚本可以是js代码或函数调用
 2. DOM0级事件: ele.事件 = 执行脚本,如btn.onclick = function(){}

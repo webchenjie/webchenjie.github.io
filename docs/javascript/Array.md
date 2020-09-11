@@ -49,7 +49,7 @@ console.log(other) // [3, 4, 5]
 3. some: 返回一个boolean,判断是否有元素符合func条件,如果有一个元素符合func条件,则循环会终止
 let list = [1, 2, 3, 4, 5]
 list.some((val, index) => {
-  return val === 3
+  return val === 6
 }) // 返回false,如果条件改为 val === 1 则返回 true
 4. every: 返回一个boolean,判断每个元素是否符合func条件,有一个元素不满足func条件,则循环终止,返回false
 let list = [1, 2, 3, 4, 5]
