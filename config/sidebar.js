@@ -73,14 +73,6 @@ module.exports = {
           path: '/docs/javascript/ES6.md',
         },
         {
-          title: 'Ajax和Json',
-          path: '/docs/javascript/Ajax和Json.md',
-        },
-        {
-          title: '存储和认证',
-          path: '/docs/javascript/存储和认证.md',
-        },
-        {
           title: '异步',
           path: '/docs/javascript/异步.md',
         },
@@ -93,15 +85,23 @@ module.exports = {
           path: '/docs/javascript/数据类型.md',
         },
         {
+          title: 'Ajax和Json',
+          path: '/docs/javascript/Ajax和Json.md',
+        },
+        {
           title: '正则表达式',
           path: '/docs/javascript/正则表达式.md',
+        },
+        {
+          title: '存储和认证',
+          path: '/docs/javascript/存储和认证.md',
         },
         {
           title: '性能和安全',
           path: '/docs/javascript/性能和安全.md',
         },
         {
-          title: '作用域与闭包',
+          title: '作用域和闭包',
           path: '/docs/javascript/作用域和闭包.md',
         },
         {
