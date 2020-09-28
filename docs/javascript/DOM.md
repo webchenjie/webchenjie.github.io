@@ -16,16 +16,16 @@ date: 2020-07-05
 2. 属性: nodeName为属性名称、nodeType为2、nodeValue为属性值
 3. 文本: nodeName为#text、nodeType为3、nodeValue为文本内容
 ----------------------------------------------------------------------------------------------
-// NodeList、HTNLCollection、NamedNodeMap
+// NodeList、HTMLCollection、NamedNodeMap
 1. NodeList是节点的集合,包含标签和文本和空行
-2. HTNLCollection是html元素的集合,不包含空白和文本
+2. HTMLCollection是html元素的集合,不包含空白和文本
 3. NamedNodeMap是元素属性的集合
 4. 都是类数组对象,都可以通过[]、item访问,都有length属性,不是Array
 ----------------------------------------------------------------------------------------------
 // 查找DOM节点
 1. getElementById('id') // 在IE中name与id值会冲突
 2. getElementsByName('name') // 1和2只能通过document调用
-3. getElementsByTagName('tag') // 传入*号可以获取所以的标签
+3. getElementsByTagName('tag') // 传入*号可以获取所有的标签
 4. getElementsByClassName('class') // 参数可多个
 5. querySelector('#id') // 参数可以是css3选择器,返回一个元素
 6. querySelectorAll('#id') // 参数同上,返回数组
