@@ -33,24 +33,20 @@ module.exports = {
       collapsable: true,
       children: [
         {
-          title: 'ECMA和W3C',
-          path: '/docs/javascript/ECMA和W3C.md',
-        },
-        {
-          title: 'Object',
-          path: '/docs/javascript/Object.md',
+          title: 'String',
+          path: '/docs/javascript/String.md',
         },
         {
           title: 'Array',
           path: '/docs/javascript/Array.md',
         },
         {
-          title: 'Function',
-          path: '/docs/javascript/Function.md',
+          title: 'Object',
+          path: '/docs/javascript/Object.md',
         },
         {
-          title: 'String',
-          path: '/docs/javascript/String.md',
+          title: 'Function',
+          path: '/docs/javascript/Function.md',
         },
         {
           title: 'Math',
@@ -85,12 +81,16 @@ module.exports = {
           path: '/docs/javascript/数据类型.md',
         },
         {
-          title: 'Ajax和Json',
-          path: '/docs/javascript/Ajax和Json.md',
-        },
-        {
           title: '正则表达式',
           path: '/docs/javascript/正则表达式.md',
+        },
+        {
+          title: 'ECMA和W3C',
+          path: '/docs/javascript/ECMA和W3C.md',
+        },
+        {
+          title: 'Ajax和Json',
+          path: '/docs/javascript/Ajax和Json.md',
         },
         {
           title: '存储和认证',
