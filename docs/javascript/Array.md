@@ -26,7 +26,7 @@ for(var i = 0; i < arr.length; i++) { arr[i] }
 3. arr3 = arr1.concat(arr2) //用于连接两个或多个数组
 4. arr.join(',') // 将数组转换成字符串,返回转换后的字符串,默认用逗号分隔,通过参数改变分隔符
 5. arr.reverse() // 数组反序,返回转换后的数组
-6. arr.slice(0, 3) // 数组截取,返回截取的数组,从下标0开始截取到3结束,如没传3则表示从0截取到最后,参数如有负数则以arr.length + 负数再计算
+6. arr.slice(0, 3) // 不传参数, 相当于拷贝, 数组截取,返回截取的数组,从下标0开始截取到3结束,如没传3则表示从0截取到最后,参数如有负数则以arr.length + 负数再计算
 7. arr.splice(2, 2) // 数组删除,返回被删除的元素所组成的数组,删除arr下标为2的后2个元素
 8. arr.splice(2, 0, 3) // 数组插入,返回一个空数组(没有被删除的元素),在下标为2的后面插入3
 9. arr.splice(2, 2, 3) // 数组替换,返回被删除的元素所组成的数组,在下标为2的后面删除2个元素,再插入3
@@ -80,4 +80,29 @@ console.log(other) // [2, 4, 6, 8, 10]
     }
 2. 如果需要把二维数据降维需要通过concat和apply
     [].concat.apply([], arr)
+3. 数组降维, 原理是2, 相当于1
+  function flat(arr) {
+    const isDeep = arr.some(item => item instanceof Array)
+    if (!isDeep) {
+      return arr // 已经是flatern
+    }
+    const res = Array.prototype.concat.apply([], arr)
+    return flat(res) // 递归
+  }
+4. 数组去重
+    传统方式:
+      function unique(arr) {
+        const res = []
+        arr.forEach(item => {
+          if (res.indexOf(item) < 0) {
+            res.push(item)
+          }
+        })
+        return res
+      }
+    ES6 Set:
+    function unique(arr) {
+      const set = new Set(arr)
+      return [...set]
+    }
 ```

@@ -16,7 +16,7 @@ module.exports = [{
       },
       {
         text: "javascript",
-        link: "/docs/javascript/ECMA和W3C.md"
+        link: "/docs/javascript/String.md"
       },
       {
         text: "vue",
