@@ -105,6 +105,10 @@ module.exports = [{
         link: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
       },
       {
+        text: "typescript",
+        link: "https://www.tslang.cn"
+      },
+      {
         text: "node.js",
         link: "http://nodejs.cn"
       },
