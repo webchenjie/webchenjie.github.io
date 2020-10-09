@@ -1,10 +1,8 @@
 module.exports = {
-  '/docs/': [
-    {
+  '/docs/': [{
       title: 'html',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/html/基础知识.md',
         },
@@ -17,8 +15,7 @@ module.exports = {
     {
       title: 'css',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/css/基础知识.md',
         },
@@ -31,8 +28,7 @@ module.exports = {
     {
       title: 'javascript',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: 'String',
           path: '/docs/javascript/String.md',
         },
@@ -111,10 +107,22 @@ module.exports = {
       ],
     },
     {
+      title: 'typescript',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/typescript/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/typescript/进阶知识.md',
+        },
+      ],
+    },
+    {
       title: 'vue',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/vue/基础知识.md',
         },
@@ -127,8 +135,7 @@ module.exports = {
     {
       title: 'node',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/node/基础知识.md',
         },
@@ -141,8 +148,7 @@ module.exports = {
     {
       title: 'webpack',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/webpack/基础知识.md',
         },
@@ -155,8 +161,7 @@ module.exports = {
     {
       title: 'http',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/http/基础知识.md',
         },
@@ -169,8 +174,7 @@ module.exports = {
     {
       title: 'vue-element-admin',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/vue-element-admin/基础知识.md',
         },
@@ -183,8 +187,7 @@ module.exports = {
     {
       title: 'uni-app',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/uni-app/基础知识.md',
         },
@@ -197,8 +200,7 @@ module.exports = {
     {
       title: '微信小程序',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: '基础知识',
           path: '/docs/微信小程序/基础知识.md',
         },
@@ -211,8 +213,7 @@ module.exports = {
     {
       title: 'git和linux',
       collapsable: true,
-      children: [
-        {
+      children: [{
           title: 'git',
           path: '/docs/git和linux/git.md',
         },

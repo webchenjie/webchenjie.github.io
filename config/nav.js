@@ -19,6 +19,10 @@ module.exports = [{
         link: "/docs/javascript/String.md"
       },
       {
+        text: "typescript",
+        link: "/docs/typescript/基础知识.md"
+      },
+      {
         text: "vue",
         link: "/docs/vue/基础知识.md"
       },
