@@ -51,6 +51,10 @@ module.exports = [{
         link: "/docs/微信小程序/基础知识.md"
       },
       {
+        text: "数据可视化",
+        link: "/docs/数据可视化/基础知识.md"
+      },
+      {
         text: "git和linux",
         link: "/docs/git和linux/git.md"
       },
