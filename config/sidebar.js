@@ -77,6 +77,10 @@ module.exports = {
           path: '/docs/javascript/数据类型.md',
         },
         {
+          title: '设计模式',
+          path: '/docs/javascript/设计模式.md',
+        },
+        {
           title: '正则表达式',
           path: '/docs/javascript/正则表达式.md',
         },
