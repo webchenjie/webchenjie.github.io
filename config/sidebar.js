@@ -228,6 +228,19 @@ module.exports = {
       ],
     },
     {
+      title: '性能优化',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/性能优化/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/性能优化/进阶知识.md',
+        },
+      ],
+    },
+    {
       title: 'git和linux',
       collapsable: true,
       children: [{
