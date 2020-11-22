@@ -89,6 +89,14 @@ module.exports = [{
         link: "https://developer.qiniu.com"
       },
       {
+        text: "natapp",
+        link: "https://natapp.cn"
+      },
+      {
+        text: "application-loader",
+        link: "http://www.applicationloader.net"
+      },
+      {
         text: "bootcdn",
         link: "https://www.bootcdn.cn"
       },
@@ -153,6 +161,10 @@ module.exports = [{
         link: "https://panjiachen.gitee.io/vue-element-admin-site/zh"
       },
       {
+        text: "wangeditor",
+        link: "http://www.wangeditor.com/doc"
+      },
+      {
         text: "element-ui",
         link: "https://element.eleme.cn/#/zh-CN"
       },
@@ -171,6 +183,10 @@ module.exports = [{
       {
         text: "uni-app可视化组件API",
         link: "https://hellouniapp.dcloud.net.cn/pcguide.html"
+      },
+      {
+        text: "luch-request",
+        link: "https://www.quanzhan.co/luch-request"
       },
       {
         text: "微信开发文档",
