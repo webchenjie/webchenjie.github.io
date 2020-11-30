@@ -85,28 +85,28 @@ module.exports = {
           path: '/docs/javascript/正则表达式.md',
         },
         {
-          title: 'ECMA和W3C',
-          path: '/docs/javascript/ECMA和W3C.md',
+          title: 'ECMA与W3C',
+          path: '/docs/javascript/ECMA与W3C.md',
         },
         {
-          title: 'Ajax和Json',
-          path: '/docs/javascript/Ajax和Json.md',
+          title: 'Ajax与Json',
+          path: '/docs/javascript/Ajax与Json.md',
         },
         {
-          title: '存储和认证',
-          path: '/docs/javascript/存储和认证.md',
+          title: '存储与认证',
+          path: '/docs/javascript/存储与认证.md',
         },
         {
-          title: '性能和安全',
-          path: '/docs/javascript/性能和安全.md',
+          title: '性能与安全',
+          path: '/docs/javascript/性能与安全.md',
         },
         {
-          title: '作用域和闭包',
-          path: '/docs/javascript/作用域和闭包.md',
+          title: '作用域与闭包',
+          path: '/docs/javascript/作用域与闭包.md',
         },
         {
-          title: '原型和原型链',
-          path: '/docs/javascript/原型和原型链.md',
+          title: '原型与原型链',
+          path: '/docs/javascript/原型与原型链.md',
         },
       ],
     },
@@ -133,10 +133,6 @@ module.exports = {
         {
           title: '进阶知识',
           path: '/docs/vue/进阶知识.md',
-        },
-        {
-          title: '高级知识',
-          path: '/docs/vue/高级知识.md',
         },
       ],
     },
@@ -245,15 +241,28 @@ module.exports = {
       ],
     },
     {
-      title: 'git和linux',
+      title: '数据结构与算法',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/数据结构与算法/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/数据结构与算法/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'git与linux',
       collapsable: true,
       children: [{
           title: 'git',
-          path: '/docs/git和linux/git.md',
+          path: '/docs/git与linux/git.md',
         },
         {
           title: 'linux',
-          path: '/docs/git和linux/linux.md',
+          path: '/docs/git与linux/linux.md',
         },
       ],
     },
