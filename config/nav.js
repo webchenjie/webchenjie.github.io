@@ -59,8 +59,12 @@ module.exports = [{
         link: "/docs/性能优化/基础知识.md"
       },
       {
-        text: "git和linux",
-        link: "/docs/git和linux/git.md"
+        text: "数据结构与算法",
+        link: "/docs/数据结构与算法/基础知识.md"
+      },
+      {
+        text: "git与linux",
+        link: "/docs/git与linux/git.md"
       },
     ]
   },
