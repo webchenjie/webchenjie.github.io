@@ -3,7 +3,7 @@ const sidebar = require('./public/config/sidebar.js')
 const plugins = require('./public/config/plugins.js')
 module.exports = {
   title: "chenjieBlog",
-  description: "热爱生活,积极向上",
+  description: "愿你能乘风破浪所向无前",
   head: [
     ["link", {
       rel: "icon",

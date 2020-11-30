@@ -6,9 +6,9 @@ module.exports = [
     {
       title: '微信公众号',
       contentInfo: {
-        title: '前端技术指南 🎉',
+        title: '小孑影视剪辑 🎉',
         needImg: true,
-        imgUrl: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/qrcode.png'
+        imgUrl: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/qrcode.jpg'
       },
       bottomInfo: {
         btnText: ''
