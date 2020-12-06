@@ -189,6 +189,10 @@ module.exports = [{
         link: "https://hellouniapp.dcloud.net.cn/pcguide.html"
       },
       {
+        text: "axios",
+        link: "http://www.axios-js.com/zh-cn/docs"
+      },
+      {
         text: "luch-request",
         link: "https://www.quanzhan.co/luch-request"
       },
