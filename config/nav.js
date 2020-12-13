@@ -47,6 +47,10 @@ module.exports = [{
         link: "/docs/uni-app/基础知识.md"
       },
       {
+        text: "git与linux",
+        link: "/docs/git与linux/git.md"
+      },
+      {
         text: "微信小程序",
         link: "/docs/微信小程序/基础知识.md"
       },
@@ -63,9 +67,9 @@ module.exports = [{
         link: "/docs/数据结构与算法/基础知识.md"
       },
       {
-        text: "git与linux",
-        link: "/docs/git与linux/git.md"
-      },
+        text: "计算机原理",
+        link: "/docs/计算机原理/基础知识.md"
+      }
     ]
   },
   {
