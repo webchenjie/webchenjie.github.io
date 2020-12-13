@@ -202,6 +202,19 @@ module.exports = {
       ],
     },
     {
+      title: 'git与linux',
+      collapsable: true,
+      children: [{
+          title: 'git',
+          path: '/docs/git与linux/git.md',
+        },
+        {
+          title: 'linux',
+          path: '/docs/git与linux/linux.md',
+        },
+      ],
+    },
+    {
       title: '微信小程序',
       collapsable: true,
       children: [{
@@ -254,17 +267,17 @@ module.exports = {
       ],
     },
     {
-      title: 'git与linux',
+      title: '计算机原理',
       collapsable: true,
       children: [{
-          title: 'git',
-          path: '/docs/git与linux/git.md',
+          title: '基础知识',
+          path: '/docs/计算机原理/基础知识.md',
         },
         {
-          title: 'linux',
-          path: '/docs/git与linux/linux.md',
+          title: '进阶知识',
+          path: '/docs/计算机原理/进阶知识.md',
         },
       ],
-    },
+    }
   ],
 };
