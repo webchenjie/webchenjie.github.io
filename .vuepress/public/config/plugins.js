@@ -8,7 +8,7 @@ module.exports = [
       contentInfo: {
         title: '小孑影视剪辑 🎉',
         needImg: true,
-        imgUrl: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/qrcode.jpg'
+        imgUrl: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/qrcode.png'
       },
       bottomInfo: {
         btnText: ''
