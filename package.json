@@ -2,6 +2,7 @@
   "name": "chenjie-blog",
   "version": "1.0.0",
   "author": "chenjie",
+  "description": "愿你能乘风破浪所向无前",
   "scripts": {
     "dev": "vuepress dev .",
     "build": "vuepress build ."
@@ -12,6 +13,5 @@
     "@vuepress/plugin-nprogress": "^1.5.2",
     "vuepress": "1.5.0",
     "vuepress-theme-reco": "1.4.7"
-  },
-  "description": "愿你能乘风破浪所向无前"
+  }
 }
