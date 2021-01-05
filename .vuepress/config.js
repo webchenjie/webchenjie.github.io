@@ -1,9 +1,14 @@
 const nav = require('./public/config/nav.js')
 const sidebar = require('./public/config/sidebar.js')
 const plugins = require('./public/config/plugins.js')
+
 module.exports = {
+  plugins,
+
   title: "chenjieBlog",
+
   description: "愿你能乘风破浪所向无前",
+
   head: [
     ["link", {
       rel: "icon",
@@ -12,23 +17,31 @@ module.exports = {
     ["meta", {
       name: "viewport",
       content: "width=device-width,initial-scale=1,user-scalable=no"
-    }],
+    }]
   ],
+
   locales: {
     "/": {
       lang: "zh-CN"
     },
   },
+
   markdown: {
     lineNumbers: true,
   },
-  plugins,
+
   theme: "reco",
+
   themeConfig: {
+    nav,
+
+    sidebar,
+
     type: "blog",
+
     logo: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
-    // 作者
-    author: "chenjie",
+
+    author: "chenjie", // 作者
     // 作者头像
     authorAvatar: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
 
@@ -38,10 +51,6 @@ module.exports = {
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
-
-    nav,
-
-    sidebar,
 
     // 博客设置
     blogConfig: {
@@ -63,8 +72,10 @@ module.exports = {
 
     // 最后更新时间
     lastUpdated: "Last Updated",
+
     // 项目开始时间
     startYear: "2020"
+
     // 备案号
     // record: "xxxx"
   }
