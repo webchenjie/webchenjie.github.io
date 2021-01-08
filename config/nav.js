@@ -23,8 +23,16 @@ module.exports = [{
         link: "/docs/typescript/基础知识.md"
       },
       {
+        text: "jquery",
+        link: "/docs/jquery/基础知识.md"
+      },
+      {
         text: "vue",
         link: "/docs/vue/基础知识.md"
+      },
+      {
+        text: "react",
+        link: "/docs/react/基础知识.md"
       },
       {
         text: "node",
@@ -113,14 +121,6 @@ module.exports = [{
         link: "https://www.iconfont.cn"
       },
       {
-        text: "swiper",
-        link: "https://www.swiper.com.cn"
-      },
-      {
-        text: "echarts",
-        link: "https://echarts.apache.org/zh/index.html"
-      },
-      {
         text: "tinypng",
         link: "https://tinypng.com"
       },
@@ -143,6 +143,10 @@ module.exports = [{
       {
         text: "webpack",
         link: "https://www.webpackjs.com"
+      },
+      {
+        text: "react.js",
+        link: "https://react.docschina.org"
       },
       {
         text: "vue.js",
@@ -169,8 +173,8 @@ module.exports = [{
         link: "https://panjiachen.gitee.io/vue-element-admin-site/zh"
       },
       {
-        text: "wangeditor",
-        link: "http://www.wangeditor.com/doc"
+        text: "d2-admin",
+        link: "https://d2.pub/zh/doc/d2-admin"
       },
       {
         text: "element-ui",
@@ -199,6 +203,22 @@ module.exports = [{
       {
         text: "luch-request",
         link: "https://www.quanzhan.co/luch-request"
+      },
+      {
+        text: "swiper",
+        link: "https://www.swiper.com.cn"
+      },
+      {
+        text: "echarts",
+        link: "https://echarts.apache.org/zh/index.html"
+      },
+      {
+        text: "u-charts",
+        link: "http://doc.ucharts.cn/1073940"
+      },
+      {
+        text: "wangeditor",
+        link: "http://www.wangeditor.com/doc"
       },
       {
         text: "微信开发文档",

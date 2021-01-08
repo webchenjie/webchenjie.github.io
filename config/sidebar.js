@@ -124,6 +124,19 @@ module.exports = {
       ],
     },
     {
+      title: 'jquery',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/jquery/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/jquery/进阶知识.md',
+        },
+      ],
+    },
+    {
       title: 'vue',
       collapsable: true,
       children: [{
@@ -133,6 +146,19 @@ module.exports = {
         {
           title: '进阶知识',
           path: '/docs/vue/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'react',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/react/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/react/进阶知识.md',
         },
       ],
     },
