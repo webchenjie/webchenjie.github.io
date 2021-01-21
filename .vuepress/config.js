@@ -1,6 +1,6 @@
-const nav = require('./public/config/nav.js')
-const sidebar = require('./public/config/sidebar.js')
-const plugins = require('./public/config/plugins.js')
+const nav = require('../config/nav.js')
+const sidebar = require('../config/sidebar.js')
+const plugins = require('../config/plugins.js')
 
 module.exports = {
   plugins,
@@ -34,24 +34,17 @@ module.exports = {
 
   themeConfig: {
     nav,
-
     sidebar,
-
     type: "blog",
-
     logo: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
-
     author: "chenjie", // 作者
     // 作者头像
     authorAvatar: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
-
     // 404腾讯公益
     noFoundPageByTencent: false,
-
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
-
     // 博客设置
     blogConfig: {
       category: {
