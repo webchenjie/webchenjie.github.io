@@ -3,11 +3,13 @@ const sidebar = require('../config/sidebar.js')
 const plugins = require('../config/plugins.js')
 
 module.exports = {
-  plugins,
+  base: '/',
 
   title: "chenjieBlog",
 
   description: "愿你能乘风破浪所向无前",
+
+  plugins,
 
   head: [
     ["link", {
