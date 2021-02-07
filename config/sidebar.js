@@ -176,6 +176,19 @@ module.exports = {
       ],
     },
     {
+      title: 'sql',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/sql/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/sql/进阶知识.md',
+        },
+      ],
+    },
+    {
       title: 'webpack',
       collapsable: true,
       children: [{

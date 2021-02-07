@@ -39,6 +39,10 @@ module.exports = [{
         link: "/docs/node/基础知识.md"
       },
       {
+        text: "sql",
+        link: "/docs/sql/基础知识.md"
+      },
+      {
         text: "webpack",
         link: "/docs/webpack/基础知识.md"
       },
