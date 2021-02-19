@@ -5,7 +5,7 @@ const plugins = require('../config/plugins.js')
 module.exports = {
   base: '/',
 
-  title: "chenjieBlog",
+  title: "ChenJieBlog",
 
   description: "愿你能乘风破浪所向无前",
 
