@@ -6,9 +6,9 @@ module.exports = [
     {
       title: '微信公众号',
       contentInfo: {
-        title: '小孑影视剪辑 🎉',
+        title: 'ChenJieBlog 🎉',
         needImg: true,
-        imgUrl: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3e1430b0-4856-11eb-8a36-ebb87efcf8c0.png'
+        imgUrl: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-e1adcd38-dd22-458d-a547-6e4ff9b727c3/4a6bbf27-c114-4c34-bb83-ba8419565261.png'
       },
       bottomInfo: {
         btnText: ''
