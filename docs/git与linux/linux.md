@@ -23,4 +23,13 @@ date: 2020-07-12
 16. head a.js // 查看a.js的内容(前几行)
 17. tail a.js // 查看a.js的内容(后几行)
 18. grep "babel" package.json // 在package.json中查找babel关键字
+19. lsb_release -a // 查看当前操作系统的版本
+20. uname -a // 查看系统内核
+21. df -Th // 查看文件系统磁盘占用情况，-Th 表示以 1G 为计量，不加则以 1k 为计量
+22. top // 查看运行的进程
+23. echo 'test' > file.txt // 把 file 文件中的内容替换成 test
+24. echo 'test' >> file.txt // 追加 test 到 file 文件中
+25. wget 'url' // 下载
+26. tar zxvf test.tar.gz // 解压，z 表示以 z 结尾，x 表示解压，v 表示显示解压的过程，f 表示解压后的文件名和压缩包一致
+27. tar zcvf test1.tar.gz test // 压缩，c 表示压缩，把 test 进行压缩，压缩后的文件叫 test1.tar.gz
 ```
