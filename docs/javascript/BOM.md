@@ -13,7 +13,9 @@ date: 2020-07-04
 3. window.confirm('text') // 对话框,点确定返回true,点取消返回false
 4. window.prompt('text', 'defaultText') // 输入框,点确定返回输入的字段,点取消返回null
 5. window.close() // 关闭窗口
-6. window.open(url, name, 参数) // 参数赋值用等于号,参数有width、height、left、top、toolbar(是否显示浏览器工具栏)、menbar(是否显示菜单栏)、scroll(是否显示滚动条)、location(是否显示地址字段)、status(是否添加状态栏)
+// 参数赋值用等于号,参数有width、height、left、top、toolbar(是否显示浏览器工具栏)、menbar(是否显示菜单栏)
+// scroll(是否显示滚动条)、location(是否显示地址字段)、status(是否添加状态栏)
+6. window.open(url, name, 参数)
 ----------------------------------------------------------------------------------------------
 // 定时器
 1. 超时调用: setTimeout(函数, 等待的时间)
@@ -36,6 +38,10 @@ clearInterval(timer)
 8. location.search // 返回url的查询字符串,以问号开头
 9. location.replace(url) // 重新定向url(跳转),不会再历史记录中生成新记录
 10. location.reload() // 重新加载当前显示的页面,无参是从缓存中加载,传入true从服务器重新加载
+11. 解析 url 参数
+  const search = location.search
+  const p = new URLSearchParams(search)
+  p.get(key) // 获取对应的 url 参数
 ----------------------------------------------------------------------------------------------
 // history: 用户操作的历史记录
 1. history.back() // 返回上一步
@@ -51,8 +57,4 @@ clearInterval(timer)
 ----------------------------------------------------------------------------------------------
 // navigator: 浏览器的信息
 navigator.userAgent // 返回浏览器名称、版本、引擎以及操作系统等信息
-----------------------------------------------------------------------------------------------
-// 动画
-1. window.requestAnimationFrame() //控制动画
-2. 动画流畅更新频率要60帧/s,即16.67ms更新一次视图
 ```
