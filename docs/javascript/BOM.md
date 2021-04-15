@@ -7,6 +7,16 @@ date: 2020-07-04
 // BOM是什么
 1. BOM(Browser Object Model)是浏览器对象模型
 ----------------------------------------------------------------------------------------------
+// 全局对象
+1. 在浏览器中是 window === self
+  window.setTimeout()
+  self.setTimeout()
+2. 在 node 中的全局变量是 global
+3. 在新版的 ES 中新增了全局变量 globalThis
+  1. 如果当前环境是浏览器则 globalThis === window === self
+  2. 如果当前环境是 Node 则 globalThis === global
+  3. 不需要再通过函数去判断当前环境和全局对象，直接使用 globalThis
+----------------------------------------------------------------------------------------------
 // window
 1. 所有全局变量和全局方法都归在window上
 2. window.alert('text') // 警告框

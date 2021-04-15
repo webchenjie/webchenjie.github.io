@@ -139,8 +139,7 @@ date: 2020-07-04
 // Iterator(实现自定义遍历的接口)
 1. 部署一个[Symbol.iterator]的方法,this指当前的值,必须return一个函数
 2. 迭代器协议: 是一个对象,对象包含一个无参函数next,next返回一个对象
-3. 可迭代协议: [Symbol.iterator]
-4. return {
+  return {
     next() {
      return {
       done: false,
@@ -148,6 +147,16 @@ date: 2020-07-04
        }
      }
    }
+3. 可迭代协议: [Symbol.iterator]
+    // 原生具备 iterator 接口的数据结构
+    1. Array
+    2. Map
+    3. Set
+    4. String
+    5. TypedArray // 二进制
+    6. 函数的 arguments 对象
+    7. nodeList 对象
+4. 异步可迭代协议：[Symbol.asyncIterator] 或 for-await-of 处理异步遍历
 ----------------------------------------------------------------------------------------------
 // 模块化
 1. 在import时,如果是默认导出的情况可以直接起不同的名字,如果加了{}的形式则需要使用as进行换名字
