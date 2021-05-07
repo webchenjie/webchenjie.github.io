@@ -147,6 +147,10 @@ module.exports = {
           title: '进阶知识',
           path: '/docs/vue/进阶知识.md',
         },
+        {
+          title: '高级知识',
+          path: '/docs/vue/高级知识.md',
+        },
       ],
     },
     {

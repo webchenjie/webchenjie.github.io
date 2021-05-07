@@ -93,10 +93,6 @@ module.exports = [{
     text: "学习链接",
     icon: "reco-document",
     items: [{
-        text: "印记中文",
-        link: "https://www.docschina.org"
-      },
-      {
         text: "阿里云",
         link: "https://account.aliyun.com/login/login.html"
       },
