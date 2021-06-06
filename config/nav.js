@@ -125,6 +125,22 @@ module.exports = [{
         link: "https://tinypng.com"
       },
       {
+        text: "animate.css",
+        link: "https://animate.style/"
+      },
+      {
+        text: "velocity.js",
+        link: "http://shouce.jb51.net/velocity/index.html"
+      },
+      {
+        text: "sortable.js",
+        link: "http://www.sortablejs.com/index.html"
+      },
+      {
+        text: "momentjs.js",
+        link: "http://momentjs.cn"
+      },
+      {
         text: "javascript",
         link: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
       },
@@ -143,6 +159,10 @@ module.exports = [{
       {
         text: "webpack",
         link: "https://www.webpackjs.com"
+      },
+      {
+        text: "umi.js",
+        link: "https://umijs.org/zh-CN"
       },
       {
         text: "react.js",
@@ -177,8 +197,20 @@ module.exports = [{
         link: "https://d2.pub/zh/doc/d2-admin"
       },
       {
+        text: "ant-design",
+        link: "https://ant.design/docs/react/introduce-cn"
+      },
+      {
         text: "element-ui",
         link: "https://element.eleme.cn/#/zh-CN"
+      },
+      {
+        text: "element-plus-ui",
+        link: "https://element-plus.gitee.io/#/zh-CN/component/installation"
+      },
+      {
+        text: "vant-ui",
+        link: "https://vant-contrib.gitee.io/vant/#/zh-CN/"
       },
       {
         text: "uview-ui",
