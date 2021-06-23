@@ -59,6 +59,14 @@ module.exports = [{
         link: "/docs/uni-app/基础知识.md"
       },
       {
+        text: "docker",
+        link: "/docs/docker/基础知识.md"
+      },
+      {
+        text: "nginx与pm2",
+        link: "/docs/nginx与pm2/nginx.md"
+      },
+      {
         text: "git与linux",
         link: "/docs/git与linux/git.md"
       },

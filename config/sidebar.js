@@ -245,6 +245,32 @@ module.exports = {
       ],
     },
     {
+      title: 'docker',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/docker/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/docker/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'nginx与pm2',
+      collapsable: true,
+      children: [{
+          title: 'nginx',
+          path: '/docs/nginx与pm2/nginx.md',
+        },
+        {
+          title: 'pm2',
+          path: '/docs/nginx与pm2/pm2.md',
+        },
+      ],
+    },
+    {
       title: 'git与linux',
       collapsable: true,
       children: [{
