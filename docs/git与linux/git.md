@@ -14,7 +14,6 @@ date: 2020-07-12
 3. git branch // 查看当前在哪个分支上, 可以加 -a 参数
 4. git log // 查看提交记录,每次提交都有一串哈希值
 5. git show 哈希值 // 查看某次提交的具体内容
-6. cat ~/.ssh/id_rsa.pub // 查看公钥
 ----------------------------------------------------------------------------------------------
 // 提交
 1. git add . // 提交代码到缓冲区点表示所有文件,后面可加具体的文件名
@@ -39,4 +38,11 @@ date: 2020-07-12
 // 远程
 1. git remote -v // 显示所有远程仓库
 2. git remote add origin remoteURl // 为本地仓库添加远程仓库地址(remoteURl)
+----------------------------------------------------------------------------------------------
+// 其他
+1. git config --global user.name "chenjie" // 设置名称
+2. git config --global user.email 785801610@qq.com // 设置邮箱
+3. git config --list // 查看上两步配置的设置
+4. ssh-keygen // 生成公钥 id_rsa.pub，三次回车，路径：C:\Users\Administrator.ssh
+5. cat ~/.ssh/id_rsa.pub // 查看公钥
 ```
