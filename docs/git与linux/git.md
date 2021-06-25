@@ -43,6 +43,8 @@ date: 2020-07-12
 1. git config --global user.name "chenjie" // 设置名称
 2. git config --global user.email 785801610@qq.com // 设置邮箱
 3. git config --list // 查看上两步配置的设置
-4. ssh-keygen // 生成公钥 id_rsa.pub，三次回车，路径：C:\Users\Administrator.ssh
+// 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa
+// 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息
+4. ssh-keygen -t rsa -C "785801610@qq.com" // 生成公钥 id_rsa.pub，三次回车，路径：C:\Users\Administrator\ssh
 5. cat ~/.ssh/id_rsa.pub // 查看公钥
 ```
