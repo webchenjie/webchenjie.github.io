@@ -32,4 +32,5 @@ date: 2020-07-12
 25. wget 'url' // 下载
 26. tar zxvf test.tar.gz // 解压，z 表示以 z 结尾，x 表示解压，v 表示显示解压的过程，f 表示解压后的文件名和压缩包一致
 27. tar zcvf test1.tar.gz test // 压缩，c 表示压缩，把 test 进行压缩，压缩后的文件叫 test1.tar.gz
+28. sudo 的全称为：super user do 顾名思义：干超级用户才能干的事！所以 sudo 最常用的功能就是提升一个命名的执行权限。
 ```
