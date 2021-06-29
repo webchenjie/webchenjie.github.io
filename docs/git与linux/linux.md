@@ -29,8 +29,13 @@ date: 2020-07-12
 22. top // 查看运行的进程
 23. echo 'test' > file.txt // 把 file 文件中的内容替换成 test
 24. echo 'test' >> file.txt // 追加 test 到 file 文件中
-25. wget 'url' // 下载
-26. tar zxvf test.tar.gz // 解压，z 表示以 z 结尾，x 表示解压，v 表示显示解压的过程，f 表示解压后的文件名和压缩包一致
-27. tar zcvf test1.tar.gz test // 压缩，c 表示压缩，把 test 进行压缩，压缩后的文件叫 test1.tar.gz
-28. sudo 的全称为：super user do 顾名思义：干超级用户才能干的事！所以 sudo 最常用的功能就是提升一个命名的执行权限。
+25. tar zxvf test.tar.gz // 解压，z 表示以 z 结尾，x 表示解压，v 表示显示解压的过程，f 表示解压后的文件名和压缩包一致
+26. tar zcvf test1.tar.gz test // 压缩，c 表示压缩，把 test 进行压缩，压缩后的文件叫 test1.tar.gz
+27. sudo 的全称为：super user do 顾名思义：干超级用户才能干的事！所以 sudo 最常用的功能就是提升一个命名的执行权限。
+28. yum install -y name // 安装 name 包，自动回答 yes
+29. 下载安装：
+  1. apt-get 用于 debian 系列的 linux 系统，代表是 ubuntu (预装好的）
+  2. yum 用于 redhat, 系列linux， 代表是 centOS
+  3. wget: 通过 FTP 或 HTTP 协议抓取的文件
+  4. curl: 对应 TP, FTPS, HTTP, HTTPS, GOPHER, TELNET 等协议的 lib
 ```
