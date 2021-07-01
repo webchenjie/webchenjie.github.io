@@ -5,26 +5,26 @@ const plugins = require('../config/plugins.js')
 module.exports = {
   base: '/',
 
-  title: "ChenJieBlog",
+  title: 'ChenJieBlog',
 
-  description: "愿你能乘风破浪所向无前",
+  description: '愿你能乘风破浪所向无前',
 
   plugins,
 
   head: [
-    ["link", {
-      rel: "icon",
-      href: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3cbcb700-4856-11eb-b680-7980c8a877b8.ico"
+    ['link', {
+      rel: 'icon',
+      href: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3cbcb700-4856-11eb-b680-7980c8a877b8.ico'
     }],
-    ["meta", {
-      name: "viewport",
-      content: "width=device-width,initial-scale=1,user-scalable=no"
+    ['meta', {
+      name: 'viewport',
+      content: 'width=device-width,initial-scale=1,user-scalable=no'
     }]
   ],
 
   locales: {
-    "/": {
-      lang: "zh-CN"
+    '/': {
+      lang: 'zh-CN'
     },
   },
 
@@ -32,16 +32,16 @@ module.exports = {
     lineNumbers: true,
   },
 
-  theme: "reco",
+  theme: 'reco',
 
   themeConfig: {
     nav,
     sidebar,
-    type: "blog",
-    logo: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
-    author: "chenjie", // 作者
+    type: 'blog',
+    logo: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png',
+    author: 'chenjie', // 作者
     // 作者头像
-    authorAvatar: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png",
+    authorAvatar: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png',
     // 404腾讯公益
     noFoundPageByTencent: false,
     // 搜索设置
@@ -51,11 +51,11 @@ module.exports = {
     blogConfig: {
       category: {
         location: 3, // 在导航栏菜单中所占的位置
-        text: "分类"
+        text: '分类'
       },
       tag: {
         location: 4, // 在导航栏菜单中所占的位置
-        text: "标签"
+        text: '标签'
       },
     },
 
@@ -66,12 +66,12 @@ module.exports = {
     },
 
     // 最后更新时间
-    lastUpdated: "Last Updated",
+    lastUpdated: 'Last Updated',
 
     // 项目开始时间
-    startYear: "2020"
+    startYear: '2020'
 
     // 备案号
-    // record: "xxxx"
+    // record: 'xxxx'
   }
 }
