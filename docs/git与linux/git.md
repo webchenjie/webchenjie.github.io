@@ -3,7 +3,7 @@ title: git
 date: 2020-07-12
 ---
 
-# git 工作流程
+## git 工作流程
 
 ![git](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/4734c4c0-4856-11eb-bdc1-8bd33eb6adaa.png)
 
