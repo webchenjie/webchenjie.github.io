@@ -1,220 +1,194 @@
 module.exports = {
   '/docs/': [{
-      title: 'html',
+      title: 'HTML',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/html/基础知识.md',
+          path: '/docs/HTML/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/html/进阶知识.md',
+          path: '/docs/HTML/进阶知识.md',
         },
       ],
     },
     {
-      title: 'css',
+      title: 'CSS',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/css/基础知识.md',
+          path: '/docs/CSS/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/css/进阶知识.md',
+          path: '/docs/CSS/进阶知识.md',
         },
       ],
     },
     {
-      title: 'javascript',
+      title: 'JavaScript',
       collapsable: true,
       children: [{
           title: 'String',
-          path: '/docs/javascript/String.md',
+          path: '/docs/JavaScript/String.md',
         },
         {
           title: 'Array',
-          path: '/docs/javascript/Array.md',
+          path: '/docs/JavaScript/Array.md',
         },
         {
           title: 'Object',
-          path: '/docs/javascript/Object.md',
+          path: '/docs/JavaScript/Object.md',
         },
         {
           title: 'Function',
-          path: '/docs/javascript/Function.md',
+          path: '/docs/JavaScript/Function.md',
         },
         {
           title: 'Math',
-          path: '/docs/javascript/Math.md',
+          path: '/docs/JavaScript/Math.md',
         },
         {
           title: 'Date',
-          path: '/docs/javascript/Date.md',
+          path: '/docs/JavaScript/Date.md',
         },
         {
           title: 'DOM',
-          path: '/docs/javascript/DOM.md',
+          path: '/docs/JavaScript/DOM.md',
         },
         {
           title: 'BOM',
-          path: '/docs/javascript/BOM.md',
+          path: '/docs/JavaScript/BOM.md',
         },
         {
           title: 'ES6',
-          path: '/docs/javascript/ES6.md',
+          path: '/docs/JavaScript/ES6.md',
         },
         {
           title: '异步',
-          path: '/docs/javascript/异步.md',
+          path: '/docs/JavaScript/异步.md',
         },
         {
           title: '移动端',
-          path: '/docs/javascript/移动端.md',
+          path: '/docs/JavaScript/移动端.md',
         },
         {
           title: '数据类型',
-          path: '/docs/javascript/数据类型.md',
+          path: '/docs/JavaScript/数据类型.md',
         },
         {
           title: '设计模式',
-          path: '/docs/javascript/设计模式.md',
+          path: '/docs/JavaScript/设计模式.md',
         },
         {
           title: '正则表达式',
-          path: '/docs/javascript/正则表达式.md',
+          path: '/docs/JavaScript/正则表达式.md',
         },
         {
           title: 'ECMA与W3C',
-          path: '/docs/javascript/ECMA与W3C.md',
+          path: '/docs/JavaScript/ECMA与W3C.md',
         },
         {
           title: 'Ajax与Json',
-          path: '/docs/javascript/Ajax与Json.md',
+          path: '/docs/JavaScript/Ajax与Json.md',
         },
         {
           title: '存储与认证',
-          path: '/docs/javascript/存储与认证.md',
+          path: '/docs/JavaScript/存储与认证.md',
         },
         {
           title: '性能与安全',
-          path: '/docs/javascript/性能与安全.md',
+          path: '/docs/JavaScript/性能与安全.md',
         },
         {
           title: '作用域与闭包',
-          path: '/docs/javascript/作用域与闭包.md',
+          path: '/docs/JavaScript/作用域与闭包.md',
         },
         {
           title: '原型与原型链',
-          path: '/docs/javascript/原型与原型链.md',
+          path: '/docs/JavaScript/原型与原型链.md',
         },
       ],
     },
     {
-      title: 'typescript',
+      title: 'TypeScript',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/typescript/基础知识.md',
+          path: '/docs/TypeScript/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/typescript/进阶知识.md',
+          path: '/docs/TypeScript/进阶知识.md',
         },
       ],
     },
     {
-      title: 'jquery',
+      title: 'jQuery',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/jquery/基础知识.md',
+          path: '/docs/jQuery/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/jquery/进阶知识.md',
+          path: '/docs/jQuery/进阶知识.md',
         },
       ],
     },
     {
-      title: 'vue',
+      title: 'Vue',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/vue/基础知识.md',
+          path: '/docs/Vue/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/vue/进阶知识.md',
+          path: '/docs/Vue/进阶知识.md',
         },
         {
           title: '高级知识',
-          path: '/docs/vue/高级知识.md',
+          path: '/docs/Vue/高级知识.md',
         },
       ],
     },
     {
-      title: 'react',
+      title: 'React',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/react/基础知识.md',
+          path: '/docs/React/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/react/进阶知识.md',
+          path: '/docs/React/进阶知识.md',
         },
       ],
     },
     {
-      title: 'node',
+      title: 'Node',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/node/基础知识.md',
+          path: '/docs/Node/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/node/进阶知识.md',
+          path: '/docs/Node/进阶知识.md',
         },
       ],
     },
     {
-      title: 'sql',
+      title: 'Webpack',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/sql/基础知识.md',
+          path: '/docs/Webpack/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/sql/进阶知识.md',
-        },
-      ],
-    },
-    {
-      title: 'webpack',
-      collapsable: true,
-      children: [{
-          title: '基础知识',
-          path: '/docs/webpack/基础知识.md',
-        },
-        {
-          title: '进阶知识',
-          path: '/docs/webpack/进阶知识.md',
-        },
-      ],
-    },
-    {
-      title: 'http',
-      collapsable: true,
-      children: [{
-          title: '基础知识',
-          path: '/docs/http/基础知识.md',
-        },
-        {
-          title: '进阶知识',
-          path: '/docs/http/进阶知识.md',
+          path: '/docs/Webpack/进阶知识.md',
         },
       ],
     },
@@ -245,41 +219,93 @@ module.exports = {
       ],
     },
     {
-      title: 'docker',
+      title: 'Git',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/docker/基础知识.md',
+          path: '/docs/Git/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/docker/进阶知识.md',
+          path: '/docs/Git/进阶知识.md',
         },
       ],
     },
     {
-      title: 'nginx与pm2',
+      title: 'SQL',
       collapsable: true,
       children: [{
-          title: 'nginx',
-          path: '/docs/nginx与pm2/nginx.md',
+          title: '基础知识',
+          path: '/docs/SQL/基础知识.md',
         },
         {
-          title: 'pm2',
-          path: '/docs/nginx与pm2/pm2.md',
+          title: '进阶知识',
+          path: '/docs/SQL/进阶知识.md',
         },
       ],
     },
     {
-      title: 'git与linux',
+      title: 'PM2',
       collapsable: true,
       children: [{
-          title: 'git',
-          path: '/docs/git与linux/git.md',
+          title: '基础知识',
+          path: '/docs/PM2/基础知识.md',
         },
         {
-          title: 'linux',
-          path: '/docs/git与linux/linux.md',
+          title: '进阶知识',
+          path: '/docs/PM2/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'HTTP',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/HTTP/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/HTTP/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'Nginx',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/Nginx/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/Nginx/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'Docker',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/Docker/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/Docker/进阶知识.md',
+        },
+      ],
+    },
+    {
+      title: 'Linux',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/Linux/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/Linux/进阶知识.md',
         },
       ],
     },

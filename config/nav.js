@@ -7,48 +7,40 @@ module.exports = [{
     text: '文档',
     icon: 'reco-api',
     items: [{
-        text: 'html',
-        link: '/docs/html/基础知识.md'
+        text: 'HTML',
+        link: '/docs/HTML/基础知识.md'
       },
       {
-        text: 'css',
-        link: '/docs/css/基础知识.md'
+        text: 'CSS',
+        link: '/docs/CSS/基础知识.md'
       },
       {
-        text: 'javascript',
-        link: '/docs/javascript/String.md'
+        text: 'JavaScript',
+        link: '/docs/JavaScript/String.md'
       },
       {
-        text: 'typescript',
-        link: '/docs/typescript/基础知识.md'
+        text: 'TypeScript',
+        link: '/docs/TypeScript/基础知识.md'
       },
       {
-        text: 'jquery',
-        link: '/docs/jquery/基础知识.md'
+        text: 'jQuery',
+        link: '/docs/jQuery/基础知识.md'
       },
       {
-        text: 'vue',
-        link: '/docs/vue/基础知识.md'
+        text: 'Vue',
+        link: '/docs/Vue/基础知识.md'
       },
       {
-        text: 'react',
-        link: '/docs/react/基础知识.md'
+        text: 'React',
+        link: '/docs/React/基础知识.md'
       },
       {
-        text: 'node',
-        link: '/docs/node/基础知识.md'
+        text: 'Node',
+        link: '/docs/Node/基础知识.md'
       },
       {
-        text: 'sql',
-        link: '/docs/sql/基础知识.md'
-      },
-      {
-        text: 'webpack',
-        link: '/docs/webpack/基础知识.md'
-      },
-      {
-        text: 'http',
-        link: '/docs/http/基础知识.md'
+        text: 'Webpack',
+        link: '/docs/Webpack/基础知识.md'
       },
       {
         text: 'vue-element-admin',
@@ -59,16 +51,32 @@ module.exports = [{
         link: '/docs/uni-app/基础知识.md'
       },
       {
-        text: 'docker',
-        link: '/docs/docker/基础知识.md'
+        text: 'Git',
+        link: '/docs/Git/基础知识.md'
       },
       {
-        text: 'nginx与pm2',
-        link: '/docs/nginx与pm2/nginx.md'
+        text: 'SQL',
+        link: '/docs/SQL/基础知识.md'
       },
       {
-        text: 'git与linux',
-        link: '/docs/git与linux/git.md'
+        text: 'PM2',
+        link: '/docs/PM2/基础知识.md'
+      },
+      {
+        text: 'HTTP',
+        link: '/docs/HTTP/基础知识.md'
+      },
+      {
+        text: 'Nginx',
+        link: '/docs/Nginx/基础知识.md'
+      },
+      {
+        text: 'Docker',
+        link: '/docs/Docker/基础知识.md'
+      },
+      {
+        text: 'Linux',
+        link: '/docs/Linux/基础知识.md'
       },
       {
         text: '微信小程序',
@@ -101,27 +109,26 @@ module.exports = [{
     text: '学习链接',
     icon: 'reco-document',
     items: [{
-        text: '阿里云',
-        link: 'https://account.aliyun.com/login/login.html'
-      },
-      {
         text: '码云',
         link: 'https://gitee.com'
+      },{
+        text: '阿里云',
+        link: 'https://account.aliyun.com/login/login.html'
       },
       {
         text: '七牛云',
         link: 'https://developer.qiniu.com'
       },
       {
-        text: 'natapp',
+        text: 'NATAPP',
         link: 'https://natapp.cn'
       },
       {
-        text: 'application-loader',
+        text: 'ApplicationLoader',
         link: 'http://www.applicationloader.net'
       },
       {
-        text: 'bootcdn',
+        text: 'BootCDN',
         link: 'https://www.bootcdn.cn'
       },
       {
@@ -129,35 +136,35 @@ module.exports = [{
         link: 'https://www.iconfont.cn'
       },
       {
-        text: 'tinypng',
+        text: 'TinyPNG',
         link: 'https://tinypng.com'
       },
       {
-        text: 'animate.css',
+        text: 'AnimateCss',
         link: 'https://animate.style/'
       },
       {
-        text: 'velocity.js',
+        text: 'VelocityJs',
         link: 'http://shouce.jb51.net/velocity/index.html'
       },
       {
-        text: 'sortable.js',
+        text: 'SortableJs',
         link: 'http://www.sortablejs.com/index.html'
       },
       {
-        text: 'momentjs.js',
+        text: 'MomentJs',
         link: 'http://momentjs.cn'
       },
       {
-        text: 'javascript',
+        text: 'JavaScript',
         link: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript'
       },
       {
-        text: 'typescript',
+        text: 'TypeScript',
         link: 'https://www.tslang.cn'
       },
       {
-        text: 'node.js',
+        text: 'NodeJs',
         link: 'http://nodejs.cn'
       },
       {
@@ -165,27 +172,27 @@ module.exports = [{
         link: 'https://www.npmjs.com'
       },
       {
-        text: 'webpack',
+        text: 'Webpack',
         link: 'https://www.webpackjs.com'
       },
       {
-        text: 'umi.js',
+        text: 'UmiJs',
         link: 'https://umijs.org/zh-CN'
       },
       {
-        text: 'react.js',
+        text: 'ReactJs',
         link: 'https://react.docschina.org'
       },
       {
-        text: 'vue.js',
+        text: 'VueJs',
         link: 'https://cn.vuejs.org'
       },
       {
-        text: 'vue3.js',
+        text: 'Vue3Js',
         link: 'https://composition-api.vuejs.org/zh'
       },
       {
-        text: 'nuxt.js',
+        text: 'NuxtJs',
         link: 'https://www.nuxtjs.cn'
       },
       {
@@ -201,11 +208,11 @@ module.exports = [{
         link: 'https://panjiachen.gitee.io/vue-element-admin-site/zh'
       },
       {
-        text: 'd2-admin',
+        text: 'D2Admin',
         link: 'https://d2.pub/zh/doc/d2-admin'
       },
       {
-        text: 'ant-design',
+        text: 'AntDesign',
         link: 'https://ant.design/docs/react/introduce-cn'
       },
       {
@@ -217,11 +224,11 @@ module.exports = [{
         link: 'https://element-plus.gitee.io/#/zh-CN/component/installation'
       },
       {
-        text: 'vant-ui',
+        text: 'VantUi',
         link: 'https://vant-contrib.gitee.io/vant/#/zh-CN/'
       },
       {
-        text: 'uview-ui',
+        text: 'uViewUi',
         link: 'https://www.uviewui.com'
       },
       {
@@ -229,7 +236,7 @@ module.exports = [{
         link: 'https://uniapp.dcloud.io'
       },
       {
-        text: 'uni-cloud',
+        text: 'uniCloud',
         link: 'https://unicloud.dcloud.net.cn/login'
       },
       {
@@ -245,19 +252,19 @@ module.exports = [{
         link: 'https://www.quanzhan.co/luch-request'
       },
       {
-        text: 'swiper',
+        text: 'Swiper',
         link: 'https://www.swiper.com.cn'
       },
       {
-        text: 'echarts',
+        text: 'Echarts',
         link: 'https://echarts.apache.org/zh/index.html'
       },
       {
-        text: 'u-charts',
+        text: 'uCharts',
         link: 'http://doc.ucharts.cn/1073940'
       },
       {
-        text: 'wangeditor',
+        text: 'wangEditor',
         link: 'http://www.wangeditor.com/doc'
       },
       {
