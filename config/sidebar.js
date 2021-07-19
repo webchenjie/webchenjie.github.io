@@ -323,6 +323,19 @@ module.exports = {
       ],
     },
     {
+      title: '性能优化',
+      collapsable: true,
+      children: [{
+          title: '基础知识',
+          path: '/docs/性能优化/基础知识.md',
+        },
+        {
+          title: '进阶知识',
+          path: '/docs/性能优化/进阶知识.md',
+        },
+      ],
+    },
+    {
       title: '数据可视化',
       collapsable: true,
       children: [{
@@ -336,15 +349,15 @@ module.exports = {
       ],
     },
     {
-      title: '性能优化',
+      title: '自动化测试',
       collapsable: true,
       children: [{
           title: '基础知识',
-          path: '/docs/性能优化/基础知识.md',
+          path: '/docs/自动化测试/基础知识.md',
         },
         {
           title: '进阶知识',
-          path: '/docs/性能优化/进阶知识.md',
+          path: '/docs/自动化测试/进阶知识.md',
         },
       ],
     },
