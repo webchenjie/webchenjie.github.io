@@ -10,6 +10,8 @@ date: 2020-07-05
 1. var obj = new Object(obj1) // obj === obj1，不传 obj1 则创建一个空对象
 2. var obj = { 'name': 'chenj',  'age': 23 }
 3. var obj = Object.create(obj1) // 创建一个空对象，并把该对象的原型指向 obj1
+4. {} === new Object()，原型是 Object.prototype
+5. Object.create(null)，没有原型
 ----------------------------------------------------------------------------------------------
 // 操作对象
 1. obj.name或obj['name'] // 读取值
@@ -38,5 +40,5 @@ date: 2020-07-05
 3. Object.entries(对象) // 把对象变成可遍历对象,即可使用for of
 4. Object.fromEntries(arr) // 把数组变成对象
 5. Object.is(对象) // 判断是否全等,相当于 ===
-6. Object.assign(对象) // 浅拷贝
+6. Object.assign(对象) // 如果是第一层级是深拷贝，如果有多层级，则除了第一层级是深拷贝其他都是浅拷贝
 ```

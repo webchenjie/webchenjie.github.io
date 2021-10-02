@@ -41,4 +41,177 @@ date: 2020-07-05
 1. fn.length获取定义时没有默认值参数的个数
 2. fn参数默认值直接在参数上赋值,没有默认值写在前面,传值时要跳过中间的参数则传undefined
 3. es6不推荐用arguments获取参数,可使用扩展运算符获取
+----------------------------------------------------------------------------------------------
+// 手写 call 实现
+Function.prototype.myCall = function () {
+	const agrs = Array.prototype.slice.call(arguments)
+
+	const t = agrs.shift() // t 要么是 window，要么是传入的参数
+
+	t.fn = this // this 就是调用的函数体，相当于扩展了 t 下的属性改变原本的 this 指向
+
+	const result = t.fn(agrs)
+
+	delete t.fn
+
+	return result
+}
+----------------------------------------------------------------------------------------------
+// 手写 apply 实现
+Function.prototype.myApply = function () {
+	const agrs = Array.prototype.slice.call(arguments)
+
+	const t = agrs.shift() // t 要么是 window，要么是传入的参数
+
+	t.fn = this // this 就是调用的函数体，相当于扩展了 t 下的属性改变原本的 this 指向
+
+	const result = t.fn(...agrs)
+
+	delete t.fn
+
+	return result
+}
+----------------------------------------------------------------------------------------------
+// 手写 bind 实现
+Function.prototype.myBind = function () {
+	const agrs = Array.prototype.slice.call(arguments)
+
+	const t = agrs.shift()  // t 要么是 window，要么是传入的参数
+
+	const self = this // this 就是调用的函数体
+
+	return function () {
+		return self.apply(t, agrs)
+	}
+}
+----------------------------------------------------------------------------------------------
+// 深拷贝
+1. 判断简单数据类型还是复杂数据类型
+2. 判断是数组还是对象
+3. 递归
+4. function deepClone(obj = {}) {
+    if (typeof obj !== 'object' || obj == null) {
+      // obj 是 null 或不是对象和数组直接返回
+      return obj
+    }
+    // 初始化返回结果
+    let result
+    if (obj instanceof Array) {
+      result = []
+    } else {
+      result = {}
+    }
+    for (let key in obj) {
+      // 保证 key 不是原型的属性
+      if (obj.hasOwnProperty(key)) {
+        // 递归调用
+        result[key] = deepClone(obj[key])
+      }
+    }
+    // 返回结果
+    return result
+}
+----------------------------------------------------------------------------------------------
+// 深度比较isEqual
+function isEqual(obj1, obj2) {
+  if (!isObject(obj1) || !isObject(obj2)) {
+    // 值类型, 一般不会是函数
+    return obj1 === obj2
+  }
+  if (obj1 === obj2) {
+    return true
+  }
+  // 两个都是对象或数组, 而且不相等
+  // 先取出obj1和obj2的keys, 比较个数
+  const obj1Keys = Object.keys(obj1)
+  const obj2Keys = Object.keys(obj2)
+  if (obj1Keys.length !== obj2Keys.length) {
+    return false
+  }
+  // 以obj1为基准和obj2依次递归比较
+  for (let key in obj1) {
+    const res = isEqual(obj1[key], obj2[key])
+    if (!res) {
+      return false
+    }
+  }
+  return true
+}
+function isObject(obj) {
+  return typeof obj === 'object' && obj !== null
+}
+----------------------------------------------------------------------------------------------
+// 数组降维
+function flat(arr) {
+	const isDeep = arr.some(item => item instanceof Array)
+	if (!isDeep) {
+		return arr // 已经是flatern
+	}
+	const res = Array.prototype.concat.apply([], arr)
+	return flat(res) // 递归
+}
+----------------------------------------------------------------------------------------------
+// 节流和防抖
+1. 节流: 限制只能每隔多久才能触发一次,有定时器要return // throttle
+    拖拽一个元素时, 要随时拿到该元素被拖拽的位置
+    直接使用drag事件, 则会频繁触发, 很容易导致卡顿
+    无论拖拽速度多快, 都会每隔多久触发一次
+
+    实现:
+      const div = document.getElementById('div')
+      let timer = null
+      div.addEventListener('drag', function(e) {
+        if (timer) {
+          return
+        }
+        timer = setTimeout(() => {
+          console.log(e)
+          timer = null
+        }, 100)
+      })
+    
+    封装:
+      function throttle(fn, delay = 100) {
+        let timer = null
+        return function() {
+          if (timer) {
+            return
+          }
+          timer = setTimeout(() => {
+            fn.apply(this, arguments)
+            timer = null
+          }, delay)
+        }
+      }
+
+2. 防抖: 用户输入结束或输入框暂停多久后才触发事件,有定时器要清空 // debounce
+    监听一个输入框的, 文字变化后触发change
+    直接用keyup事件, 则会频繁触发change事件
+
+    实现:
+      const input = document.getElementById('input')
+      let timer = null
+      input.addEventListener('keyup', function() {
+        if (timer) {
+          clearTimeout(timer)
+        }
+        timer = setTimeout(() => {
+          console.log(input.value)
+          timer = null
+        }, 500)
+      })
+
+    封装:
+      function debounce(fn, delay = 500) {
+        let timer = null
+        return function() {
+          if (timer) {
+            clearTimeout(timer)
+          }
+          timer = setTimeout(() => {
+            fn.apply(this, arguments)
+            timer = null
+          }, delay)
+        }
+      }
 ```
