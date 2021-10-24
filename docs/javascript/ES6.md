@@ -164,6 +164,13 @@ date: 2020-07-04
 2. 在导入时如果用* as 名字方式全部导入的话,默认导出的内容是在名字.default中
 3. 在导出时也可以用as修改名字,默认导出对象时要加{},export default { 对象 }
 4. import时没有from相当于执行了这个模块的全部代码
+5. export default 相当于导出了一个名字叫 default 的模块
+6. export default 可以导出匿名函数或匿名变量，export 不可以
+7. export 中如果直接导出一个匿名对象，则里面只能写变量的引用，export { obj, arr }
+   其他 export 只能导出有名字的变量，实际也都会挂载到 export {} 里面去
+8. 示例
+    import obj, { arr } from './test' // 正确
+    import { arr }, obj from './test' // 错误
 ----------------------------------------------------------------------------------------------
 // 其他
 1. 可以在try catch时,catch(e)不加e参数

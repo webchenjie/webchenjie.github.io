@@ -151,6 +151,10 @@ module.exports = {
           title: '高级知识',
           path: '/docs/Vue/高级知识.md',
         },
+        {
+          title: '源码知识',
+          path: '/docs/Vue/源码知识.md',
+        },
       ],
     },
     {
