@@ -28,12 +28,11 @@ proGithubPath="/d/Work/Git/webchenjie/Blog/ChenJieBlogProdGithub"
 handleGitFlow dev $1
 
 # 打包构建
-echo "yarn build"
 yarn build
 
 # 把打包生成的文件拷贝到对应的 Path 下
-cp .vuepress/dist/* ${proGiteePath}
-cp .vuepress/dist/* ${proGithubPath}
+cp -rf .vuepress/dist/* ${proGiteePath}/
+cp -rf .vuepress/dist/* ${proGithubPath}/
 
 # 删除打包生成的文件
 rm -rf .vuepress/dist
@@ -45,5 +44,3 @@ handleGitFlow proGitee $1
 # 切换到 proGithubPath 执行 GitFlow
 cd ${proGithubPath}
 handleGitFlow proGithub $1
-
-echo "执行结束"
