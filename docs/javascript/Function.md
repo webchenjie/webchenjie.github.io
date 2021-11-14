@@ -182,7 +182,7 @@ function flat(arr) {
           timer = null
         }, 100)
       })
-    
+
     封装:
       function throttle(fn, delay = 100) {
         let timer = null
