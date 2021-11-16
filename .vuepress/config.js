@@ -17,7 +17,7 @@ module.exports = {
 			{
 				rel: 'icon',
 				href:
-					'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3cbcb700-4856-11eb-b680-7980c8a877b8.ico'
+					'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-favicon.ico'
 			}
 		],
 		[
@@ -46,11 +46,11 @@ module.exports = {
 		sidebar,
 		type: 'blog',
 		logo:
-			'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png',
+			'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-logo.png',
 		author: 'chenjie', // 作者
 		// 作者头像
 		authorAvatar:
-			'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-umybkfmeehmg0383ca/3d74bc60-4856-11eb-97b7-0dc4655d6e68.png',
+			'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-logo.png',
 		// 404腾讯公益
 		noFoundPageByTencent: false,
 		// 搜索设置

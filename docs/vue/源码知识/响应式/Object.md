@@ -46,7 +46,7 @@ Object.defineProperty(car, 'price', {
 
 通过`Object.defineProperty()`方法给`car`定义了一个`price`属性，并把这个属性的读和写分别使用`get()`和`set()`进行拦截，每当该属性进行读或写操作的时候就会触发`get()`和`set()`。如下图：
 
-![](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-e1adcd38-dd22-458d-a547-6e4ff9b727c3/d7b23349-08c3-4558-9d9d-9bfeabdd43e1.png)
+![Vue](https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/docs/Vue/源码知识/响应式/2.png)
 
 可以看到，`car`已经可以主动告诉我们它的属性的读写情况了，这也意味着，这个`car`的数据对象已经是“可观测”的了。
 
@@ -297,7 +297,7 @@ export function parsePath(path) {
 
 简单总结一下就是：`Watcher`先把自己设置到全局唯一的指定位置（`window.target`），然后读取数据。因为读取了数据，所以会触发这个数据的`getter`。接着，在`getter`中就会从全局唯一的那个位置读取当前正在读取数据的`Watcher`，并把这个`watcher`收集到`Dep`中去。收集好之后，当数据发生变化时，会向`Dep`中的每个`Watcher`发送通知。通过这样的方式，`Watcher`可以主动去订阅任意一个数据的变化。为了便于理解，我们画出了其关系流程图，如下图：
 
-![](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-e1adcd38-dd22-458d-a547-6e4ff9b727c3/348c3a75-ff5a-4fca-806c-284c890e89d2.png)
+![Vue](https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/docs/Vue/源码知识/响应式/3.png)
 
 以上，就彻底完成了对`Object`数据的侦测，依赖收集，依赖的更新等所有操作。
 
