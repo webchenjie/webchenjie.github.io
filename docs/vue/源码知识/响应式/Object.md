@@ -46,7 +46,7 @@ Object.defineProperty(car, 'price', {
 
 通过`Object.defineProperty()`方法给`car`定义了一个`price`属性，并把这个属性的读和写分别使用`get()`和`set()`进行拦截，每当该属性进行读或写操作的时候就会触发`get()`和`set()`。如下图：
 
-![Vue](https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/docs/Vue/源码知识/响应式/2.png)
+![Vue](https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/docs/Vue/源码知识/响应式/1.png)
 
 可以看到，`car`已经可以主动告诉我们它的属性的读写情况了，这也意味着，这个`car`的数据对象已经是“可观测”的了。
 
