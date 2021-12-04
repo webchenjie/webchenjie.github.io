@@ -8,6 +8,10 @@ date: 2020-07-05
 1. 'function' 声明,预解析可提前,var赋值时不可提前,函数也是对象
 2. 立即执行函数（IIFE）
 ----------------------------------------------------------------------------------------------
+// Function 和 Class 的区别
+1. 相同点：都可以用作构造函数
+2. 不同点：`class` 不可以使用 call、apply、bind 的方式来改变执行上下文
+----------------------------------------------------------------------------------------------
 // 函数的调用
 1. 匿名函数调用: (函数本身)() 或者 (函数本身()) 或者 +-~!函数本身()
 2. 构造函数调用: new 函数名()
@@ -96,6 +100,47 @@ Function.prototype.myBind = function () {
 	return function () {
 		return self.apply(t, agrs)
 	}
+}
+----------------------------------------------------------------------------------------------
+// 手写 new 实现
+const ObjectFactory = (...args) => {
+  // 创建空对象
+  const obj = {}
+
+  // 获取构造函数
+  const Constructor = [].shift.call(args)
+
+  // 对象的 __proto__ 指向 Constructor.prototype
+  obj.__proto__ = Constructor.prototype
+
+  // 用 apply 的方式把构造函数 Constructor 的 this 指向 obj，执行 Constructor
+  const res = Constructor.apply(obj, args)
+
+  // 根据 res 的执行结果判断是返回构造函数的返回对象还是新创建的空对象
+  return typeof res === 'object' ? res : obj
+}
+
+const res1 = new Person({ name: 'chenj' })
+const res2 = ObjectFactory(Person, { name: 'chenj' })
+----------------------------------------------------------------------------------------------
+// 手写 instanceof 实现
+function instance_of(Obj, Constructor) {
+  const displayPrototype = Constructor.prototype // 获取构造函数的 prototype 属性
+  let implicitPrototype = Obj.__proto__ // 获取实例对象的隐式原型
+
+  // while 循环 -> 在原型链上不断向上查找
+  while(true) {
+    // 直到 implicitPrototype = null 都没有找到，返回 false
+    if (implicitPrototype === null) {
+      return false
+      // 构造函数的 prototype 属性出现在实例对象的原型链上，返回 true
+    } else if (implicitPrototype === displayPrototype) {
+      return true
+    }
+
+    // 在原型链上不断查找，构造函数的显示原型
+    implicitPrototype = implicitPrototype.__proto__
+  }
 }
 ----------------------------------------------------------------------------------------------
 // 深拷贝
