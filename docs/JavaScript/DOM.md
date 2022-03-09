@@ -21,6 +21,27 @@ date: 2020-07-05
 2. HTMLCollection是html元素的集合,不包含空白和文本
 3. NamedNodeMap是元素属性的集合
 4. 都是类数组对象,都可以通过[]、item访问,都有length属性,不是Array
+5. HTMLCollection 和 NodelList 的区别
+  1. DOM 是一棵树，所有节点都是 Node
+  2. Node 是 Element 的基类
+  3. Element 是其他 HTML 元素的基类，如 HTMLDivElement
+  4. 示例
+    class Node {}
+    // document
+    class Document extends Node {}
+    class DocumentFragment extends Node {}
+    // 文本和注释
+    class CharacterData extends Node {}
+    class Comment extends CharacterData {}
+    class Text extends CharacterData {}
+    // element
+    class Element extends Node {}
+    class HTMLElement extends Element {}
+    class HTMLDivElement extends HTMLElement {}
+    class HTMLInputElement extends HTMLElement {}
+  5. HTMLCollection 是 Element 的集合
+  6. NodeList 是 Node 集合
+  7. Node 是所有元素的父类，
 ----------------------------------------------------------------------------------------------
 // 查找DOM节点
 1. getElementById('id') // 在IE中name与id值会冲突
