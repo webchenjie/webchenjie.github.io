@@ -179,6 +179,10 @@ module.exports = {
                   path: '/docs/Vue/源码知识/响应式/Array.md'
                 }
               ]
+            },
+            {
+              title: '总结',
+              path: '/docs/Vue/源码知识/总结.md'
             }
           ]
         }
