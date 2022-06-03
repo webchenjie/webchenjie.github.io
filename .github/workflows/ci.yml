@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout
+        uses: actions/checkout@v3
 
       - name: Install and Build 🔧
         run: |
@@ -18,7 +18,7 @@ jobs:
           yarn build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: gh-pages
