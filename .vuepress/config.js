@@ -3,7 +3,7 @@ const sidebar = require('../config/sidebar.js')
 const plugins = require('../config/plugins.js')
 
 module.exports = {
-  base: '/ChenJieBlog/',
+  base: '/',
 
   title: 'ChenJieBlog',
 
