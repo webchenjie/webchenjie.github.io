@@ -1,0 +1,25 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout
+
+      - name: Install and Build 🔧
+        run: |
+          yarn
+          yarn build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch: gh-pages
+          folder: '.vuepress/dist'
