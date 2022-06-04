@@ -6,13 +6,13 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 📁
         uses: actions/checkout@v3
 
-      - name: Install and Build 🔧
+      - name: Build 🔧
         run: |
           yarn
           yarn build
