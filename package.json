@@ -30,10 +30,10 @@
     "vuepress-theme-reco": "1.6.13"
   },
   "devDependencies": {
-    "@sxwy/commitlint-config": "^1.0.0",
-    "@sxwy/eslint-config-base": "^1.2.0",
-    "@sxwy/prettier-config": "^1.2.0",
-    "@sxwy/stylelint-config": "^1.2.0",
+    "@sxwy/commitlint-config": "^1.2.0",
+    "@sxwy/eslint-config-base": "^1.5.0",
+    "@sxwy/prettier-config": "^1.4.0",
+    "@sxwy/stylelint-config": "^1.4.0",
     "eslint": "^8.19.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
