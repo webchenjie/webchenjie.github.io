@@ -49,9 +49,9 @@ data(){
 ```javascript
 let arr = [1, 2, 3]
 arr.push(4)
-Array.prototype.newPush = function(val) {
-	console.log('arr被修改了')
-	this.push(val)
+Array.prototype.newPush = function (val) {
+  console.log('arr被修改了')
+  this.push(val)
 }
 arr.newPush(4)
 ```
@@ -77,29 +77,29 @@ export const arrayMethods = Object.create(arrayProto)
 
 // 改变数组自身内容的7个方法
 const methodsToPatch = [
-	'push',
-	'pop',
-	'shift',
-	'unshift',
-	'splice',
-	'sort',
-	'reverse'
+  'push',
+  'pop',
+  'shift',
+  'unshift',
+  'splice',
+  'sort',
+  'reverse'
 ]
 
 /**
  * Intercept mutating methods and emit events
  */
-methodsToPatch.forEach(function(method) {
-	const original = arrayProto[method] // 缓存原生方法
-	Object.defineProperty(arrayMethods, method, {
-		enumerable: false,
-		configurable: true,
-		writable: true,
-		value: function mutator(...args) {
-			const result = original.apply(this, args)
-			return result
-		}
-	})
+methodsToPatch.forEach(function (method) {
+  const original = arrayProto[method] // 缓存原生方法
+  Object.defineProperty(arrayMethods, method, {
+    enumerable: false,
+    configurable: true,
+    writable: true,
+    value: function mutator(...args) {
+      const result = original.apply(this, args)
+      return result
+    }
+  })
 })
 ```
 
@@ -115,15 +115,15 @@ methodsToPatch.forEach(function(method) {
 ```javascript
 // 源码位置：/src/core/observer/index.js
 export class Observer {
-	constructor(value) {
-		this.value = value
-		if (Array.isArray(value)) {
-			const augment = hasProto ? protoAugment : copyAugment
-			augment(value, arrayMethods, arrayKeys)
-		} else {
-			this.walk(value)
-		}
-	}
+  constructor(value) {
+    this.value = value
+    if (Array.isArray(value)) {
+      const augment = hasProto ? protoAugment : copyAugment
+      augment(value, arrayMethods, arrayKeys)
+    } else {
+      this.walk(value)
+    }
+  }
 }
 // 能力检测：判断__proto__是否可用，因为有的浏览器不支持该属性
 export const hasProto = '__proto__' in {}
@@ -135,7 +135,7 @@ const arrayKeys = Object.getOwnPropertyNames(arrayMethods)
  * the prototype chain using __proto__
  */
 function protoAugment(target, src: Object, keys: any) {
-	target.__proto__ = src
+  target.__proto__ = src
 }
 
 /**
@@ -144,10 +144,10 @@ function protoAugment(target, src: Object, keys: any) {
  */
 /* istanbul ignore next */
 function copyAugment(target: Object, src: Object, keys: Array<string>) {
-	for (let i = 0, l = keys.length; i < l; i++) {
-		const key = keys[i]
-		def(target, key, src[key])
-	}
+  for (let i = 0, l = keys.length; i < l; i++) {
+    const key = keys[i]
+    def(target, key, src[key])
+  }
 }
 ```
 
@@ -164,16 +164,16 @@ function copyAugment(target: Object, src: Object, keys: Array<string>) {
 ```javascript
 // 源码位置：/src/core/observer/index.js
 export class Observer {
-	constructor(value) {
-		this.value = value
-		this.dep = new Dep() // 实例化一个依赖管理器，用来收集数组依赖
-		if (Array.isArray(value)) {
-			const augment = hasProto ? protoAugment : copyAugment
-			augment(value, arrayMethods, arrayKeys)
-		} else {
-			this.walk(value)
-		}
-	}
+  constructor(value) {
+    this.value = value
+    this.dep = new Dep() // 实例化一个依赖管理器，用来收集数组依赖
+    if (Array.isArray(value)) {
+      const augment = hasProto ? protoAugment : copyAugment
+      augment(value, arrayMethods, arrayKeys)
+    } else {
+      this.walk(value)
+    }
+  }
 }
 ```
 
@@ -185,27 +185,27 @@ export class Observer {
 
 ```javascript
 function defineReactive(obj, key, val) {
-	let childOb = observe(val)
-	Object.defineProperty(obj, key, {
-		enumerable: true,
-		configurable: true,
-		get() {
-			// 注意：这边会触发两次的依赖收集
-			// 一个针对 Object 类型使用，一个则针对 Array 使用
-			dep.depend() // 针对 Object
-			if (childOb) {
-				childOb.dep.depend() // 针对 Array
-			}
-			return val
-		},
-		set(newVal) {
-			if (val === newVal) {
-				return
-			}
-			val = newVal
-			dep.notify() // 在setter中通知依赖更新
-		}
-	})
+  let childOb = observe(val)
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    get() {
+      // 注意：这边会触发两次的依赖收集
+      // 一个针对 Object 类型使用，一个则针对 Array 使用
+      dep.depend() // 针对 Object
+      if (childOb) {
+        childOb.dep.depend() // 针对 Array
+      }
+      return val
+    },
+    set(newVal) {
+      if (val === newVal) {
+        return
+      }
+      val = newVal
+      dep.notify() // 在setter中通知依赖更新
+    }
+  })
 }
 
 /**
@@ -216,16 +216,16 @@ function defineReactive(obj, key, val) {
  * 如果 Value 已经存在一个Observer实例，则直接返回它
  */
 export function observe(value, asRootData) {
-	if (!isObject(value) || value instanceof VNode) {
-		return
-	}
-	let ob
-	if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
-		ob = value.__ob__
-	} else {
-		ob = new Observer(value)
-	}
-	return ob
+  if (!isObject(value) || value instanceof VNode) {
+    return
+  }
+  let ob
+  if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
+    ob = value.__ob__
+  } else {
+    ob = new Observer(value)
+  }
+  return ob
 }
 ```
 
@@ -243,15 +243,15 @@ export function observe(value, asRootData) {
 /**
  * Intercept mutating methods and emit events
  */
-methodsToPatch.forEach(function(method) {
-	const original = arrayProto[method]
-	def(arrayMethods, method, function mutator(...args) {
-		const result = original.apply(this, args)
-		const ob = this.__ob__
-		// notify change
-		ob.dep.notify()
-		return result
-	})
+methodsToPatch.forEach(function (method) {
+  const original = arrayProto[method]
+  def(arrayMethods, method, function mutator(...args) {
+    const result = original.apply(this, args)
+    const ob = this.__ob__
+    // notify change
+    ob.dep.notify()
+    return result
+  })
 })
 ```
 
@@ -278,43 +278,43 @@ let arr = [
 
 ```javascript
 export class Observer {
-	value: any
-	dep: Dep
+  value: any
+  dep: Dep
 
-	constructor(value: any) {
-		this.value = value
-		this.dep = new Dep()
-		def(value, '__ob__', this)
-		if (Array.isArray(value)) {
-			const augment = hasProto ? protoAugment : copyAugment
-			augment(value, arrayMethods, arrayKeys)
-			this.observeArray(value) // 将数组中的所有元素都转化为可被侦测的响应式
-		} else {
-			this.walk(value)
-		}
-	}
+  constructor(value: any) {
+    this.value = value
+    this.dep = new Dep()
+    def(value, '__ob__', this)
+    if (Array.isArray(value)) {
+      const augment = hasProto ? protoAugment : copyAugment
+      augment(value, arrayMethods, arrayKeys)
+      this.observeArray(value) // 将数组中的所有元素都转化为可被侦测的响应式
+    } else {
+      this.walk(value)
+    }
+  }
 
-	/**
-	 * Observe a list of Array items.
-	 */
-	observeArray(items: Array<any>) {
-		for (let i = 0, l = items.length; i < l; i++) {
-			observe(items[i])
-		}
-	}
+  /**
+   * Observe a list of Array items.
+   */
+  observeArray(items: Array<any>) {
+    for (let i = 0, l = items.length; i < l; i++) {
+      observe(items[i])
+    }
+  }
 }
 
 export function observe(value, asRootData) {
-	if (!isObject(value) || value instanceof VNode) {
-		return
-	}
-	let ob
-	if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
-		ob = value.__ob__
-	} else {
-		ob = new Observer(value)
-	}
-	return ob
+  if (!isObject(value) || value instanceof VNode) {
+    return
+  }
+  let ob
+  if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
+    ob = value.__ob__
+  } else {
+    ob = new Observer(value)
+  }
+  return ob
 }
 ```
 
@@ -332,27 +332,27 @@ export function observe(value, asRootData) {
 /**
  * Intercept mutating methods and emit events
  */
-methodsToPatch.forEach(function(method) {
-	// cache original method
-	const original = arrayProto[method]
-	def(arrayMethods, method, function mutator(...args) {
-		const result = original.apply(this, args)
-		const ob = this.__ob__
-		let inserted
-		switch (method) {
-			case 'push':
-			case 'unshift':
-				inserted = args // 如果是push或unshift方法，那么传入参数就是新增的元素
-				break
-			case 'splice':
-				inserted = args.slice(2) // 如果是splice方法，那么传入参数列表中下标为2的就是新增的元素
-				break
-		}
-		if (inserted) ob.observeArray(inserted) // 调用observe函数将新增的元素转化成响应式
-		// notify change
-		ob.dep.notify()
-		return result
-	})
+methodsToPatch.forEach(function (method) {
+  // cache original method
+  const original = arrayProto[method]
+  def(arrayMethods, method, function mutator(...args) {
+    const result = original.apply(this, args)
+    const ob = this.__ob__
+    let inserted
+    switch (method) {
+      case 'push':
+      case 'unshift':
+        inserted = args // 如果是push或unshift方法，那么传入参数就是新增的元素
+        break
+      case 'splice':
+        inserted = args.slice(2) // 如果是splice方法，那么传入参数列表中下标为2的就是新增的元素
+        break
+    }
+    if (inserted) ob.observeArray(inserted) // 调用observe函数将新增的元素转化成响应式
+    // notify change
+    ob.dep.notify()
+    return result
+  })
 })
 ```
 

@@ -16,8 +16,7 @@ module.exports = {
       'link',
       {
         rel: 'icon',
-        href:
-          'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-favicon.ico'
+        href: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-favicon.ico'
       }
     ],
     [
@@ -45,8 +44,7 @@ module.exports = {
     nav,
     sidebar,
     type: 'blog',
-    logo:
-      'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-logo.png',
+    logo: 'https://6368-chenjie-blog-88b4b7-1302547066.tcb.qcloud.la/base/base-logo.png',
     author: 'chenjie', // 作者
     // 作者头像
     authorAvatar:
