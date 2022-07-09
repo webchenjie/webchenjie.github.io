@@ -37,6 +37,10 @@ module.exports = {
           path: '/docs/JavaScript/String.md'
         },
         {
+          title: 'Number',
+          path: '/docs/JavaScript/Number.md'
+        },
+        {
           title: 'Array',
           path: '/docs/JavaScript/Array.md'
         },

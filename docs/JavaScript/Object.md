@@ -40,6 +40,6 @@ date: 2020-07-05
 2. Object.values(对象) // 取所有的val值,返回数组,可调用数组方法
 3. Object.entries(对象) // 把对象变成可遍历对象,即可使用for of
 4. Object.fromEntries(arr) // 把数组变成对象
-5. Object.is(对象) // 判断是否全等,相当于 ===
+5. Object.is(对象) // 判断是否是同一个值，不会隐式转换类型
 6. Object.assign(对象) // 如果是第一层级是深拷贝，如果有多层级，则除了第一层级是深拷贝其他都是浅拷贝
 ```
