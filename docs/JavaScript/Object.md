@@ -23,13 +23,36 @@ date: 2020-07-05
 // es5
 1. Object.getPrototypeOf(obj) // 获取原型链上的对象
 2. Object.defineProperty() // 修改属性描述符
+  1. Object.defineProperty(obj, 'name', {})
+     如果对一个属性这样设置，它的属性描述符都是 false，即属性描述符的默认值都是 false
 3. Object.deleteProperty() // 删除属性描述符
 4. Object.getOwnPropertyDescriptor() //获取属性描述符
-5. Object.freeze(obj) // 把obj变为不可扩展
-6. Object.hasOwnProperty(key) // 判断 key 是否是该对象自身的属性，而不是原型上的
+5. Object.hasOwnProperty(key) // 判断 key 是否是该对象自身的属性，而不是原型上的
+6. Object.preventExtensions(obj)
+  1. 把 obj 变为不可扩展
+  2. 不能新增属性
+  3. 可以修改描述符
+  4. 可以删除属性
+  5. 可以更改属性值
+  6. Object.isExtensible(obj) // 判断是否是可扩展
+7. Object.seal(obj)
+  1. 把 obj 变为封闭状态
+  2. 不能新增属性
+  3. 不能修改描述符
+  4. 不能删除属性
+  5. 可以更改属性值
+  6. Object.isSealed(obj) // 判断是否是封闭状态
+8. Object.freeze(obj)
+  1. 把 obj 变为冻结状态
+  2. 不能新增属性
+  3. 不能修改描述符
+  4. 不能删除属性
+  5. 不能更改属性值
+  6. Object.isFrozen(obj) // 判断是否被冻结
 ----------------------------------------------------------------------------------------------
 // 属性描述符
-1. configurable: true // 是否可删除
+1. configurable: true // 是否可删除，其他描述符是否可以被更改
+  1. 如果 configurable 是 false，这个对象的属性只能改 value 和 writable 从 true 变成 false，其他都会失败
 2. enumerable: true // 是否可遍历
 3. value: 值 // 本身的val值
 4. writable: true // 是否可修改
@@ -42,4 +65,19 @@ date: 2020-07-05
 4. Object.fromEntries(arr) // 把数组变成对象
 5. Object.is(对象) // 判断是否是同一个值，不会隐式转换类型
 6. Object.assign(对象) // 如果是第一层级是深拷贝，如果有多层级，则除了第一层级是深拷贝其他都是浅拷贝
+----------------------------------------------------------------------------------------------
+// 普通属性和排序属性
+1. 当使用非数字的字符串作为 key 时，遍历 obj 它会按顺序遍历
+2. 如果使用数字或数字字符串作为 key 时，遍历 obj 它会按 key 大小进行顺序遍历，从小到大
+3. 如果一个对象里面既有普通属性又有排序顺序，遍历输出时，排序属性会在普通属性的前面
+4. 为什么要设计普通属性和排序属性？
+  1. 提升属性的访问速度
+  2. 两种线性数据结构保存
+  3. 在对象上会有两个隐藏的属性，elements 即排序属性，properties 即普通属性
+     在这两个属性下又分别挂载了这个对象上的对应的属性
+5. 对象内属性：被保存在对象自身的普通属性，即不在 properties 上面，而是在直接挂载在对象上面
+  1. 内属性的数量是 10 个，可以在浏览器的 Memory 上测试验证
+  2. 在 properties 中，如果数量较少是以顺序的下标存储的，如果多则是以无序下标存储的，这是 V8 的优化
+6. 隐藏类（Map）：类似快照，记录这个对象的属性的来源等信息，可以在浏览器的 Memory 中查看某一个对象
+7. 对象的 delete 和赋值为 undefined，赋值的动作会比 delete 快，尤其是对普通属性来说，快很多
 ```
