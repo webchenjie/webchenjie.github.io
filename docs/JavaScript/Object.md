@@ -21,7 +21,7 @@ date: 2020-07-05
 5. for(var key in obj) { key为属性名,obj[key]为属性值 } // 遍历对象
 ----------------------------------------------------------------------------------------------
 // es5
-1. Object.getPrototypeOf(obj) // 获取原型链上的对象
+1. Object.getPrototypeOf(obj) // 获取原型链上的对象，参数不能是 null 或 undefined，否则会报错
 2. Object.defineProperty() // 修改属性描述符
   1. Object.defineProperty(obj, 'name', {})
      如果对一个属性这样设置，它的属性描述符都是 false，即属性描述符的默认值都是 false
@@ -80,4 +80,17 @@ date: 2020-07-05
   2. 在 properties 中，如果数量较少是以顺序的下标存储的，如果多则是以无序下标存储的，这是 V8 的优化
 6. 隐藏类（Map）：类似快照，记录这个对象的属性的来源等信息，可以在浏览器的 Memory 中查看某一个对象
 7. 对象的 delete 和赋值为 undefined，赋值的动作会比 delete 快，尤其是对普通属性来说，快很多
+----------------------------------------------------------------------------------------------
+// 对象的属性的遍历
+1. 属性的分类
+  1. 普通属性
+  2. 不可枚举的属性
+  3. 原型属性
+  4. Symbol 属性
+2. 遍历的方法
+  1. for in // 可以遍历普通属性 + 原型属性
+  2. Object.keys // 可以遍历普通属性
+  3. Object.getOwnPropertyNames // 可以遍历普通属性 + 不可枚举属性
+  4. Object.getOwnPropertySymbols // 可以遍历不可枚举属性 + Symbol 属性
+  5. Reflect.ownKeys // 可以遍历普通属性 + 不可枚举属性 + Symbol 属性
 ```
