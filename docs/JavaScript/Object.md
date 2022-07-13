@@ -93,4 +93,24 @@ date: 2020-07-05
   3. Object.getOwnPropertyNames // 可以遍历普通属性 + 不可枚举属性
   4. Object.getOwnPropertySymbols // 可以遍历不可枚举属性 + Symbol 属性
   5. Reflect.ownKeys // 可以遍历普通属性 + 不可枚举属性 + Symbol 属性
+----------------------------------------------------------------------------------------------
+// delete 本质
+1. delete 的返回值是什么
+  1. Boolean 类型
+  2. true，不一定删除成功，代表删除没有发生异常
+  3. false，一定没有删除成功
+2. delete 不能删除哪些属性
+  1. 任何用 var 声明的属性，不能从全局作用域或者函数作用域删除
+  2. 任何使用 let 或 const 声明的属性，不能从它声明的作用域删除
+  3. 不可配置（configurable）的属性不能被删除
+3. 本质
+  1. 操作表达式的结果
+  2. 值、字面量，不操作，直接返回 true
+  3. 引用类型，删除引用
+4. 严格模式
+  1. 在非严格模式下，delete 方法是安全方法，不会抛异常
+  2. 在严格模式下可能会抛出 3 种异常
+    1. SyntaxError：尝试删除变量、函数名、函数参数
+    2. TypeError：尝试删除 configurable 为 false 的属性
+    3. ReferenceError：尝试删除引用类型上的属性，如 delete super.xxx // class
 ```
