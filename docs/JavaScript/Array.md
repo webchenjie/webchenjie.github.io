@@ -5,7 +5,7 @@ date: 2020-07-04
 
 ```js
 // 创建数组
-1. new Array(3) // 3表示数组长度
+1. new Array(3) // 3表示数组长度，如果只有一个参数且是数值则代表长度，如果不是数值则代表内容
 2. var arr = new Array(3, '4', true) // 3, '4', true 表示数组内容
 3. var arr = [3, '4', true] // 3, '4', true 表示数组内容
 4. console.log(arr[0]) // 读取数组下标对应的值
@@ -23,6 +23,7 @@ for(var i = 0; i < arr.length; i++) { arr[i] }
 // 操作数组
 1. arr.sort(function(a, b) { return b - a }) // 降序
 2. arr.sort(function(a, b) { return a - b }) // 升序
+  1. 默认按照 ASLL 码先后书序排序（10 排在 2 的前面）
 3. arr3 = arr1.concat(arr2) //用于连接两个或多个数组
 4. arr.join(',') // 将数组转换成字符串,返回转换后的字符串,默认用逗号分隔,通过参数改变分隔符
 5. arr.reverse() // 数组反序,返回转换后的数组
