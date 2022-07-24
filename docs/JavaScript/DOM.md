@@ -15,6 +15,24 @@ date: 2020-07-05
 1. 元素: nodeName为元素名称、nodeType为1、nodeValue为null
 2. 属性: nodeName为属性名称、nodeType为2、nodeValue为属性值
 3. 文本: nodeName为#text、nodeType为3、nodeValue为文本内容
+4. 其他 nodeType 的值，具体可查询 MDN
+  1. nodeType === 1，元素节点，div、span 等
+    1. 创建：document.createElement
+    2. children（nodeType = 1，这是 Element 的属性），childNodes（这是 Node 的属性）
+  2. nodeType === 3，文本，对象模型：Text
+    1. 神秘空白的文本节点
+    2. 使用 childNodes 访问
+    3. 使用 nodeValue 取值
+  3. nodeType === 8，注释，对象模型：Comment
+    1. '<!--' 和 '-->' 之间的内容
+  4. nodeType === 9，文档，对象模型：Document
+  5. nodeType === 10，文档类型，对象模型：DocumentType
+    1. 访问方式：document.doctype，document.firstChild
+    2. 有用的属性只有一个，就是 name，返回值是 'html'
+  6. nodeType === 11，文档碎片，对象模型：DocumentFragment
+    1. 和标准的 documnet 一样，存储由节点（nodes）组成的文档结构
+    2. 所有的节点会被一次插入到文档中，而这个操作仅发生一个重渲染的操作
+    3. 常用于批量创建大量节点，提高性能
 ----------------------------------------------------------------------------------------------
 // NodeList、HTMLCollection、NamedNodeMap
 1. NodeList是节点的集合,包含标签和文本和空行
@@ -41,15 +59,66 @@ date: 2020-07-05
     class HTMLInputElement extends HTMLElement {}
   5. HTMLCollection 是 Element 的集合
   6. NodeList 是 Node 集合
-  7. Node 是所有元素的父类，
+  7. Node 是所有元素的父类
+  8. children 属性是 Element 独有的
+  9. childNodes 属性是 NodeL 独有的，包含 children
+  10. 通过 for/while 遍历，NodeList 有 forEach 方法，但是注意兼容性，可以转为数组
 ----------------------------------------------------------------------------------------------
 // 查找DOM节点
 1. getElementById('id') // 在IE中name与id值会冲突
+  1. 根据元素的 id 属性值进行节点查询，返回单一元素
+  2. 只返回元素，nodeType 为 1 的 Element
+  3. id 是大小写敏感的字符串
+  4. 如果有多个元素有相同 id，只会返回第一个元素
+  5. 此方法仅仅存在于 Document 实例上
 2. getElementsByName('name') // 1和2只能通过document调用
+  1. 根据指定的 name 属性查询元素
+  2. 返回的是实时的节点集合 NodeList
+  3. 包括不能被解析的节点
+  4. 此方法仅仅存在于 Document 实例上
 3. getElementsByTagName('tag') // 传入*号可以获取所有的标签
+  1. 根据指定的标签查询元素
+  2. 返回的是实时的元素集合
+  3. tagName 可以是 '*'，代表所有元素，当参数是 '*' 时，作用和 document.all 一样
+  4. WebKit 旧版本内核的浏览器中可能返回一个 NodeList
 4. getElementsByClassName('class') // 参数可多个
+  1. 根据指定的类名查询元素
+  2. 返回结果是实时的元素集合，但不是数组
+  3. 可以同时匹配多个 class，'class' 类名通过空格分隔，匹配是 And 的关系
+  4. 元素均拥有此方法，不限于 documnet
 5. querySelector('#id') // 参数可以是css3选择器,返回一个元素
+  1. 根据 css 选择器进行节点查询，返回匹配的第一个元素 Element
+  2. 仅仅返回匹配的第一个元素 Element
+  3. 如果传入的不是有效的 css 选择器字符串，会抛出异常，所以这个不是一个安全的方法
+  4. 元素均有此方法，不限于 document
+  5. 注意 css 选择器字符串的转义字符
 6. querySelectorAll('#id') // 参数同上,返回数组
+  1. 根据 css 选择器进行节点查询，返回节点列表 NodeList
+  2. 返回的是静态的 NodeList，随后对 DOM 元素的改动不会影响其集合的内容
+  3. querySelectorAll 可能返回的不是你期望的值（scope）
+    1. querySelectorAll(':scope .outer .inner')
+    2. 如果不加 scope，则不会按照 DOM 的层级结构查询，会全局查询
+  4. 元素均有此方法，不限于 document
+7. 一些特殊查询属性
+  1. document.all，所有的元素
+  2. document.images，所有的图片元素
+  3. document.forms，所有的 form 表单元素
+  4. document.scripts，所有的脚本元素
+  5. document.links，所有具有 href 的 area（热点）和 a 元素
+  6. document.fonts，所有字体
+8. 怎么查询伪元素？
+  1. 不能查询
+  2. 可以通过 window.getComputedStyle 方法获取内容
+    1. 示例
+      <style>
+        .box::before {
+          content: '你好，'
+        }
+      </style>
+      <div class="box">chenj</div>
+      const box = document.querySelector('.box')
+      const before = window.getComputedStyle(box, 'before')
+      console.log(before.content)
 ----------------------------------------------------------------------------------------------
 // 获取DOM节点(包含空白文本)
 1. ele.firstChild // 获取元素的第一个子节点
@@ -77,6 +146,24 @@ date: 2020-07-05
 2. document.createTextNode('文本') // 创建文本
 3. document.createDocumentFragment(标签) // 创建一个文档片段,相当于一个把标签装起来的盒子
 4. document.createComment('注释') // 创建注释语句
+5. 对象模型直接 new
+  1. const comment = new Comment('注释')
+  2. const test = new Text('文本')
+  3. document.body.append(comment)
+  4. document.body.append(text)
+----------------------------------------------------------------------------------------------
+// DOM操作（挂载）
+1. Node
+  1. appendChild，将一个节点附加到指定父节点的子节点列表的末尾
+  2. insertBefore，在参考节点之前插入一个拥有指定父节点的子节点
+  3. replaceChild，指定的节点替换当前节点的一个子节点，并返回被替换掉的节点
+  4. textContent，替换一个节点及其后代的文本内容
+2. Element
+  1. after，在该节点之后插入一组 Node（操作同级节点）
+  2. before，在该节点之后插入一组 Node（操作同级节点）
+  3. append，在节点最后一个子节点后插入一组 Node（操作子节点）
+  4. prepend，在节点的第一个子节点之前插入一组 Node（操作子节点）
+  5. replaceChildren，将后代替换为指定节点
 ----------------------------------------------------------------------------------------------
 // DOM操作(添加)
 1. ele.appendChild(ele) // 为ele节点的最后一个子节点添加节点,返回新的子节点,如果参数是已存在的节点则会移动
@@ -89,6 +176,10 @@ date: 2020-07-05
 // DOM操作(删除)
 1. ele.removeChild(ele) // 删除当前元素的某个子节点,返回被删除的节点
 2. ele.removeNode() // 将目标节点从文档中删除,返回目标节点,参数默认为false会删除父节点保留子节点,传入true时将全部删除包括子节点
+3. Node.removeNode
+4. Element.remove
+5. outerHTML、innerHTML
+6. Document.adoptNode
 ----------------------------------------------------------------------------------------------
 // 设置元素样式
 ele.style.styleName = styleValue
