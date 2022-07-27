@@ -293,4 +293,61 @@ ele.style.styleName = styleValue
 1. e.touches // 当屏幕上有多个手指按下的数组
 2. e.changedTouches // 当屏幕上有多个手指,其中有移动的信息
 3. e.targetTouches // 当屏幕上有多个手指,作用在元素上的触摸信息
+----------------------------------------------------------------------------------------------
+// 容易混淆的属性
+1. HTMLElement.innerText 和 Node.textContent
+  1. HTMLElement.innerText 表示一个节点以及后代被渲染的文本内容（未渲染不包含，如 style、script、display: none 等）
+  2. Node.textContent 表示一个节点以及其后代节点的文本内容
+  3. 区别
+    1. innerText 可操作已被渲染的内容，textContent 不会
+    2. innerText 受样式影响会触发浏览器绘制部分或全部页面，带来性能问题，尽可能使用 textContent
+2. Node.nodeValue 和 value
+  1. Node.nodeValue
+    1. 对应 text、comment 和 CDATA 节点来说，nodeValue 返回该节点的文本内容
+    2. 对应 attribute 节点来说，返回该属性的属性值
+  2. value
+    1. 特定的一些 HTMLELement 元素，用 value 属性获取其值，如 HTMLInputElement、HTMLSelectElement 等
+  3. 区别
+    1. nodeValue 是文本节点、属性节点、注释节点等类型的节点用来取文本/值的属性
+    2. value 是特定的元素节点用来取值的属性
+3. Node.compareDocumentPosition 和 Node.contains
+  1. Node.compareDocumentPosition
+    1. 比较当前节点与任意文档中的另一个节点的位置关系，返回是数字，多个条件成立时返回的数字会累加
+  2. Node.contains
+    1. 返回的是一个布尔值，来表示传入的节点是否为该节点的后代节点
+  3. 区别
+    1. compareDocumentPosition 返回的是数字，带组合意义的数据，不仅仅可以返回包含，还可以返回在之前或之后等信息
+    2. contains 返回的是布尔值，仅仅告诉你是否有包含关系
+4. Element.getBoundingClientRect 和 Element.getClientRects
+  1. Element.getBoundingClientRect 返回元素的大小及其相对于可视化窗口的位置
+  2. Element.getClientRects 返回盒子的边界矩形集合
+    1. 对于行内元素，元素内部的每一行都会有一个边框，对于块级元素，如果里面没有其他元素，一整块元素只有一个边框
+5. window.onload 和 DOMContentLoaded
+  1. window.onload 在文档装载完成后会触发 load 事件，此时，在文档中的所有对象都在 DOM 中
+     所有图片、脚本、链接以及子框架都完成了装载
+  2. DOMContentLoaded 当初始的 HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发
+     而无需等待样式表、图片和子框架（iframe）的完全加载
+6. Document.adoptNode 和 Document.importNode 和 Node.cloneNode
+  1. Document.adoptNode 将外部文档的一个节点拷贝一份，然后可以把这个拷贝的节点插入到当前文档中
+  2. Document.importNode 是从其他 document 文档中获取一个节点，该节点以及它的子树上的所有节点都会从原文档删除
+     并且它的 ownerDocument 属性会变成当前 documnet 文档，之后你可以把这个节点插入到当前文档中
+  3. Node.cloneNode 是生成一个节点的副本，分为浅克隆和深克隆
+    1. cloneNode deep 参数在不同版本的浏览器实现中，默认值可能不一样，所以建议写上值
+    2. cloneNode 会克隆一个元素节点，会拷贝它所有的属性以及属性值，当前也包括了属性上绑定的事件
+       比如 onClick="xxx"，但不会拷贝那些使用 addEventListener 方法或 node.onclick=fn 这种用 js 动态绑定的事件
+  4. 区别
+    1. adoptNode 从外部文档进行拷贝
+    2. importNode 从外部文档进行拷贝，并从外部文档删除
+    3. cloneNode 从本文档进行复制，有浅复制和深复制
+7. append 和 appendChild
+  1. Node.appendChild 是将一个节点附加到指定父节点的子节点列表的末尾处
+  2. Element.append 是在 parentNode 的最后一个子节点之后插入一组 Node 对象或 DOMString 对象
+  3. 区别
+    1. append 允许追加 DOMString，appendChild 不允许
+    2. append 和 appendChild 都允许追加 Node 对象
+    3. append 没有返回值，appendChild 返回追加的 Node 对象
+    4. append 可以追加多个节点，appendChild 只能追加一个
+8. childNodes 和 children
+  1. Node.childNodes 是节点的子节点集合，包括元素节点、文本节点、注释节点等
+  2. Element.children 返回的只是节点的元素节点集合，即 nodeType 为 1 的节点
 ```
