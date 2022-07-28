@@ -182,8 +182,17 @@ date: 2020-07-05
 6. Document.adoptNode
 ----------------------------------------------------------------------------------------------
 // 设置元素样式
-ele.style.styleName = styleValue
-如: box.style.fontWeight = 'bold'
+1. ele.style.styleName = styleValue
+  如: box.style.fontWeight = 'bold'
+2. ele.style.cssText = "color: red; background-color: blue;"
+3. className 和 classList
+4. 可以在 style 标签上加 id，然后获取到对应的 style 标签，通过 textContent 进行样式的替换
+5. window.getComputeStyle
+  1. 返回一个对象，该对象在应用活动样式表并解析这些值可能包含的任何基本计算后报告元素的所有 CSS 属性的值
+  2. 语法：const style = window.getComputeStyle(el, [pseudoElt]) // pseudoElt 可以查询伪元素，如 before
+  3. 计算后的样式不等于 css 文件、style 标签和属性设置的样式的值
+  4. 可以获取伪类样式
+  5. 此方法会引起重排
 ----------------------------------------------------------------------------------------------
 // 获取设置标签之间的内容
 1. ele.innerHTML // 获取ele元素开始和结束标签之间的html
@@ -208,10 +217,31 @@ ele.style.styleName = styleValue
 // 事件
 1. html事件: 直接在html元素标签内添加事件执行脚本,如<tag 事件='执行脚本'></tag>,执行脚本可以是js代码或函数调用
 2. DOM0级事件: ele.事件 = 执行脚本,如btn.onclick = function(){}
+  1. 效率高
+  2. 节点上 onclick 属性被 Node.cloneNode 克隆，通过 js 赋值的 onclick 不可以
+  3. 移除事件非常简单
+  4. this 是当前的节点
+  5. 如果调用函数，会在全局作用域中查找
+  6. 唯一性，只能顶一个事件回调函数
 3. DOM2级事件绑定: ele.addEventListener('click', function(){}, false),默认false冒泡,true捕获
 4. DOM2级事件移除: ele.removeEventListener('click', 函数名, false),默认false冒泡,true捕获
 5. IE8及以下DOM2级事件绑定: ele.attachEvent('onclick', function(){})
-5. IE8及以下DOM2级事件移除: ele.detachEvent('onclick', 函数名)
+6. IE8及以下DOM2级事件移除: ele.detachEvent('onclick', 函数名)
+7. DOM2级事件执行顺序
+  1. 捕获阶段
+  2. 目标阶段
+  3. 冒泡阶段
+  4. 如：window ==> document ==> body ==> button ==> body ==> document ==> window
+8. DOM2级事件第三个参数除了可以是 true or false，还是可以是个 options
+  1. once，是否只响应一次
+    1. 最典型的应用就是视频播放，现代浏览器可能需要用户参与后，视频才可以有声播放
+       也就是说即使设置了 autoplay，如果用户没有操作，视频也不会自动播放，所以可以通过
+       此属性绑定一个事件监听用户操作，从而进行播放
+  2. passive，设置为 true 时，事件处理成不会调用 preventDefault
+    1. 某些触摸事件的监听器在尝试处理滚动时，可能阻止浏览器的主线程，从而导致滚动处理期间性能大大降低
+  3. AbortSignal，removeEventListener 的另一种方案，也可以用于取消 fetch 请求
+9. DOM2级事件如果绑定的事件、参数、回调函数相同，只会绑定一个
+10. 所有的事件都是继承于 EventTarget
 ----------------------------------------------------------------------------------------------
 // 冒泡捕获
 1. 事件冒泡: 事件沿DOM树向上传播,直系亲属树结构中,点击某个元素,由于冒泡作用,亲属树上的元素凡是添加的事件的都会被触发
@@ -263,8 +293,8 @@ ele.style.styleName = styleValue
 ----------------------------------------------------------------------------------------------
 // 事件参数function(event){}, 高级浏览器
 1. e.type // 事件类型
-2. e.target // 事件源触发的元素
-3. e.currentTarget // 事件绑定在哪就指哪,绑定事件的元素
+2. e.target // 触发事件的元素
+3. e.currentTarget // 绑定事件的元素
 4. e.preventDefault() // 阻止默认行为
 5. e.stopPropagation() // 阻止事件冒泡或捕获
 6. e.clientY // 浏览器顶部底边到鼠标位置(可视区)
@@ -277,6 +307,10 @@ ele.style.styleName = styleValue
 13. e.shiftKey // 按下shift键
 14. e.ctrlKey // 按下ctrl键
 15. e.altKey // 按下alt键
+16. e.stoplmmediatePropagation()
+  1. 阻止监听同一事件的其他事件监听器被调用
+  2. e.stopPropagation 的增强版
+  3. 简单理解就是，前面的事件调用 stoplmmediatePropagation 后，后面的事件就不会被执行
 ----------------------------------------------------------------------------------------------
 // 事件参数function(event){}, IE浏览器
 1. e.type // 事件类型
@@ -293,6 +327,12 @@ ele.style.styleName = styleValue
 1. e.touches // 当屏幕上有多个手指按下的数组
 2. e.changedTouches // 当屏幕上有多个手指,其中有移动的信息
 3. e.targetTouches // 当屏幕上有多个手指,作用在元素上的触摸信息
+----------------------------------------------------------------------------------------------
+// 自定义事件
+1. document.createEvent // 已废弃
+2. new Event // 不支持传参
+3. new CustomEvent // 支持传参
+  1. 从继承关系看来，CustomEvent 是 Event 的扩展
 ----------------------------------------------------------------------------------------------
 // 容易混淆的属性
 1. HTMLElement.innerText 和 Node.textContent
