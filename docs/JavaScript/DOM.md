@@ -193,6 +193,10 @@ date: 2020-07-05
   3. 计算后的样式不等于 css 文件、style 标签和属性设置的样式的值
   4. 可以获取伪类样式
   5. 此方法会引起重排
+6. CSSOM
+  1. 关系
+    1. document ==> CSSStyleSheet（style 标签） ==> CSSRuleList（对应样式块） ==> CSSRule（对应样式） ==> styleMap（append/clear/delete/set）
+  2. 使用：document.styleSheets
 ----------------------------------------------------------------------------------------------
 // 获取设置标签之间的内容
 1. ele.innerHTML // 获取ele元素开始和结束标签之间的html
