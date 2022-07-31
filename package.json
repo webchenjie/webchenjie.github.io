@@ -30,11 +30,11 @@
     "vuepress-theme-reco": "1.6.13"
   },
   "devDependencies": {
-    "@sxwy/commitlint-config": "^1.2.0",
-    "@sxwy/eslint-config-base": "^1.5.0",
-    "@sxwy/prettier-config": "^1.4.0",
-    "@sxwy/stylelint-config": "^1.4.0",
-    "eslint": "^8.19.0",
+    "@sxwy/commitlint-config": "^1.3.0",
+    "@sxwy/eslint-config-base": "^1.6.0",
+    "@sxwy/prettier-config": "^1.4.1",
+    "@sxwy/stylelint-config": "^1.4.1",
+    "eslint": "^8.20.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",

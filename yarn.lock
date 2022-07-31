@@ -1465,18 +1465,18 @@
   resolved "https://registry.npmmirror.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@sxwy/commitlint-config@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@sxwy/commitlint-config/-/commitlint-config-1.2.0.tgz#e24b365b7f05de3a309356cf0e6b67bd41706875"
-  integrity sha512-MpIquD8nuZr9Wp9Fqa8I4tcvjRfYePGMA8liSRkvsW/351AJh94phK7kqWcSAJNjbB6eN0OA1m2Bsq0OKrhHnw==
+"@sxwy/commitlint-config@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@sxwy/commitlint-config/-/commitlint-config-1.3.0.tgz#acc1bc73d652d7de7b70ccdc60b5a3413256c0c3"
+  integrity sha512-jJlh4O1A+uALbkpqEbjU/3RJw2Ujiu5PJtQcVlCSBiybGKQpNz/uHO2WaL8G84JD0F+XZlWyPaUdqGUoSyoXOA==
   dependencies:
     "@commitlint/cli" "^17.0.3"
     "@commitlint/config-conventional" "^17.0.3"
 
-"@sxwy/eslint-config-base@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@sxwy/eslint-config-base/-/eslint-config-base-1.5.0.tgz#bfd073ee3e56834f77b60ef74fd270e80c8917ca"
-  integrity sha512-K2z6fRj9QUUey14eggoR2KwyYi50+37yx49IVi9YjyZrgrEe3nIHcHJ2aTmj7O6LuipuaFF6q4EzWl/hDWASGg==
+"@sxwy/eslint-config-base@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@sxwy/eslint-config-base/-/eslint-config-base-1.6.0.tgz#1acf6cdf6095799252586ae7902f1a5ffd9b695d"
+  integrity sha512-rM6qnptqLgQuA/lXTeSSWJDRxbPayABkc7tpeR9b7Z0x9b1pZ3DrBd0p2/cx8QmrerDftpK1kZqs+ebdTTSAzw==
   dependencies:
     "@babel/core" "^7.18.6"
     "@babel/eslint-parser" "^7.18.2"
@@ -1489,15 +1489,15 @@
     eslint-plugin-prettier "^4.2.1"
     eslint-plugin-promise "^6.0.0"
 
-"@sxwy/prettier-config@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@sxwy/prettier-config/-/prettier-config-1.4.0.tgz#faba4c81f22772e1024793eb31e26fe0dd315d36"
-  integrity sha512-hKkrNGn5bTQ1GuyGnYtbcTENS6thetqWTQfLGIFzfGAoozXw1ipQ55DCu/Yp9y480rMAQkV/YtwBAU3D1xzitg==
+"@sxwy/prettier-config@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@sxwy/prettier-config/-/prettier-config-1.4.1.tgz#9fdafb88121d64b3768521ca0c6bb76fac2980e7"
+  integrity sha512-gCo0uvKzwxPXIE18fDp8wYfQ7v5l8uY8xRdEYFrC/A53UCl+5NNu+p8NnAyq0Ud/CnB3XN0ZyC/NLPVdiSEjUQ==
 
-"@sxwy/stylelint-config@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@sxwy/stylelint-config/-/stylelint-config-1.4.0.tgz#dd5206d1d5f2f1f724bd1a55a883ba59ad197ea3"
-  integrity sha512-SuC8Jl4IB+32wvtCJ/GhUXWHILQtbX8oce83eTJAaXL8IDaAY9AJnh+2q9n5L2gTQ+rfPwErRzhEke1177Wo4A==
+"@sxwy/stylelint-config@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@sxwy/stylelint-config/-/stylelint-config-1.4.1.tgz#034f670d63183f6ee1f33081006495090505c864"
+  integrity sha512-xBStfKDAGrKkNQp8PGqEtd2JCo6lY48TKD6w14kgVwcd2zpVFdk1R5W+IbKLRAu5TYs0E0eZQ4tJEwQJV8wLnA==
   dependencies:
     stylelint-config-prettier-scss "^0.0.1"
     stylelint-config-recess-order "^3.0.0"
@@ -5003,10 +5003,10 @@ eslint-visitor-keys@^3.3.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz#f6480fa6b1f30efe2d1968aa8ac745b862469826"
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
 
-eslint@^8.19.0:
-  version "8.19.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.19.0.tgz#7342a3cbc4fbc5c106a1eefe0fd0b50b6b1a7d28"
-  integrity sha512-SXOPj3x9VKvPe81TjjUJCYlV4oJjQw68Uek+AM0X4p+33dj2HY5bpTZOgnQHcG2eAm1mtCU9uNMnJi7exU/kYw==
+eslint@^8.20.0:
+  version "8.20.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.20.0.tgz#048ac56aa18529967da8354a478be4ec0a2bc81b"
+  integrity sha512-d4ixhz5SKCa1D6SCPrivP7yYVi7nyD6A4vs6HIAul9ujBzcEmZVM3/0NN/yu5nKhmO1wjp5xQ46iRfmDGlOviA==
   dependencies:
     "@eslint/eslintrc" "^1.3.0"
     "@humanwhocodes/config-array" "^0.9.2"
