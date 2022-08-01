@@ -6,6 +6,9 @@ date: 2020-07-04
 ```js
 // ajax是什么
 1. ajax是一种在无需要重新加载整个网页的情况下,能够更新部分网页的技术
+2. 全称是 Asynchronous Javascript And XML，即异步 Javascript 和 XML
+3. 它并不是指单一的某种技术，而是多种现有技术的结合，实现无页面刷新的数据获取
+4. 这些技术包括了 HTML、XHTML、CSS、JavaScript、DOM、XML、XSLT，以及最重要的 XMLHttpRequest
 ----------------------------------------------------------------------------------------------
 // ajax的优点
 1. 通过异步模式,提升了用户体验
@@ -28,6 +31,71 @@ date: 2020-07-04
 4. 发送HTTP请求
 5. 获取异步调用返回数据
 6. 使用js和DOM实现局部刷新
+----------------------------------------------------------------------------------------------
+// XMLHttpResquest
+1. upload，返回一个 XMLHttpResquestUpload 对象，表示上传进度
+2. withCredentials，用来指定跨域请求是否携带授权信息，如 cookie
+3. readyState，返回 XHR 代理当前所处的状态（0-4）
+4. status，返回响应的状态码，请求之前为 0，成功为 200
+5. statusText，服务器返回的状态码文本
+6. timeout，指定 ajax 的超时时长
+7. response，服务器响应的内容
+8. responseText，服务器响应内容的文本形式
+9. responseType，响应的类型（arrayBuffer、blob、document、json、text）
+10. responseXML，xml 形式的响应数据
+11. responseURL，ajax 最终请求的 url，存在重定向时，就是重定向后的 url
+12. abort()，如果请求已发出，立刻将终止该请求
+13. getAllResponseHeaders()，获取所有的响应头
+14. getResponseHeader()，获取指定的响应头文本字符串
+15. open()，初始化请求
+16. overrideMimeType()，指定一个 MIME 类型，代替服务器指定的类型
+17. send()，发送请求
+18. setRequestHeader()，设置请求头部
+19. 事件
+  1. onreadystatechange，readyState 属性变化时触发
+  2. ontimeout，在预设时间内没收到响应触发
+  3. onabort，request 被停止时触发
+  4. onloadstart，接收到响应数据时触发
+  5. onload，请求成功完成触发
+  6. onloadend，请求结束触发，无论请求成功与否
+  7. onerror，请求遇到错误时触发
+  8. onprogress，当请求收到更多数据时，周期性触发
+20. 缺点
+  1. 回调地狱
+  2. XHR 不符合关注点分离原则，如请求和响应都在一个对象上面
+----------------------------------------------------------------------------------------------
+// request的属性
+1. request.responseText // 获取字符串形式的响应数据
+2. request.responseXml // 获取xml形式的响应数据
+3. request.status // 数字,状态码
+4. request.statusText // 文本,状态码
+5. request.getAllResponseHeader() // 获取所有的响应报头
+6. request.getResponseHeader() // 获取某个的响应报头
+----------------------------------------------------------------------------------------------
+// request.readystate
+1. 0(未初始化)还没有调用send()方法
+2. 1(载入)已调用send()方法,正在发送请求
+3. 2(载入完成)send()方法执行完成,已经接收全部响应内容
+4. 3(交互)正在解析响应内容
+5. 4(完成)响应内容解析完成,可以在客户端调用
+----------------------------------------------------------------------------------------------
+// request.status
+1. 1xx: 服务器收到请求
+2. 2xx: 表示成功处理请求,如200
+3. 3xx: 需要重定向,浏览器直接跳转,301表示永久重定向,302表示临时重定向,304表示资源未改变(缓存)
+4. 4xx: 客户端请求错误,404表示资源找不到,403表示没有权限
+5. 5xx: 服务器端错误,504表示网关超时,500表示服务器错误
+----------------------------------------------------------------------------------------------
+// ajax演示
+var request = new XMLHttpRequest
+request.open('post', url, true) // 创建请求,true为异步
+request.setRequestHeader('content-type', 'application/json') // post请求要写请求头
+request.send('name=cj&age=23') // 发送请求
+request.onreadystatechange = function() {
+  if (request.readystate === 4 && request.status === 200) {
+    console.log(JSON.parse(request.responeText))
+  }
+}
 ----------------------------------------------------------------------------------------------
 // json是什么
 1. json全称是js对象表示法,它是一种数据交换的文本格式
@@ -101,39 +169,16 @@ date: 2020-07-04
        会执行 toJSON 方法，并使用 toJSON 返回的值作为结果
     2. 也就是说如果对象拥有 toJSON 方法时，会覆盖对象默认的序列化行为
 ----------------------------------------------------------------------------------------------
-// ajax演示
-var request = new XMLHttpRequest
-request.open('post', url, true) // 创建请求,true为异步
-request.setRequestHeader('content-type', 'application/json') // post请求要写请求头
-request.send('name=cj&age=23') // 发送请求
-request.onreadystatechange = function() {
-  if (request.readystate === 4 && request.status === 200) {
-    console.log(JSON.parse(request.responeText))
-  }
-}
-----------------------------------------------------------------------------------------------
-// request的属性
-1. request.responseText // 获取字符串形式的响应数据
-2. request.responseXml // 获取xml形式的响应数据
-3. request.status // 数字,状态码
-4. request.statusText // 文本,状态码
-5. request.getAllResponseHeader() // 获取所有的响应报头
-6. request.getResponseHeader() // 获取某个的响应报头
-----------------------------------------------------------------------------------------------
-// request.readystate
-1. 0(未初始化)还没有调用send()方法
-2. 1(载入)已调用send()方法,正在发送请求
-3. 2(载入完成)send()方法执行完成,已经接收全部响应内容
-4. 3(交互)正在解析响应内容
-5. 4(完成)响应内容解析完成,可以在客户端调用
-----------------------------------------------------------------------------------------------
-// request.status
-1. 1xx: 服务器收到请求
-2. 2xx: 表示成功处理请求,如200
-3. 3xx: 需要重定向,浏览器直接跳转,301表示永久重定向,302表示临时重定向,304表示资源未改变(缓存)
-4. 4xx: 客户端请求错误,404表示资源找不到,403表示没有权限
-5. 5xx: 服务器端错误,504表示网关超时,500表示服务器错误
-----------------------------------------------------------------------------------------------
-// 其他
-1. fetch是xmlHttRequest的下一代
+// fetch
+1. promise 语法，解决了回调地狱问题
+2. 更合理的设计，分离 request/response 等对象
+3. 前端可拦截 301/302 等跳转（XMR 不能）
+4. 支持数据流（Stream），方便处理大文件
+5. 语法简单
+6. 缺点
+  1. 缺少中断请求，需要使用其他 API 实现（AbortController 和 AbortSignal）
+  2. 缺少获取请求传输进度的能力，需要使用 Response.body 给我们返回一个 ReadableStream 对象
+  3. 兼容性比 XMR 差
+  4. 不支持超时，需要使用 setTimeout 自己封装
+  5. 错误不会被拒绝，服务器返回 400-500 等错误，并不会触发 promise 的 reject 回调
 ```
