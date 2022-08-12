@@ -152,6 +152,31 @@ clearTimeout(timer)
 4. 清除间歇调用: clearInterval(timer)
 var timer = setInterval(function() {}, 1000)
 clearInterval(timer)
+5. setInterval 累计效应
+  1. 定时器代码执行之间的间隔可能比你预期的要小
+  2. 定时器某些间隔会被跳过，因为如果存在 setInterval 未被执行则下一个 setInterval 不会被加入队列
+6. setTimeout 最低延迟
+  1. 以 chrome 为例，最低延迟 1ms，如果延迟时间大于 31次方-1，则默认为 1ms
+  2. setTimeout 嵌套多层时（5层），最小延迟 4ms
+7. requestAnimationFrame 在事件循环中的执行时机
+  1. 事件循环步骤：1个宏任务 ==> 所有微任务 ==> 是否需要渲染 ==> 渲染 UI
+  2. 在事件循环中，requestAnimationFrame 是在渲染 UI 中执行的
+8. requestAnimationFrame
+  1. 优点
+    1. dom 操作与浏览器刷新频率保持一致，保障动画流畅
+    2. 在隐藏或不可见的元素中，requestAnimationFrame 将不进行重绘和回流，节省CPU/GPU
+    3. 页面不是激活状态，动画会自动暂停，节省CPU开销
+  2. 注意：如果事件循环有任务耗时特别长，requestAnimationFrame 的动画效果会大打折扣
+9. requestIdleCallback：将在浏览器的空闲时段调用函数排队
+  1. 空闲时间的计算
+    1. 存在连续渲染的两帧，空闲时间就是帧的频率减去执行任务的时间（宏任务、微任务），减去绘制的时间
+    2. 当一段时间没有绘制或任务发生，空闲时间将会尽可能变大，但不会超过 50ms
+  2. 如何使用
+    1. 低优先级的任务使用空闲回调
+    2. 空闲回调尽量不超过可分配的时间，回调的参数会返回可分配时间
+    3. 由于该回调是在 render 之后，尽量避免在回调中改变 DOM
+    4. 避免运行时间无法预测的任务
+
 ----------------------------------------------------------------------------------------------
 // location: 地址栏的url
 1. location.href // 返回当前加载页面的完整url，赋值时会产生新的历史记录
