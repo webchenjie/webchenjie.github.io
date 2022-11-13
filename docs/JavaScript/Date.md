@@ -1,5 +1,5 @@
 ---
-title: Date
+title: JavaScript-Date
 date: 2020-07-04
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ES6
+title: JavaScript-ES6
 date: 2020-07-04
 ---
 

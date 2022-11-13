@@ -1,5 +1,5 @@
 ---
-title: Ajax和Json
+title: JavaScript-Ajax与Json
 date: 2020-07-04
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ECMA和W3C
+title: JavaScript-ECMA与W3C
 date: 2020-07-11
 ---
 

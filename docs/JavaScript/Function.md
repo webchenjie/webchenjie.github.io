@@ -1,5 +1,5 @@
 ---
-title: Function
+title: JavaScript-Function
 date: 2020-07-05
 ---
 

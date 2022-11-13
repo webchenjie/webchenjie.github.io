@@ -1,5 +1,5 @@
 ---
-title: Array
+title: JavaScript-Array
 date: 2020-07-04
 ---
 

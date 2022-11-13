@@ -1,5 +1,5 @@
 ---
-title: Math
+title: JavaScript-Math
 date: 2020-07-04
 ---
 

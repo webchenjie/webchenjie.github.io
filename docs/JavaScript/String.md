@@ -1,5 +1,5 @@
 ---
-title: String
+title: JavaScript-String
 date: 2020-07-04
 ---
 
