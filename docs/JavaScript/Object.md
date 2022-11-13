@@ -1,6 +1,10 @@
 ---
 title: JavaScript-Object
 date: 2020-07-05
+tags:
+    - JavaScript
+categories:
+    - 技术
 ---
 
 ```js

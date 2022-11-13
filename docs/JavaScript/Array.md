@@ -1,6 +1,10 @@
 ---
 title: JavaScript-Array
 date: 2020-07-04
+tags:
+    - JavaScript
+categories:
+    - 技术
 ---
 
 ```js

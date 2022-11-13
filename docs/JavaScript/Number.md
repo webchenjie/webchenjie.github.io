@@ -1,6 +1,10 @@
 ---
 title: JavaScript-Number
 date: 2022-07-09
+tags:
+    - JavaScript
+categories:
+    - 技术
 ---
 
 ```js

@@ -1,6 +1,10 @@
 ---
 title: JavaScript-Ajax与Json
 date: 2020-07-04
+tags:
+    - JavaScript
+categories:
+    - 技术
 ---
 
 ```js
