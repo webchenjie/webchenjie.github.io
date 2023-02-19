@@ -9,15 +9,20 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build 🔧
+      - name: UseNode
+        uses: actions/setup-node@v3
+          with:
+            node-version: 16
+
+      - name: Build
         run: |
           yarn
           yarn build
 
-      - name: Deploy 🚀
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           token: ${{ secrets.GH_TOKEN }}
