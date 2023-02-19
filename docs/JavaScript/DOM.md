@@ -65,7 +65,7 @@ categories:
   6. NodeList 是 Node 集合
   7. Node 是所有元素的父类
   8. children 属性是 Element 独有的
-  9. childNodes 属性是 NodeL 独有的，包含 children
+  9. childNodes 属性是 Node 独有的，包含 children
   10. 通过 for/while 遍历，NodeList 有 forEach 方法，但是注意兼容性，可以转为数组
 ----------------------------------------------------------------------------------------------
 // 查找DOM节点
