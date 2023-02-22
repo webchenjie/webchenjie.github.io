@@ -69,7 +69,7 @@ arr.newPush(4)
 
 基于上一小节的思想，在`Vue`中创建了一个数组方法拦截器，它拦截在数组实例与`Array.prototype`之间，在拦截器内重写了操作数组的一些方法，当数组实例使用操作数组方法时，其实使用的是拦截器中重写的方法，而不再使用`Array.prototype`上的原生方法。如下图所示：
 
-![Vue](https://mp-bb37bf33-58d5-448f-bdac-3f38f7f72de0.cdn.bspapp.com/cloudstorage/0127047a-f517-4df8-b589-de2268ec044e.png)
+![Vue](/image/docs/Vue/源码知识/响应式/docs-Vue-源码知识-响应式-1.png)
 
 经过整理，`Array`原型中可以改变数组自身内容的方法有 7 个，分别是：`push`,`pop`,`shift`,`unshift`,`splice`,`sort`,`reverse`。那么源码中的拦截器代码如下：
 
