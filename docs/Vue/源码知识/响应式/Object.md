@@ -302,7 +302,7 @@ export function parsePath(path) {
 
 简单总结一下就是：`Watcher`先把自己设置到全局唯一的指定位置（`window.target`），然后读取数据。因为读取了数据，所以会触发这个数据的`getter`。接着，在`getter`中就会从全局唯一的那个位置读取当前正在读取数据的`Watcher`，并把这个`watcher`收集到`Dep`中去。收集好之后，当数据发生变化时，会向`Dep`中的每个`Watcher`发送通知。通过这样的方式，`Watcher`可以主动去订阅任意一个数据的变化。为了便于理解，我们画出了其关系流程图，如下图：
 
-![Vue](/image/docs/Vue/源码知识/响应式/docs-Vue-源码知识-响应式-1.png)
+![Vue](/image/docs/Vue/源码知识/响应式/docs-Vue-源码知识-响应式-3.png)
 
 以上，就彻底完成了对`Object`数据的侦测，依赖收集，依赖的更新等所有操作。
 
