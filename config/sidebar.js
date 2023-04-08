@@ -2,7 +2,6 @@ module.exports = {
   '/docs/': [
     {
       title: 'HTML',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -16,7 +15,6 @@ module.exports = {
     },
     {
       title: 'CSS',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -30,7 +28,6 @@ module.exports = {
     },
     {
       title: 'JavaScript',
-      collapsable: true,
       children: [
         {
           title: 'String',
@@ -120,7 +117,6 @@ module.exports = {
     },
     {
       title: 'TypeScript',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -134,7 +130,6 @@ module.exports = {
     },
     {
       title: 'jQuery',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -148,7 +143,6 @@ module.exports = {
     },
     {
       title: 'Vue',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -164,29 +158,46 @@ module.exports = {
         },
         {
           title: '源码知识',
-          collapsable: true,
           children: [
             {
-              title: '响应式',
-              collapsable: true,
+              title: 'Vue2',
               children: [
                 {
-                  title: '响应式之介绍',
-                  path: '/docs/Vue/源码知识/响应式/介绍.md'
+                  title: '响应式',
+                  children: [
+                    {
+                      title: '介绍',
+                      path: '/docs/Vue/源码知识/Vue2/响应式/介绍.md'
+                    },
+                    {
+                      title: 'Object',
+                      path: '/docs/Vue/源码知识/Vue2/响应式/Object.md'
+                    },
+                    {
+                      title: 'Array',
+                      path: '/docs/Vue/源码知识/Vue2/响应式/Array.md'
+                    }
+                  ]
                 },
                 {
-                  title: '响应式之 Object',
-                  path: '/docs/Vue/源码知识/响应式/Object.md'
-                },
-                {
-                  title: '响应式之 Array',
-                  path: '/docs/Vue/源码知识/响应式/Array.md'
+                  title: '总结',
+                  path: '/docs/Vue/源码知识/Vue2/总结.md'
                 }
               ]
             },
             {
-              title: '总结',
-              path: '/docs/Vue/源码知识/总结.md'
+              title: 'Vue3',
+              children: [
+                {
+                  title: '响应式',
+                  children: [
+                    {
+                      title: '介绍',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/介绍.md'
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -194,7 +205,6 @@ module.exports = {
     },
     {
       title: 'React',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -208,7 +218,6 @@ module.exports = {
     },
     {
       title: 'Node',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -222,7 +231,6 @@ module.exports = {
     },
     {
       title: 'Webpack',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -236,7 +244,6 @@ module.exports = {
     },
     {
       title: 'Vite',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -250,7 +257,6 @@ module.exports = {
     },
     {
       title: 'vue-element-admin',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -264,7 +270,6 @@ module.exports = {
     },
     {
       title: 'uni-app',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -278,7 +283,6 @@ module.exports = {
     },
     {
       title: 'Git',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -292,7 +296,6 @@ module.exports = {
     },
     {
       title: 'SQL',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -306,7 +309,6 @@ module.exports = {
     },
     {
       title: 'PM2',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -320,7 +322,6 @@ module.exports = {
     },
     {
       title: 'HTTP',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -334,7 +335,6 @@ module.exports = {
     },
     {
       title: 'Nginx',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -348,7 +348,6 @@ module.exports = {
     },
     {
       title: 'Docker',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -362,7 +361,6 @@ module.exports = {
     },
     {
       title: 'Linux',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -376,7 +374,6 @@ module.exports = {
     },
     {
       title: '微信小程序',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -390,7 +387,6 @@ module.exports = {
     },
     {
       title: '性能优化',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -404,7 +400,6 @@ module.exports = {
     },
     {
       title: '数据可视化',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -418,7 +413,6 @@ module.exports = {
     },
     {
       title: '自动化测试',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -432,7 +426,6 @@ module.exports = {
     },
     {
       title: '数据结构与算法',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
@@ -446,7 +439,6 @@ module.exports = {
     },
     {
       title: '计算机原理',
-      collapsable: true,
       children: [
         {
           title: '基础知识',
