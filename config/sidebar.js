@@ -194,6 +194,18 @@ module.exports = {
                     {
                       title: '介绍',
                       path: '/docs/Vue/源码知识/Vue3/响应式/介绍.md'
+                    },
+                    {
+                      title: 'reactive',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/reactive.md'
+                    },
+                    {
+                      title: 'ref',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/ref.md'
+                    },
+                    {
+                      title: 'effect',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/effect.md'
                     }
                   ]
                 }
