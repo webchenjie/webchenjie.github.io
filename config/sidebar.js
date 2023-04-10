@@ -206,6 +206,10 @@ module.exports = {
                     {
                       title: 'effect',
                       path: '/docs/Vue/源码知识/Vue3/响应式/effect.md'
+                    },
+                    {
+                      title: 'computed',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/computed.md'
                     }
                   ]
                 }
