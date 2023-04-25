@@ -210,6 +210,10 @@ module.exports = {
                     {
                       title: 'computed',
                       path: '/docs/Vue/源码知识/Vue3/响应式/computed.md'
+                    },
+                    {
+                      title: 'watch',
+                      path: '/docs/Vue/源码知识/Vue3/响应式/watch.md'
                     }
                   ]
                 }
