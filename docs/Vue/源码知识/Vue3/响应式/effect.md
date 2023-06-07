@@ -13,6 +13,14 @@ categories:
 
 ## 2. 过程
 
+-   数据结构
+
+    -   WeakMap
+        -   key: 响应式对象
+        -   value: Map 对象
+            -   key: 响应式对象的指定属性
+            -   value: Set 对象
+
 -   reactive
     如果是复杂类型则会有一个 WeakMap 的数据结构对应的一对多的依赖对象，从而才能知道对应的哪个属性哪个依赖的触发
 

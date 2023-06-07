@@ -15,14 +15,6 @@ categories:
 
 getter 和 setter 配合 Reflect 进行 get 和 set 操作，在 get 时进行 track 即依赖收集，在 set 时进行 trigger 即依赖触发
 
--   数据结构
-
-    -   WeakMap
-        -   key: 响应式对象
-        -   value: Map 对象
-            -   key: 响应式对象的指定属性
-            -   value: Set 对象
-
 ## 3. 缺陷
 
 -   reactive 只能对复杂数据类型进行使用，没办法使用简单数据类型，所以有 ref
