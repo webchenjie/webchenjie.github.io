@@ -25,7 +25,7 @@ categories:
 
 ## 3. 依赖收集和触发
 
-RefImpl 中有个 dep 属性，对应的是一个 Set 对象，对应的 ReactiveEffect 依赖就存放在这里
+RefImpl 中有个 dep 属性，对应的是一个 Set 对象，对应的 ReactiveEffect 依赖就存放在这里，这里的依赖没有 WeakMap 缓存
 
 -   复杂类型
 

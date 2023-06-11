@@ -192,10 +192,6 @@ module.exports = {
                   title: '响应式',
                   children: [
                     {
-                      title: '介绍',
-                      path: '/docs/Vue/源码知识/Vue3/响应式/介绍.md'
-                    },
-                    {
                       title: 'reactive',
                       path: '/docs/Vue/源码知识/Vue3/响应式/reactive.md'
                     },
