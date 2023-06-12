@@ -9,7 +9,7 @@ categories:
 
 ## 1. 描述
 
-创建 ComputedRefImpl 实例，然后返回，和 ref 的 RefImpl 类似
+创建 ComputedRefImpl 实例，然后返回，和 ref 的 RefImpl 类似，主要通过 ReactiveEffect 中的优先执行 computed 的 effect 逻辑来触发 schedule 调度器，在调度器中会再次触发对应的依赖，就会执行使用 computed 的 run 函数
 
 ## 2. 过程
 
