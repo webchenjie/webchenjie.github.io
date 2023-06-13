@@ -7,7 +7,7 @@ categories:
     - 技术
 ---
 
-## 1. 描述
+## 1. 简介
 
 创建 ReactiveEffect 实例，然后根据 option 判断是否执行 run 函数
 

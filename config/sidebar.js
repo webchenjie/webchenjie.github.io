@@ -212,6 +212,19 @@ module.exports = {
                       path: '/docs/Vue/源码知识/Vue3/响应式/watch.md'
                     }
                   ]
+                },
+                {
+                  title: '运行时',
+                  children: [
+                    {
+                      title: '介绍',
+                      path: '/docs/Vue/源码知识/Vue3/运行时/介绍.md'
+                    },
+                    {
+                      title: 'h函数',
+                      path: '/docs/Vue/源码知识/Vue3/运行时/h函数.md'
+                    }
+                  ]
                 }
               ]
             }
