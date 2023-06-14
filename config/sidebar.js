@@ -223,6 +223,10 @@ module.exports = {
                     {
                       title: 'h函数',
                       path: '/docs/Vue/源码知识/Vue3/运行时/h函数.md'
+                    },
+                    {
+                      title: 'render函数',
+                      path: '/docs/Vue/源码知识/Vue3/运行时/render函数.md'
                     }
                   ]
                 }
