@@ -28,12 +28,22 @@ render 函数的作用就是根据 vnode 去创建对应的 DOM 元素，其中�
 
 -   如果新节点是空的并且旧节点存在，Vue 会直接把旧节点删除
 
--   属性的挂载逻辑
+-   class 和其他属性的挂载逻辑
 
     -   如果是 class，则通过 el.className 挂载
     -   如果是其他属性，则通过 el.setAttribute 挂载
     -   如果是 value，则通过 el.value 挂载
     -   实际上 class 的设置可以通过 el.className 和 el.setAttribute 进行设置，Vue 使用 el.className 设置的原因是 className 比 setAttribute 的性能要好
+
+-   style 属性挂载逻辑
+
+    -   如果是 style 和 class 逻辑差不多，都是循环遍历通过 el.style.xxx = xxx 进行赋值
+    -   赋值后会缓存 style 的值，如果后面再次改变了 style，会判断新的 style 有没有包含旧的 style，如果没有，则会把旧的进行移除
+
+-   事件的挂载逻辑
+
+    -   本质通过 addEventListener 进行事件添加，通过 removeEventListener 进行事件移除
+    -   在事件中，Vue 通过 vei 即 vue event invokers 进行事件回调缓存，如果是同一个事件，一开始是回调 A，后面是回调 B，这种情况不会进行多次 add 和 remove，而是通过改变 vei 中的回调函数，因为 add 和 remove 会消耗性能
 
 ## 3. 更新
 
