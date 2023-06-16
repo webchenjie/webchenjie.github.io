@@ -7,15 +7,19 @@ categories:
     - 技术
 ---
 
-## 1. 简介
+## 简介
 
 h 函数的作用是生成 vnode，它根据参数生成对应的 js 对象，生成的对象中会包含当前节点的类型以及子节点的类型和数据，后面 render 的时候会使用到
 
--   vnode 的本质就是一个 js 对象
+> vnode 的本质就是一个 js 对象
 
-## 2. 不同类型的 vnode
+## 过程
 
-h 函数会根据不同的参数生成不同的 vnode，最终生成的 js 对象中会有个 `shapeFlag` 属性来表示当前是什么类型的节点，如果有 children，则会通过 `按位或` 运算生成
+Vue 中维护了一个 `ShapeFlag` 的枚举值，其中不同的类型对应的不同的数值，下面所有关于 `shapeFlag` 值的生成的改变都是来源于这里
+
+h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父节点的类型来构建出一个 `shapeFlag` 的变量，用于标识当前是属于什么类型的节点，在执行到处理子节点的逻辑中，这个 `shapeFlag` 会再次根据子节点的类型来改变 `shapeFlag` 的值，最后通过 `按位或` 运算生成最终的 `shapeFlag` 的值，这样这个值就标识了当前的父节点和子节点的类型，在后面 render 的时候会去解析对应值从而得到对应的类型
+
+### 不同类型的 vnode
 
 -   普通元素节点 + 文本子节点
 
@@ -113,6 +117,6 @@ render(vnode, document.querySelector('#app'))
 }
 ```
 
-## 3. class 和 style 的增强
+### class 和 style 的增强
 
-我们知道可以给 class 或 style 传递动态类型，比如对象或数组或字符串，在生产 vnode 的时候，会对 props 中的 class 和 style 进行特殊处理，如果传递的是可迭代对象，则会遍历把对应的属性加入到 class 或 style 中，这就实现了动态传递的功能
+我们知道可以给 class 或 style 传递动态类型，比如对象或数组或字符串，在生产 vnode 的时候，会对 props 中的 class 和 style 进行特殊处理，如果传递的是可迭代对象，则会遍历把对应的属性加入到 class 或 style 中，这就实现了动态传递的功能，最后把处理好的 class 和 style 赋值给 vnode 中的 props 属性进行保存

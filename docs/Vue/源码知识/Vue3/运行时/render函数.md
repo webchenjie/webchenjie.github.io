@@ -7,11 +7,11 @@ categories:
     - 技术
 ---
 
-## 1. 简介
+## 简介
 
 render 函数的作用就是根据 vnode 去创建对应的 DOM 元素，其中会根据 vnode 中的类型去创建不同的 DOM 节点
 
-## 2. 挂载
+## 挂载
 
 -   触发 patch 方法，根据 vnode 中的 type 和 shapeFlag 的值来确定要进行哪种类型的节点挂载
 
