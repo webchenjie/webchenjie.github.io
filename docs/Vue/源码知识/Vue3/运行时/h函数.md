@@ -119,4 +119,4 @@ render(vnode, document.querySelector('#app'))
 
 ### class 和 style 的增强
 
-我们知道可以给 class 或 style 传递动态类型，比如对象或数组或字符串，在生产 vnode 的时候，会对 props 中的 class 和 style 进行特殊处理，如果传递的是可迭代对象，则会遍历把对应的属性加入到 class 或 style 中，这就实现了动态传递的功能，最后把处理好的 class 和 style 赋值给 vnode 中的 props 属性进行保存
+我们知道可以给 class 或 style 传递动态类型，比如对象或数组或字符串，在生成 vnode 的时候，会对 props 中的 class 和 style 进行特殊处理，如果传递的是可迭代对象，则会遍历把对应的属性加入到 class 或 style 中，这就实现了动态传递的功能，最后把处理好的 class 和 style 赋值给 vnode 中的 props 属性进行保存

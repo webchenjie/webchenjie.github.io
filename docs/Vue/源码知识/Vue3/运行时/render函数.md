@@ -9,7 +9,7 @@ categories:
 
 ## 简介
 
-render 函数的作用就是根据 vnode 去创建对应的 DOM 元素，其中会根据 vnode 中的类型去创建不同的 DOM 节点
+render 函数的作用就是根据 vnode 去渲染对应的 DOM 元素，其中会根据 vnode 中的类型去创建不同的 DOM 节点
 
 ## 挂载
 
