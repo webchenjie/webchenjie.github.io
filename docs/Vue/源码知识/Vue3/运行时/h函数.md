@@ -17,11 +17,13 @@ h 函数的作用是生成 vnode，它根据参数生成对应的 js 对象，�
 
 Vue 中维护了一个 `ShapeFlag` 的枚举值，其中不同的类型对应的不同的数值，下面所有关于 `shapeFlag` 值的生成的改变都是来源于这里
 
-h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父节点的类型来构建出一个 `shapeFlag` 的变量，用于标识当前是属于什么类型的节点，在执行到处理子节点的逻辑中，这个 `shapeFlag` 会再次根据子节点的类型来改变 `shapeFlag` 的值，最后通过 `按位或` 运算生成最终的 `shapeFlag` 的值，这样这个值就标识了当前的父节点和子节点的类型，在后面 render 的时候会去解析对应值从而得到对应的类型
+h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父节点的类型来构建出一个 `shapeFlag` 的变量，用于标识当前是属于什么类型的节点，在执行到处理子节点的逻辑中，会再次根据父节点的 `shapeFlag` 的值和子节点的类型来改变 `shapeFlag` 的值（即通过 `按位或` 运算生成最终的 `shapeFlag` 的值），这样这个值就标识了当前的父节点和子节点的类型，在后面 render 的时候会去解析对应值从而得到对应的类型
+
+-   `按位或` 运算可以简单理解为是把数值变成 32 位的二进制进行相比，只要一个为 1 结果就是 1，否则就是 0，然后再把二进制转为十进制
 
 ### 不同类型的 vnode
 
--   普通元素节点 + 文本子节点
+-   元素节点 + 文本子节点
 
 ```js
 {
@@ -32,7 +34,7 @@ h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父
 }
 ```
 
--   普通元素节点 + 多个文本子节点（数组）
+-   元素节点 + 多个文本子节点（数组）
 
 ```js
 {
@@ -53,34 +55,6 @@ h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父
         }
     ],
     type: 'div'
-}
-```
-
--   组件的 vnode
-
-组件的本质也是一个对象或一个函数
-
-```js
-const components = {
-    render() {
-        const vnode = h('div', '这是一个 components')
-        return vnode
-    }
-}
-const vnode = h(components)
-render(vnode, document.querySelector('#app'))
-```
-
-实际的 vnode
-
-```js
-{
-    __v_isVNode: true,
-    shapeFlag: 4,
-    children: null,
-    type: {
-        render() { ... } // components 对象中的 render
-    }
 }
 ```
 
@@ -114,6 +88,34 @@ render(vnode, document.querySelector('#app'))
     shapeFlag: 8,
     children: '这是文本子节点',
     type: Symbol(Fragment)
+}
+```
+
+-   组件的 vnode
+
+组件的本质也是一个对象或一个函数
+
+```js
+const components = {
+    render() {
+        const vnode = h('div', '这是一个 components')
+        return vnode
+    }
+}
+const vnode = h(components)
+render(vnode, document.querySelector('#app'))
+```
+
+实际的 vnode
+
+```js
+{
+    __v_isVNode: true,
+    shapeFlag: 4,
+    children: null,
+    type: {
+        render() { ... } // components 对象中的 render
+    }
 }
 ```
 
