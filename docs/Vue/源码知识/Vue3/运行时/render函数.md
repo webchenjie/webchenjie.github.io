@@ -50,18 +50,18 @@ render 函数的作用就是根据 vnode 去渲染对应的 DOM 元素，其中�
 
 ### 文本节点
 
-    -   挂载： document.createTextNode(text) + el.insertBefore(child)
-    -   更新：document.nodeValue = text
+-   挂载： document.createTextNode(text) + el.insertBefore(child)
+-   更新：document.nodeValue = text
 
 ### 注释节点
 
-    -   挂载： document.createComment(text) + el.insertBefore(child)
-    -   更新：n1.el = n2.el（n1 是旧节点、n2 是新节点）
+-   挂载： document.createComment(text) + el.insertBefore(child)
+-   更新：n1.el = n2.el（n1 是旧节点、n2 是新节点）
 
 ### 片段节点
 
-    -   挂载：会遍历里面的子 节点生成为文本节点进行挂载
-    -   更新：el.textContent = text
+-   挂载：会遍历里面的子 节点生成为文本节点进行挂载
+-   更新：el.textContent = text
 
 ### 组件节点
 
