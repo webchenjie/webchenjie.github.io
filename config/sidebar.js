@@ -229,6 +229,15 @@ module.exports = {
                       path: '/docs/Vue/源码知识/Vue3/运行时/render函数.md'
                     }
                   ]
+                },
+                {
+                  title: '编译器',
+                  children: [
+                    {
+                      title: '介绍',
+                      path: '/docs/Vue/源码知识/Vue3/编译器/介绍.md'
+                    }
+                  ]
                 }
               ]
             }
