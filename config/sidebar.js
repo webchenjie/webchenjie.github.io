@@ -236,6 +236,18 @@ module.exports = {
                     {
                       title: '介绍',
                       path: '/docs/Vue/源码知识/Vue3/编译器/介绍.md'
+                    },
+                    {
+                      title: 'parse',
+                      path: '/docs/Vue/源码知识/Vue3/编译器/parse.md'
+                    },
+                    {
+                      title: 'transform',
+                      path: '/docs/Vue/源码知识/Vue3/编译器/transform.md'
+                    },
+                    {
+                      title: 'generate',
+                      path: '/docs/Vue/源码知识/Vue3/编译器/generate.md'
                     }
                   ]
                 }
