@@ -23,3 +23,18 @@ categories:
 
 -   解析 JS AST 生成函数字符串
 -   最后通过 new Function 转化为 render 函数
+
+### 例子
+
+```html
+<div>hello world</div>
+```
+
+```js
+const _Vue = Vue
+
+return function render(_ctx, _cache) {
+    const { createElementVNode: _createElementVNode } = _Vue
+    return _createElementVNode('div', [], ['hello world'])
+}
+```
