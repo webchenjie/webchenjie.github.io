@@ -28,7 +28,7 @@
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.13",
     "@vuepress/plugin-nprogress": "^1.9.7",
     "vuepress": "^1.9.7",
-    "vuepress-theme-reco": "1.6.13"
+    "vuepress-theme-reco": "^1.6.17"
   },
   "devDependencies": {
     "@sxwy/commitlint-config": "^1.3.0",
