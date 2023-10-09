@@ -15,7 +15,7 @@ jobs:
       - name: UseNode
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 16.18.0
 
       - name: Build
         run: |
