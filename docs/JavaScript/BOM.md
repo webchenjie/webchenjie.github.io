@@ -299,5 +299,6 @@ cosnt url = new URL('https://webchenjie.cn')
   decodeURI 和 encodeURI 是用来对整个 URI 做转义
 2. 路由传参时要通过 encodeURI 或 encodeURIComponent 进行参数处理，如果涉及对象时需要 JSON.stringify 处理，
   解析的时候通过 decodeURI 或 decodeURIComponent 进行处理，如果涉及对象时需要 JSON.parse 处理
-3. RGB 颜色值中的每一个数值是 0-255，其中每个数值都可以通过 js 的 parseInt(num, 16) 方法传入 16 进制转成 #FF00AA 形式
+3. RGB 颜色值中的每一个数值是 0-255，其中每个数值都可以通过 js 的 toString(16) 方法传入 16 进制转成 #FF00AA 形式
+4. #FF00AA 形式的颜色值，其中每个数值都可以通过 js 的 parseInt(num, 16) 方法传入 RGB 的数值转成 RGB 格式
 ```
