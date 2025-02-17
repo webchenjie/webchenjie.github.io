@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "ChenJieBlog",
   "main": ".vuepress/dist/index.html",
+  "engines": {
+    "node": "16.18.0",
+    "yarn": "1.22.22"
+  },
   "scripts": {
     "dev": "vuepress dev .",
     "build": "vuepress build .",
@@ -25,20 +29,20 @@
   "homepage": "https://github.com/webchenjie/webchenjie.github.io#readme",
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
-    "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.13",
-    "@vuepress/plugin-nprogress": "^1.9.7",
-    "vuepress": "^1.9.7",
+    "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.16",
+    "@vuepress/plugin-nprogress": "^1.9.10",
+    "vuepress": "^1.9.10",
     "vuepress-theme-reco": "^1.6.17"
   },
   "devDependencies": {
-    "@sxwy/commitlint-config": "^1.3.0",
-    "@sxwy/eslint-config-base": "^1.6.0",
-    "@sxwy/prettier-config": "^1.4.1",
-    "@sxwy/stylelint-config": "^1.4.1",
-    "eslint": "^8.20.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.9.1"
+    "@sxwy/commitlint-config": "^1.8.0",
+    "@sxwy/eslint-config-base": "^1.10.0",
+    "@sxwy/prettier-config": "^1.8.0",
+    "@sxwy/stylelint-config": "^1.10.0",
+    "eslint": "^8.57.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^14.16.1"
   }
 }
