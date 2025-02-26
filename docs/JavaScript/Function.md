@@ -239,6 +239,7 @@ function flat(arr) {
     拖拽一个元素时, 要随时拿到该元素被拖拽的位置
     直接使用drag事件, 则会频繁触发, 很容易导致卡顿
     无论拖拽速度多快, 都会每隔多久触发一次
+    频繁操作的时候保持一个频率触发
 
     实现:
       const div = document.getElementById('div')
@@ -270,6 +271,7 @@ function flat(arr) {
 2. 防抖: 用户输入结束或输入框暂停多久后才触发事件,有定时器要清空 // debounce
     监听一个输入框的, 文字变化后触发change
     直接用keyup事件, 则会频繁触发change事件
+    频繁操作的时候最后才触发
 
     实现:
       const input = document.getElementById('input')

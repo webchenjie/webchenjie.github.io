@@ -80,6 +80,12 @@ console.log(other) // [2, 4, 6, 8, 10]
 13. arr.includes(参数) // 判断arr是否包含参数,返回布尔值
 14. arr.flat(深度) // 数组扁平化
 15. 只有 for 循环、for of 才支持异步串行执行，其他大部分都不支持
+16. reduce 累加/计数
+    const arr = [10, 20, 30, 40]
+    const sum = arr.reduce((sum, val, index, arr) => {
+        return sum + val // 返回值，会作为下一次执行时的第一个参数 sum 的值
+    }, 0)
+    console.log(sum) // 100
 ----------------------------------------------------------------------------------------------
 1. 如果是有树状结构的数组需要合并成一维数组需要通过concat和扩展运算符一起递归调用
     function flatten(arr) {
