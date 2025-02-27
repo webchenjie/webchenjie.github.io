@@ -23,7 +23,7 @@ publish: false
 2. obj.name = tom或obj['name'] = tom // 设置值
 3. delete obj.name // 删除值
 4. ('name' in obj) // 返回true,判断属性是否存在对象中
-5. for(var key in obj) { key为属性名,obj[key]为属性值 } // 遍历对象
+5. for(var key in obj) { key为属性名,obj[key]为属性值 } // 遍历对象，也可以遍历数组
 ----------------------------------------------------------------------------------------------
 // es5
 1. Object.getPrototypeOf(obj) // 获取原型链上的对象，参数不能是 null 或 undefined，否则会报错
