@@ -16,7 +16,7 @@ h 函数的作用是生成 vnode，它根据参数生成对应的 js 对象，�
 
 ## 过程
 
-Vue 中维护了一个 `ShapeFlag` 的枚举值，其中不同的类型对应的不同的数值，下面所有关于 `shapeFlag` 值的生成的改变都是来源于这里
+Vue 中维护了一个 `shapeFlag` 的枚举值，其中不同的类型对应的不同的数值，下面所有关于 `shapeFlag` 值的生成的改变都是来源于这里
 
 h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父节点的类型来构建出一个 `shapeFlag` 的变量，用于标识当前是属于什么类型的节点，在执行到处理子节点的逻辑中，会再次根据父节点的 `shapeFlag` 的值和子节点的类型来改变 `shapeFlag` 的值（即通过 `按位或` 运算生成最终的 `shapeFlag` 的值），这样这个值就标识了当前的父节点和子节点的类型，在后面 render 的时候会去解析对应值从而得到对应的类型
 
@@ -66,7 +66,7 @@ h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父
     __v_isVNode: true,
     shapeFlag: 8,
     children: '这是文本子节点',
-    type: Symbol(Text)
+    type: Symbol(Text) // symbol
 }
 ```
 
@@ -77,7 +77,7 @@ h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父
     __v_isVNode: true,
     shapeFlag: 8,
     children: '这是文本子节点',
-    type: Symbol(Comment)
+    type: Symbol(Comment) // symbol
 }
 ```
 
@@ -88,7 +88,7 @@ h 函数会根据传入的不同参数生成 vnode，其中第一次会根据父
     __v_isVNode: true,
     shapeFlag: 8,
     children: '这是文本子节点',
-    type: Symbol(Fragment)
+    type: Symbol(Fragment) // symbol
 }
 ```
 
