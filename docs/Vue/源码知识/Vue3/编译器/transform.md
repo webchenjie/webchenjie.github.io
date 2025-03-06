@@ -10,7 +10,7 @@ publish: false
 
 ## 简介
 
-转化（transform）AST，得到 JS AST
+转化（transform）AST，得到 JS AST，中间会经过很多转换方法，得到 codegenNode，这个在后面 generate 时会用到
 
 ## 转换策略
 
