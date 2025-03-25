@@ -294,8 +294,8 @@ module.exports = [
   //   ]
   // },
   {
-    text: '开源作品',
-    link: 'https://github.com/sxwy',
+    text: 'Github',
+    link: 'https://github.com/webchenjie',
     icon: 'reco-github'
   }
 ]
