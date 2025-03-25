@@ -70,7 +70,10 @@ list.forEach((val, index) => {
 });
 console.log(other) // [2, 4, 6, 8, 10]
 6. for in: for-in循环实际是为循环”enumerable“对象而设计的,for in也可以循环数组,但是不推荐这样使用,for–in是用来循环带有字符串key的对象的方法
-7. for of: for of为ES6提供,具有iterator接口,就可以用for of循环遍历它的成员。也就是说,for of循环内部调用的是数据结构的Symbol.iterator方法,for of循环可以使用的范围包括数组、Set和Map结构、某些类似数组的对象(比如arguments对象、DOM NodeList对象)、后文的Generator对象,以及字符串,有些数据结构是在现有数据结构的基础上,计算生成的,比如,ES6的数组、Set、Map都部署了以下三个方法,调用后都返回遍历器对象
+7. for of: for of为ES6提供,具有iterator接口,就可以用for of循环遍历它的成员。
+    也就是说,for of循环内部调用的是数据结构的Symbol.iterator方法,
+    for of循环可以使用的范围包括数组、Set和Map结构、某些类似数组的对象(比如arguments对象、DOM NodeList对象)、后文的Generator对象,
+    以及字符串,有些数据结构是在现有数据结构的基础上,计算生成的,比如,ES6的数组、Set、Map都部署了以下三个方法,调用后都返回遍历器对象
 8. Array.from(伪数组, mapfn, this) // 用于把伪数组转换成数组或初始化伪数组,可以只传一个参数
 9. Array.of(1, 2, 3) // 相当于push,或生成新数组,如果参数只有一个则返回单个元素参数的数组
 10. Array.fill(8, 2, 4) // 从数组第2项到第4项换成8
