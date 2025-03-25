@@ -1,9 +1,9 @@
 module.exports = [
-  {
-    text: '主页',
-    link: '/',
-    icon: 'reco-home'
-  },
+  // {
+  //   text: '主页',
+  //   link: '/',
+  //   icon: 'reco-home'
+  // },
   {
     text: '学习记录',
     icon: 'reco-api',
@@ -110,11 +110,11 @@ module.exports = [
       }
     ]
   },
-  {
-    text: '时间线',
-    link: '/timeline/',
-    icon: 'reco-date'
-  },
+  // {
+  //   text: '时间线',
+  //   link: '/timeline/',
+  //   icon: 'reco-date'
+  // },
   // {
   //   text: '学习链接',
   //   icon: 'reco-document',

@@ -54,16 +54,16 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     // 博客设置
-    blogConfig: {
-      category: {
-        location: 3, // 在导航栏菜单中所占的位置
-        text: '分类'
-      },
-      tag: {
-        location: 4, // 在导航栏菜单中所占的位置
-        text: '标签'
-      }
-    },
+    // blogConfig: {
+    //   category: {
+    //     location: 3, // 在导航栏菜单中所占的位置
+    //     text: '分类'
+    //   },
+    //   tag: {
+    //     location: 4, // 在导航栏菜单中所占的位置
+    //     text: '标签'
+    //   }
+    // },
 
     // 评论浏览量设置 Vssue
     valineConfig: {
