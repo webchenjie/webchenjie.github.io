@@ -462,6 +462,10 @@ module.exports = {
         {
           title: '进阶知识',
           path: '/docs/数据可视化/进阶知识.md'
+        },
+        {
+          title: 'SVG',
+          path: '/docs/数据可视化/SVG.md'
         }
       ]
     },
