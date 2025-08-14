@@ -125,32 +125,125 @@ publish: false
 1. d 表示点的列表以及有关如何绘制路径的其他信息，大写是绝对坐标，小写是相对坐标
     - M（移动到）：指定一个新位置，但不绘制线条。 // Move To
     - L（直线到）：绘制一条直线到指定位置。 // Line To
-    - H（水平线到）：绘制一条水平线到指定位置。
-    - V（垂直线到）：绘制一条垂直线到指定位置。
+    - H（水平线到）：绘制一条水平线到指定位置。// Horizontal Line To
+    - V（垂直线到）：绘制一条垂直线到指定位置。 // Vertical Line To
     - Q（贝塞尔曲线）：二次贝塞尔曲线(一个控制点) // Quadratic Bézier
-    - T（贝塞尔曲线）：简化的二次贝塞尔曲线(自动对称控制点)
+    - T（贝塞尔曲线）：简化的二次贝塞尔曲线(自动对称控制点) // Smooth Quadratic Bézier Curve
     - C（贝塞尔曲线）：三次贝塞尔曲线(两个控制点) // Cubic Bézier
-    - S（贝塞尔曲线）：简化的三次贝塞尔曲线(自动对称第二个控制点)
+    - S（贝塞尔曲线）：简化的三次贝塞尔曲线(自动对称第二个控制点) // Smooth Cubic Bézier Curve
     - A（椭圆弧）：绘制一条弧线到指定位置。 // Elliptical Arc
-2. 移动命令
-M 命令用于移动到新的起点位置。例如，M10 10 将路径移动到坐标 (10, 10)。
-<path d="M10 10 L20 20" fill="none" stroke="black"/>
-3. 直线命令
-L 命令用于绘制直线到指定位置。例如，L20 20 从当前位置绘制一条直线到坐标 (20, 20)。
-<path d="M10 10 L20 20" fill="none" stroke="black"/>
-4. 曲线命令
-C 命令用于绘制贝塞尔曲线。它需要四个参数：控制点1的 x 和 y 坐标，控制点2的 x 和 y 坐标，以及终点坐标的 x 和 y 坐标。
-例如，C10 10 20 20 30 30 将绘制一条贝塞尔曲线。
-<path d="M10 10 C10 10 20 20 30 30" fill="none" stroke="black"/>
-5. 弧线命令
-A 命令用于绘制弧线。它需要多个参数，包括半径、大圆标志、小圆标志、旋转角度以及终点的 x 和 y 坐标。
-例如，A100 100 0 0 1 0 将绘制一条弧线。
-<path d="A100 100 0 0 1 0" fill="none" stroke="black"/>
+    - Z（闭合）：用于将当前路径的终点与起点用直线连接，形成一个封闭图形。它不区分大小写（Z 和 z 效果相同）。
+2. M 移动命令
+    语法：M x,y
+    将画笔移动到指定坐标，不绘制线条
+    示例：M50,50 将起点设置在 (50,50)
+<path d="M50,50 L100,50" stroke="red" stroke-width="2" fill="none"/>
+<text x="50" y="40" font-size="12">1. M: Move To (起点)</text>
 
-// 重要说明
-1. 多个相同命令可以省略命令字母：
-    L 10,10 20,20 30,30 等同于 L 10,10 L 20,20 L 30,30
-2. 坐标可以用空格或逗号分隔：
-    M10,10 和 M 10 10 等效
-3. 路径命令是顺序敏感的，必须按正确顺序书写
+
+3. L 直线命令
+    语法：L x,y
+    从当前位置画直线到指定坐标
+    示例：L100,50 从当前位置画到 (100,50)
+<path d="M150,50 L200,100" stroke="green" stroke-width="2" fill="none"/>
+<text x="150" y="40" font-size="12">2. L: Line To</text>
+
+4. H 水平线命令
+    语法：H x
+    水平直线，只指定X坐标
+    示例：H300 水平画到X=300的位置
+<path d="M250,50 H300" stroke="blue" stroke-width="2" fill="none"/>
+<text x="250" y="40" font-size="12">3. H: Horizontal Line</text>
+
+5. V 垂直线命令
+    语法：V y
+    垂直直线，只指定Y坐标
+    示例：V100 垂直画到Y=100的位置
+<path d="M350,50 V100" stroke="purple" stroke-width="2" fill="none"/>
+<text x="350" y="40" font-size="12">4. V: Vertical Line</text>
+
+6. Q 二次贝塞尔曲线(一个控制点)
+    语法：Q cx,cy x,y
+    二次贝塞尔曲线，需要一个控制点
+    示例：Q100,100 150,150
+    (100,100)是控制点
+    (150,150)是终点
+<path d="M50,150 Q100,100 150,150" stroke="orange" stroke-width="2" fill="none"/>
+<circle cx="100" cy="100" r="3" fill="red"/>
+<text x="50" y="140" font-size="12">5. Q: Quadratic Bézier</text>
+<text x="90" y="90" font-size="10">(控制点)</text>
+
+
+7. T 简化的二次贝塞尔曲线(自动对称控制点)
+    语法：T x,y
+    自动对称的二次贝塞尔曲线
+    示例：Q250,100 300,150 T400,150
+    第二个曲线的控制点会自动与第一个对称，注意是反方向的对称
+    (400,150)是终点
+<path d="M200,150 Q250,100 300,150 T400,150" stroke="brown" stroke-width="2" fill="none"/>
+<circle cx="250" cy="100" r="3" fill="red"/>
+<circle cx="350" cy="100" r="3" fill="red" opacity="0.5"/>
+<text x="200" y="140" font-size="12">6. T: Smooth Q-Bézier</text>
+<text x="240" y="90" font-size="10">(控制点)</text>
+<text x="340" y="90" font-size="10">(自动对称)</text>
+
+
+8. C 三次贝塞尔曲线(两个控制点)
+    语法：C cx1,cy1 cx2,cy2 x,y
+    三次贝塞尔曲线，需要两个控制点
+    示例：C100,200 150,300 200,250
+    (100,200)和(150,300)是控制点
+    (200,250)是终点
+<path d="M50,250 C100,200 150,300 200,250" stroke="pink" stroke-width="2" fill="none"/>
+<circle cx="100" cy="200" r="3" fill="red"/>
+<circle cx="150" cy="300" r="3" fill="red"/>
+<text x="50" y="240" font-size="12">7. C: Cubic Bézier</text>
+<text x="90" y="190" font-size="10">(控制点1)</text>
+<text x="140" y="310" font-size="10">(控制点2)</text>
+
+9. S 简化的三次贝塞尔曲线(自动对称第二个控制点)
+    语法：S cx2,cy2 x,y
+    自动对称的三次贝塞尔曲线
+    示例：C300,200 350,300 400,250 S500,200 550,250
+    第二个曲线的第一个控制点会自动对称，注意是反方向的对称
+    (500,200)是控制点
+    (550,250)是终点
+<path d="M250,250 C300,200 350,300 400,250 S500,200 550,250" stroke="teal" stroke-width="2" fill="none"/>
+<circle cx="300" cy="200" r="3" fill="red"/>
+<circle cx="350" cy="300" r="3" fill="red"/>
+<circle cx="450" cy="300" r="3" fill="red" opacity="0.5"/>
+<circle cx="500" cy="200" r="3" fill="red"/>
+<text x="250" y="240" font-size="12">8. S: Smooth C-Bézier</text>
+<text x="290" y="190" font-size="10">(控制点1)</text>
+<text x="340" y="310" font-size="10">(控制点2)</text>
+<text x="440" y="310" font-size="10">(自动对称)</text>
+
+10. A 椭圆弧
+    语法：A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
+    绘制椭圆弧
+    示例：A50,30 90 1 1 200,400
+    rx=50, ry=30 (椭圆半径)
+    x-axis-rotation=90(旋转角度)
+    large-arc-flag=1 (弧度) // 0-小弧度(<180°) 1-大弧度(>=180°)
+    sweep-flag=1 (绘制方向) // 0-逆时针 1-顺时针
+    x,y=200,400(终点)
+<path d="M100,400 A50,30 90 1 1 200,400" stroke="black" stroke-width="2" fill="none"/>
+<text x="100" y="390" font-size="12">9. A: Elliptical Arc</text>
+<text x="150" y="370" font-size="10">(rx=50,ry=30)</text>
+
+11. Z 闭合命令
+    命令格式：Z 或 z（无参数）。
+    作用：从当前点画一条直线到路径的 初始点（即第一个 M/m 命令定义的起点）。
+    执行后：
+        当前坐标重置为初始点（等同于回到路径起点）。
+        如果路径未定义初始点（如未使用 M/m），Z 不生效。
+<path d="M100,100 L200,100 L150,200 Z" />
+
+11. 重要说明
+    1. 多个相同命令可以省略命令字母：
+        L 10,10 20,20 30,30 等同于 L 10,10 L 20,20 L 30,30
+    2. 坐标可以用空格或逗号分隔：
+        M10,10 和 M 10 10 等效
+    3. 路径命令是顺序敏感的，必须按正确顺序书写
+    4. 每次命令结束后，当前坐标一定是该命令的终点，可通过 Z 命令闭合路径，回到初始点
 ```
